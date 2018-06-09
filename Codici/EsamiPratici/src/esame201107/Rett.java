@@ -25,13 +25,14 @@ import javafx.scene.shape.Circle;
  */
 public class Rett extends GridPane {
 
+    public static final int size = 65;
     Button x, o, c, r;
     Character mode;
 
     public Rett(boolean random) {
         Pane disegno = new StackPane();
-        disegno.setPrefHeight(300 / Pannello.N);
-        disegno.setPrefWidth(300 / Pannello.N);
+        disegno.setPrefHeight(size*1.2);
+        disegno.setPrefWidth(size*1.2);
         disegno.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
         if (random) {
             r = new Button("r");
@@ -46,11 +47,11 @@ public class Rett extends GridPane {
             r.setOnAction((ActionEvent e) -> {
                 disegno.getChildren().clear();
                 if (new Random().nextBoolean()) {
-                    Ics ics = new Ics(150 / Pannello.N);
+                    Ics ics = new Ics(size);
                     disegno.getChildren().add(ics);
                     mode = 'x';
                 } else {
-                    Circle circle = new Circle(150 / (Pannello.N * 2), Color.BLACK);
+                    Circle circle = new Circle(size / 2.0, Color.BLACK);
                     disegno.getChildren().add(circle);
                     mode = 'o';
                 }
@@ -58,14 +59,14 @@ public class Rett extends GridPane {
         } else {
             x.setOnAction((ActionEvent e) -> {
                 disegno.getChildren().clear();
-                Ics ics = new Ics(150 / Pannello.N);
+                Ics ics = new Ics(size);
                 disegno.getChildren().add(ics);
                 mode = 'x';
             });
 
             o.setOnAction((ActionEvent e) -> {
                 disegno.getChildren().clear();
-                Circle circle = new Circle(150 / (Pannello.N * 2), Color.BLACK);
+                Circle circle = new Circle(size / 2.0, Color.BLACK);
                 disegno.getChildren().add(circle);
                 mode = 'o';
             });
@@ -98,8 +99,7 @@ public class Rett extends GridPane {
         }
         getChildren().addAll(c, disegno);
     }
-    
-    
+
     public void reset() {
         c.fire();
     }

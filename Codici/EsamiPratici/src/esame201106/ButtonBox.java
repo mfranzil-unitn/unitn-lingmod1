@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package esame201107;
+package esame201106;
 
-import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 
@@ -18,22 +17,15 @@ public class ButtonBox extends VBox {
     public ButtonBox(Pannello pannello) {
         Button stampa = new Button("Stampa");
         Button reset = new Button("Reset");
-        Button controlla = new Button("Controlla");
+        Button mescola = new Button("Mescola");
 
         stampa.setOnAction(e -> pannello.stampa());
 
         reset.setOnAction(e -> pannello.resetAll());
 
-        controlla.setOnAction((ActionEvent e) -> {
-            boolean result = pannello.controlla();
-            if (result) {
-                pannello.vittoria();
-            } else {
-                pannello.sconfitta();
-            }
-        });
+        mescola.setOnAction(e -> pannello.mescola());
 
-        getChildren().addAll(stampa, reset, controlla);
+        getChildren().addAll(stampa, reset, mescola);
     }
 
 }

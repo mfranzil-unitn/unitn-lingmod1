@@ -23,7 +23,7 @@ import javafx.stage.Stage;
  */
 public class Pannello extends GridPane {
 
-    public static final int N = 4;
+    public static final int N = 3;
 
     public Pannello() {
         int randomCount = 0;
