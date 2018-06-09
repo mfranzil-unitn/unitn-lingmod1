@@ -64,7 +64,7 @@ public class PannelloGrafico extends Pane {
             }
             shapeCounter++;
         });
-        
+
         graphicScene.setOnKeyPressed((KeyEvent e) -> {
             switch (e.getCode()) {
                 case C:
@@ -149,5 +149,5 @@ public class PannelloGrafico extends Pane {
     public LinkedList<Shape> getFigure() {
         return figure;
     }
-    
+
 }

@@ -26,7 +26,7 @@ public class Bottoni extends HBox {
         this.getChildren().add(bomb);
         this.setSpacing(100);
         this.setAlignment(Pos.CENTER);
-               
+
     }
 
 }

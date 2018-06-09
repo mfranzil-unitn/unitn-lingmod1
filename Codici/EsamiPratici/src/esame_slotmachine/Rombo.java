@@ -18,7 +18,7 @@ public class Rombo extends Quadrato {
         super(size);
         setRotate(45);
         setFill(Color.BROWN);
-        
+
     }
-    
+
 }

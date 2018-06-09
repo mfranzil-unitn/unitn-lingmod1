@@ -13,9 +13,8 @@ import javafx.scene.shape.Circle;
  * @author Matteo Franzil
  */
 public class Cerchio extends Circle {
-    
-   
-    public Cerchio (double x, double y, double size, Color c) {
+
+    public Cerchio(double x, double y, double size, Color c) {
         super(x, y, size);
         setFill(c);
     }

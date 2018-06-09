@@ -9,8 +9,9 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
 /**
- * Questa classe definisce il "titolo" presente nella GUI. 
- *  */
+ * Questa classe definisce il "titolo" presente nella GUI.
+ *
+ */
 public class Title extends Group {
 
     public Title() {
@@ -23,6 +24,6 @@ public class Title extends Group {
         rect.setFill(Color.YELLOW);
         rect.setStroke(Color.BLACK);
         rect.setStrokeWidth(5);
-        this.getChildren().addAll(rect,lab);
+        this.getChildren().addAll(rect, lab);
     }
 }

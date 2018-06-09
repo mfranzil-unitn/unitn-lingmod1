@@ -62,8 +62,8 @@ public class SpinItem extends StackPane {
             forme.get(number).setVisible(true);
         } else if (currentshape > -1 && number <= -1) {
             forme.get(currentshape).setVisible(false);
-        }       
-        
+        }
+
         currentshape = number;
     }
 

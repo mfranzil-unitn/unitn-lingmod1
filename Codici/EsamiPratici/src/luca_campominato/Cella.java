@@ -23,10 +23,10 @@ public class Cella extends StackPane {
     Rectangle r;
     Boolean visible;
     Text near;
-    int val,nearbomb = 0;
+    int val, nearbomb = 0;
 
     Cella(int val) {
-        near = new Text(""+nearbomb);
+        near = new Text("" + nearbomb);
         near.setVisible(false);
         c = new Circle(20, Color.RED);
         r = new Rectangle(40, 40, Color.WHITE);
@@ -34,7 +34,7 @@ public class Cella extends StackPane {
         c.setMouseTransparent(true);
         r.setStroke(Color.BLACK);
         this.val = val;
-        this.getChildren().addAll(r, c,near);
+        this.getChildren().addAll(r, c, near);
 
         r.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
@@ -49,20 +49,20 @@ public class Cella extends StackPane {
         switch (val) {
             case 0:
                 r.setFill(Color.GRAY);
-                CampoMinato.tot -=1;
+                CampoMinato.tot -= 1;
                 break;
             case 1:
                 c.setVisible(true);
-                CampoMinato.tot -=100;
+                CampoMinato.tot -= 100;
                 break;
             case 2:
                 r.setFill(Color.RED);
-                near.setText(""+nearbomb);
+                near.setText("" + nearbomb);
                 near.setVisible(true);
-                CampoMinato.tot -=1;
+                CampoMinato.tot -= 1;
                 break;
         }
-        
+
         CampoMinato.controlla();
     }
 

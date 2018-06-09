@@ -17,23 +17,22 @@ import javafx.stage.WindowEvent;
  * @author Matteo Franzil
  */
 public class Main extends Application {
+
     public static final int SIZE = 30;
-    
+
     @Override
     public void start(Stage primaryStage) {
         GridPane root = new GridPane();
         Pannello pannello = new Pannello();
         ControlPanel comandi = new ControlPanel(pannello);
-       
-        
+
         GridPane.setConstraints(pannello, 0, 0, 8, 10);
         GridPane.setConstraints(comandi, 9, 0, 2, 2);
-                
-        
+
         root.getChildren().addAll(pannello, comandi);
-        
+
         Scene scene = new Scene(root, 400, 400);
-        
+
         primaryStage.setTitle("Hello World!");
         primaryStage.setOnCloseRequest((WindowEvent e) -> {
             Platform.exit();
@@ -48,5 +47,5 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }

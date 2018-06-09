@@ -14,10 +14,9 @@ import javafx.scene.shape.Rectangle;
  */
 public class Quadrato extends Rectangle {
 
-   
     public Quadrato(double x, double y, double size, Color c) {
         super(x, y, size, size);
         setFill(c);
     }
-    
+
 }

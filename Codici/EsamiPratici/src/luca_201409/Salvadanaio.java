@@ -13,36 +13,36 @@ import javafx.util.Duration;
 
 /**
  * Questa classe è il contenitore grafico del set di monete.
- * 
+ *
  */
-public class Salvadanaio extends VBox{
-    SlotMachine sm=null;
+public class Salvadanaio extends VBox {
+
+    SlotMachine sm = null;
     ListenerMonete monetaListener = null;
-    
-    public Salvadanaio(SlotMachine sm){
-        this.sm=sm;
+
+    public Salvadanaio(SlotMachine sm) {
+        this.sm = sm;
         setAlignment(Pos.CENTER);
         setSpacing(30);
         setPadding(new Insets(10, 50, 10, 10));
-        monetaListener=new ListenerMonete();
+        monetaListener = new ListenerMonete();
         initialize();
     }
-    
+
     public void initialize() {
         getChildren().clear();
         for (int i = 0; i < SlotMachine.NUM_MONETE; i++) {
-            Moneta m= new Moneta();
-            m.addEventFilter(MouseEvent.MOUSE_CLICKED,monetaListener);
+            Moneta m = new Moneta();
+            m.addEventFilter(MouseEvent.MOUSE_CLICKED, monetaListener);
             addMoneta(m);
         }
     }
-    
-    public void addMoneta(Moneta m){
+
+    public void addMoneta(Moneta m) {
         getChildren().add(m);
     }
 
 // ============= LISTENER Moneta  ==============================================
-    
     public class ListenerMoneteWithoutAnimation implements EventHandler {
 
         public void handle(Event t) {
@@ -57,7 +57,7 @@ public class Salvadanaio extends VBox{
 
         // isHandlerActive serve ad evitare che si possa cliccare più volte
         // sulla moneta durante l'animazione
-        boolean isHandlerActive = false; 
+        boolean isHandlerActive = false;
 
         void setHandlerInactive() {
             isHandlerActive = false;

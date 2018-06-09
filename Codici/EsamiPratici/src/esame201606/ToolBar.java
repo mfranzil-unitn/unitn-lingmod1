@@ -31,7 +31,7 @@ public class ToolBar extends FlowPane {
         addauto.setOnAction((ActionEvent e) -> {
             griglia.setAddCarMode(!griglia.isAddCarMode());
         });
-        
+
         inizia.setOnAction((ActionEvent e) -> {
             ControlPanel pannello = new ControlPanel(griglia);
             inizia.setDisable(true);

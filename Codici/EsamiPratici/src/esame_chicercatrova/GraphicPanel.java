@@ -90,7 +90,7 @@ public class GraphicPanel extends Pane {
     public void setD2(int d2) {
         this.d2 = d2;
     }
-    
+
     public void drawTarget() {
         Rectangle rect = new Rectangle(target.getX() - 2, target.getY() - 2, 4, 4);
         rect.setFill(Color.PURPLE);

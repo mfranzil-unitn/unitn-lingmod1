@@ -18,5 +18,5 @@ public class Quadrato extends Rectangle {
         super(size, size);
         setFill(Color.RED);
     }
-    
+
 }

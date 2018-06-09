@@ -26,7 +26,7 @@ public class Main extends Application {
     Pannello panel;
     SpinBar roulette;
     Text titolo;
-    
+
     @Override
     public void start(Stage primaryStage) {
         BorderPane root = new BorderPane();
@@ -59,9 +59,9 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-    
+
     public void reset() {
-       roulette.clear();
+        roulette.clear();
     }
 
     /**
@@ -70,6 +70,5 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-
 
 }

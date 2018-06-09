@@ -19,24 +19,24 @@ import javafx.stage.Stage;
  * @author lucamartinelli
  */
 public class CampoMinato {
-    
+
     static Button perso;
     static Stage loseStage;
     static StackPane loseRoot;
     static Scene loseScene;
-    
+
     static Button vinto;
     static Stage winStage;
-    static StackPane winRoot;   
+    static StackPane winRoot;
     static Scene winScene;
-    
+
     static BorderPane border;
     static Scene scene;
     static Stage stage;
     static Griglia g;
     static Cella celle[][];
     static Bottoni btn;
-    
+
     static int tot = 15;
 
     CampoMinato() {
@@ -61,14 +61,14 @@ public class CampoMinato {
     }
 
     public static void controlla() {
-        if (tot < 0) { 
+        if (tot < 0) {
             lose();
-        } 
-        if(tot == 0){
-            win();
-          
         }
-       
+        if (tot == 0) {
+            win();
+
+        }
+
     }
 
     public static void lose() {
@@ -114,7 +114,7 @@ public class CampoMinato {
                 winStage.close();
             }
         });
-        
+
         winStage.setOnCloseRequest(new EventHandler() {
             @Override
             public void handle(Event event) {
@@ -123,7 +123,7 @@ public class CampoMinato {
         });
 
         winRoot.getChildren().add(vinto);
-        
+
         winScene = new Scene(winRoot, 250, 150);
         winStage.setY(stage.getY());
         winStage.setX(stage.getX() + stage.getWidth());
@@ -131,16 +131,16 @@ public class CampoMinato {
         winStage.setScene(winScene);
         winStage.show();
     }
-    
-    public static void nuovaPartita(){
+
+    public static void nuovaPartita() {
         border.getChildren().remove(g);
         Griglia.conta = 0;
         tot = 15;
-        g = new Griglia(5,celle);
+        g = new Griglia(5, celle);
         btn = new Bottoni();
         border.setCenter(g);
         border.setBottom(btn);
-        
+
     }
 
 }

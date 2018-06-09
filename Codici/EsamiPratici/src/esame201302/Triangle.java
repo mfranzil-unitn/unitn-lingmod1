@@ -18,7 +18,7 @@ public class Triangle extends Polygon {
         getPoints().addAll(new Double[]{
             x, y,
             x + size, y,
-            x + size / 2.0, y+ (size * Math.sqrt(3) / 2.0)});
+            x + size / 2.0, y + (size * Math.sqrt(3) / 2.0)});
         setFill(Color.BLUE);
     }
 }

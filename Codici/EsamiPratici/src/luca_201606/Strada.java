@@ -12,11 +12,11 @@ import javafx.scene.paint.Color;
  * @author lucamartinelli
  */
 class Strada extends Terreno {
-    
-    Strada(int i,int j) {
+
+    Strada(int i, int j) {
         posi = i;
         posj = j;
         zona.setFill(Color.GREY);
-        
+
     }
 }

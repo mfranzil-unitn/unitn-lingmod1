@@ -29,7 +29,7 @@ public class SpinBar extends HBox {
         setPadding(new Insets(100, 20, 100, 20));
         setAlignment(Pos.CENTER);
         getChildren().addAll(roulette1, roulette2, roulette3);
-        
+
         addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent e) -> {
             spin(false, panel);
         });
@@ -69,7 +69,7 @@ public class SpinBar extends HBox {
             }
         }
     }
-    
+
     public void clear() {
         for (int i = 0; i < 3; i++) {
             ((SpinItem) getChildren().get(i)).switchShape(-1);

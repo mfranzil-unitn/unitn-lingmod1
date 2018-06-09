@@ -20,5 +20,5 @@ public class Strada extends Terreno {
     public Strada() {
         setBackground(new Background(new BackgroundFill(Color.GREY, CornerRadii.EMPTY, Insets.EMPTY)));
     }
-    
+
 }

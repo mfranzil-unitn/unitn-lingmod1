@@ -80,7 +80,7 @@ public class SlotMachine extends Application {
         //
         MyButton spinButton = new MyButton("Spin", true, new ListenerSpinButton());
         MyButton payButton = new MyButton("Pay", true, new ListenerPayButton());
-        MyButton nuovaPartitaButton = new MyButton("Nuova Partita",false,new ListenerNuovaPartitaButton());             //
+        MyButton nuovaPartitaButton = new MyButton("Nuova Partita", false, new ListenerNuovaPartitaButton());             //
         buttonbar.getChildren().addAll(nuovaPartitaButton, spinButton, payButton);
         buttonbar.setSpacing(40); // spazio orizzontale tra le componenti del HBox
         buttonbar.setAlignment(Pos.CENTER);
@@ -141,6 +141,7 @@ public class SlotMachine extends Application {
         stage.show();
     }
 // ============= BOTTONI =======================================================
+
     class MyButton extends Button {
 
         MyButton(String label, boolean isDisabled, EventHandler listener) {
@@ -151,6 +152,7 @@ public class SlotMachine extends Application {
         }
     }
 // ============= LISTENERS DEI BOTTONI =========================================
+
     class ListenerNuovaPartitaButton implements EventHandler {
 
         /**

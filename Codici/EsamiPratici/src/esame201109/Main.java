@@ -10,17 +10,22 @@ import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class Main extends Application {
 
     Griglia grigliaSx, grigliaDx;
-    
+
     @Override
     public void start(Stage primaryStage) {
-        FlowPane root = new FlowPane();
-        
-        GridPane grids = new GridPane();
+        Button reset = new Button("Reset");
+        Button stampa = new Button("Stampa");
+        Text modeText = new Text("Uguale");
+        Button modeButton = new Button("Modalità");
+
+        GridPane root = new GridPane();
+        FlowPane buttons = new FlowPane();
         Scene scene = new Scene(root);
 
         grigliaSx = new Griglia(true);
@@ -32,45 +37,64 @@ public class Main extends Application {
         column2.setPercentWidth(50);
 
         RowConstraints row1 = new RowConstraints();
-        row1.setPercentHeight(100);
+        RowConstraints row2 = new RowConstraints();
+        row1.setPercentHeight(10);
+        row2.setPercentHeight(90);
 
-        grids.getColumnConstraints().addAll(column1, column2);
-        grids.getRowConstraints().add(row1);
+        root.getColumnConstraints().addAll(column1, column2);
+        root.getRowConstraints().addAll(row1, row2);
 
-        GridPane.setConstraints(grigliaSx, 0, 0);
-        GridPane.setConstraints(grigliaDx, 1, 0);
+        GridPane.setConstraints(grigliaSx, 0, 1);
+        GridPane.setConstraints(grigliaDx, 1, 1);
+        GridPane.setConstraints(reset, 0, 0);
+        GridPane.setConstraints(stampa, 1, 0);
+        GridPane.setConstraints(modeText, 2, 0);
+        GridPane.setConstraints(modeButton, 3, 0);
 
-        grids.setPadding(new Insets(20, 20, 20, 20));
-        grids.setHgap(10);
-        grids.setVgap(10);
+        root.setPadding(new Insets(20, 20, 20, 20));
+        root.setHgap(5);
+        root.setVgap(5);
 
-        grids.getChildren().addAll(grigliaSx, grigliaDx);
-
-        grids.addEventFilter(MouseEvent.MOUSE_CLICKED, (MouseEvent e) -> {
+        root.addEventFilter(MouseEvent.MOUSE_CLICKED, (MouseEvent e) -> {
             try {
                 Cella temp = (Cella) e.getTarget();
+                modeButton.setDisable(true);
+                int x = GridPane.getRowIndex(temp);
+                int y = GridPane.getColumnIndex(temp);
                 if (temp.isWhiteOnly() && temp.isCurrentlyWhite()) {
-                    grigliaDx.changeCell(GridPane.getRowIndex(temp), GridPane.getColumnIndex(temp));
+                    grigliaDx.changeCell(x, y);
                 } else if (!temp.isWhiteOnly() && !temp.isCurrentlyWhite()) {
-                    grigliaSx.changeCell(GridPane.getRowIndex(temp), GridPane.getColumnIndex(temp));
+                    grigliaSx.changeCell(x, y);
                 }
             } catch (ClassCastException ex) {
                 System.out.println("Cannot click on something else than a Cella");
             }
         });
-        
-        Button reset = new Button("Reset");
+
         reset.setOnAction((ActionEvent e) -> {
             grigliaSx.reset();
             grigliaDx.reset();
+            modeButton.setDisable(false);
         });
-        
-        Button stampa = new Button("Stampa");
+
         stampa.setOnAction((ActionEvent e) -> {
             grigliaSx.print();
         });
-        
-        root.getChildren().addAll(stampa, reset, grids);
+
+        modeButton.setOnAction((ActionEvent e) -> {
+            if (!grigliaDx.isSpeculare()) {
+                grigliaDx.setSpeculare(true);
+                grigliaSx.setSpeculare(true);
+                modeText.setText("Speculare");
+            } else {
+                grigliaDx.setSpeculare(false);
+                grigliaSx.setSpeculare(true);
+                modeText.setText("Uguale");
+            }
+        });
+
+        buttons.getChildren().addAll(stampa, reset, modeText, modeButton);
+        root.getChildren().addAll(buttons, grigliaSx, grigliaDx);
 
         primaryStage.setScene(scene);
         primaryStage.setTitle("Griglie");

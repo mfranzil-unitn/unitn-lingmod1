@@ -16,7 +16,7 @@ import javafx.scene.transform.Rotate;
 public class Slash extends Rectangle {
 
     public Slash(int size) {
-        super(size, size/10);
+        super(size, size / 10);
         setRotate(75);
         setFill(Color.CHOCOLATE);
     }

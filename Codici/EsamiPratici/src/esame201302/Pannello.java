@@ -62,7 +62,7 @@ public class Pannello extends Pane {
                 node = null;
                 break;
         }
-        
+
         try {
             node.setTranslateY(node.getTranslateY() + offset);
             if (node.getTranslateY() > getHeight()) {
@@ -79,7 +79,7 @@ public class Pannello extends Pane {
         Alert alert = new Alert(Alert.AlertType.INFORMATION, "Vince IL " + node.getClass(), ButtonType.OK);
         alert.showAndWait();
     }
-    
+
     public void moveOthers(String nome, double offset) {
         switch (nome) {
             case "C":

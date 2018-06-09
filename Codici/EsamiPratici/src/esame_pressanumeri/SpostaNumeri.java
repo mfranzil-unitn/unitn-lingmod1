@@ -44,11 +44,11 @@ public class SpostaNumeri extends Application {
                 root.getChildren().add(temp);
             }
         }
-        BottoneMovimentato vuoto = new BottoneMovimentato(2,2);
+        BottoneMovimentato vuoto = new BottoneMovimentato(2, 2);
         GridPane.setConstraints(vuoto, 2, 2);
-                buttons[2][2] = vuoto;
-                vuoto.setVisible(false);
-                root.getChildren().add(vuoto);
+        buttons[2][2] = vuoto;
+        vuoto.setVisible(false);
+        root.getChildren().add(vuoto);
 
         primaryStage.addEventFilter(KeyEvent.KEY_PRESSED, new Handler());
 
@@ -67,16 +67,17 @@ public class SpostaNumeri extends Application {
     }
 
     class Handler implements EventHandler<KeyEvent> {
+
         @Override
         public void handle(KeyEvent event) {
 
         }
     }
-    
+
     public BottoneMovimentato getNearby(int i, int j) {
         BottoneMovimentato temp = null;
-        while(!temp.getText().equals(8)) {
-            temp = buttons[i-1][j-1];
+        while (!temp.getText().equals(8)) {
+            temp = buttons[i - 1][j - 1];
         }
         return null;
     }

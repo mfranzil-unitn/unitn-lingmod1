@@ -23,8 +23,10 @@ import javafx.scene.shape.Circle;
  * @author Matteo Franzil
  */
 public class Cella extends StackPane {
+
     Circle circ;
     private boolean recentlyMoved;
+
     public Cella() {
         circ = new Circle(Griglia.BASESIZE, Color.CORNFLOWERBLUE);
         recentlyMoved = false;
@@ -32,24 +34,24 @@ public class Cella extends StackPane {
         setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
         circ.setVisible(false);
         getChildren().add(circ);
-        
+
         addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent e) -> {
             switchCirc();
         });
     }
-    
+
     public boolean isCircVisible() {
         return circ.isVisible();
     }
-    
+
     public void switchCirc() {
         if (circ.isVisible()) {
-                circ.setVisible(false);
-            } else {
-                circ.setVisible(true);
-            }
+            circ.setVisible(false);
+        } else {
+            circ.setVisible(true);
+        }
     }
-    
+
     public void setCircleVisible(boolean isVisible) {
         if (isVisible) {
             circ.setVisible(true);
@@ -71,5 +73,5 @@ public class Cella extends StackPane {
     public void setRecentlyMoved(boolean recentlyMoved) {
         this.recentlyMoved = recentlyMoved;
     }
-    
+
 }

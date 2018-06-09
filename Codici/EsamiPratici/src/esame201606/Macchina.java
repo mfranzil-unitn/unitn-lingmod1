@@ -36,7 +36,7 @@ public class Macchina extends Circle {
     public int getRelativeY() {
         return relativeY;
     }
-    
+
     public void setRelativeX(int x) {
         this.relativeX = x;
     }
@@ -44,7 +44,7 @@ public class Macchina extends Circle {
     public void setRelativeY(int relativeY) {
         this.relativeY = relativeY;
     }
-    
+
     public static int getMacchinedisponibili() {
         return macchinedisponibili;
     }

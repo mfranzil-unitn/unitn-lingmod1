@@ -25,7 +25,7 @@ public class Cella extends Pane {
 
     public static final int SIZE = 20;
     private boolean whiteOnly;
-    
+
     public Cella(boolean whiteOnly) {
         this.whiteOnly = whiteOnly;
         setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
@@ -34,7 +34,7 @@ public class Cella extends Pane {
         setMaxHeight(SIZE);
         setPrefWidth(SIZE);
         setMaxWidth(SIZE);
-        
+
         addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent e) -> {
             try {
                 switchBackground();
@@ -55,7 +55,7 @@ public class Cella extends Pane {
     public boolean isWhiteOnly() {
         return whiteOnly;
     }
-    
+
     public boolean isCurrentlyWhite() {
         boolean res;
         if (getBackground().getFills().get(0).getFill().equals(Color.WHITE)) {
@@ -65,9 +65,9 @@ public class Cella extends Pane {
         }
         return res;
     }
-    
+
     public void forceSwitchBackground() {
         setBackground(new Background(new BackgroundFill(isCurrentlyWhite() ? Color.BLACK : Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
     }
-    
+
 }

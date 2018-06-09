@@ -30,8 +30,7 @@ public class Launcher extends Application {
         stage.setScene(mainScene);
         stage.setResizable(false);
         stage.show();
-        
-        
+
         ControlWindow controlWindow = new ControlWindow(mainWindow);
         Scene controlScene = new Scene(controlWindow, 350, 300);
         Stage controlStage = new Stage();

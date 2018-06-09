@@ -30,7 +30,7 @@ public class Main extends Application {
         column2.setPercentWidth(30);
         column1.setHgrow(Priority.ALWAYS);
         root.getColumnConstraints().addAll(column1, column2);
-        
+
         RowConstraints row1 = new RowConstraints();
         row1.setPercentHeight(100);
         root.getRowConstraints().add(row1);

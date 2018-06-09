@@ -13,21 +13,20 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 
-
-
 /**
  *
  * @author lucamartinelli
  */
-public abstract class Terreno extends StackPane{
+public abstract class Terreno extends StackPane {
+
     boolean circ;
     Rectangle zona;
     Circle c;
-    int posi,posj;
-    
-    Terreno(){
+    int posi, posj;
+
+    Terreno() {
         circ = false;
-        zona = new Rectangle(50,50);
+        zona = new Rectangle(50, 50);
         this.getChildren().add(zona);
         c = new Circle(25);
         c.setFill(Color.RED);
@@ -35,7 +34,5 @@ public abstract class Terreno extends StackPane{
         c.setVisible(circ);
         c.setMouseTransparent(true);
     }
-    
-}
 
-    
+}

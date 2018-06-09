@@ -13,9 +13,9 @@ import javafx.scene.paint.Color;
  */
 class Prato extends Terreno {
 
-    Prato(int i,int j) {
+    Prato(int i, int j) {
         posi = i;
-        posj= j;
+        posj = j;
         zona.setFill(Color.GREEN);
     }
 }

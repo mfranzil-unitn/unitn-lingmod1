@@ -6,10 +6,11 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
 public class Slot {
+
     Rectangle r;
-    
-    Slot(){
-        r=new Rectangle(200,300);
+
+    Slot() {
+        r = new Rectangle(200, 300);
         r.setFill(Color.ANTIQUEWHITE);
         r.setStroke(Color.BLACK);
     }

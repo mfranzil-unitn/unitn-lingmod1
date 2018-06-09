@@ -44,7 +44,7 @@ public class ControlPanel extends VBox {
                 d1.setText(oldValue);
             }
         });
-        
+
         resa.setOnAction((ActionEvent e) -> {
             graphic.drawTarget();
             label.setText("HAI PERSO");

@@ -42,6 +42,7 @@ public class Spinbar extends HBox {
 
     /**
      * Metodo per verificare se tutti i simboli presenti sono uguali
+     *
      * @return true se tutti i simboli sono uguali, false altrimenti
      */
     public boolean areSymbolsEqual() {
@@ -52,8 +53,10 @@ public class Spinbar extends HBox {
         }
         return true;
     }
+
     /**
      * Cambia l'i-esimo simbolo della spinbar - senza animazioni
+     *
      * @param i indice dell'elemento da modificare
      */
     public void spinElementWithoutAnimation(int i) {
@@ -63,8 +66,10 @@ public class Spinbar extends HBox {
         this.getChildren().remove(i);
         this.getChildren().add(i, simbolo[i]);
     }
+
     /**
      * Cambia l'i-esimo simbolo della spinbar - con animazioni
+     *
      * @param i indice dell'elemento da modificare
      */
     public void spinElement(final int i) {

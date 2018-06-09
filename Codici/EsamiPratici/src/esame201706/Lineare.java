@@ -70,7 +70,7 @@ public class Lineare extends Application {
             lastPressedButton = 2;
 
         });
-        
+
         sqrt.setOnAction((ActionEvent event) -> {
             bigGrid.setSqrt(linearGrid);
             lastPressedButton = 3;
@@ -92,8 +92,8 @@ public class Lineare extends Application {
 
         root.setPadding(new Insets(30, 30, 30, 30));
         root.getChildren().addAll(bigGrid, linearGrid, rnd, allOn, allOff, linear, sin, cos, sqrt);
-        
-        primaryStage.setOnCloseRequest((WindowEvent e)-> {
+
+        primaryStage.setOnCloseRequest((WindowEvent e) -> {
             Platform.exit();
         });
         Scene scene = new Scene(root, bigGrid.getMinWidth(), bigGrid.getMinHeight());
@@ -102,7 +102,6 @@ public class Lineare extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-
 
     /**
      * @param args the command line arguments

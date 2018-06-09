@@ -11,22 +11,23 @@ import javafx.scene.text.Text;
 import javafx.util.Duration;
 
 public class Money {
+
     Circle circle;
     Text testo;
     StackPane c;
-    
-    Money(){
-        circle=new Circle(40);
+
+    Money() {
+        circle = new Circle(40);
         circle.setFill(Color.YELLOW);
         circle.setStroke(Color.BLACK);
-        testo=new Text("1 euro");
-        c=new StackPane(circle, testo);
-        circle.setOnMouseClicked(new EventHandler(){
+        testo = new Text("1 euro");
+        c = new StackPane(circle, testo);
+        circle.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
-                PathTransition a=new PathTransition();
+                PathTransition a = new PathTransition();
             }
-            
+
         });
     }
 }

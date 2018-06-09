@@ -22,7 +22,6 @@ public class Triangolo extends Polygon {
             x + size, y,
             x + size / 2.0, y - (size * Math.sqrt(3) / 2.0)});
         setFill(Color.GREEN);
-    }    
-    
-    
+    }
+
 }

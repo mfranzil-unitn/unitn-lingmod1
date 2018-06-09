@@ -22,7 +22,7 @@ public class ControlPanel extends VBox {
 
     Button up, down, start, stop, reset;
     TextField figura;
-    
+
     Thread corsa;
 
     public ControlPanel(Pannello pannello) {
@@ -48,19 +48,19 @@ public class ControlPanel extends VBox {
             start.setDisable(false);
             stop.setDisable(false);
         });
-        
+
         start.setOnAction((ActionEvent e) -> {
             pannello.start();
             stop.setDisable(false);
             start.setDisable(true);
         });
-        
+
         stop.setOnAction((ActionEvent e) -> {
             pannello.stop(corsa);
             stop.setDisable(true);
             start.setDisable(false);
         });
-        
+
         figura = new TextField();
         figura.setPrefSize(50, USE_PREF_SIZE);
         figura.textProperty().addListener((ObservableValue<? extends String> observable, String oldValue, String newValue) -> {

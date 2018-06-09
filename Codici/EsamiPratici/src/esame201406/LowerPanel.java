@@ -23,29 +23,30 @@ public class LowerPanel extends HBox {
 
     Thread thr;
     Button print, clear, step, start, stop;
+
     public LowerPanel(Griglia griglia) {
         print = new Button("Print");
         clear = new Button("Clear");
         step = new Button("Step");
         start = new Button("Start");
-        stop = new Button("Stop");       
-                
+        stop = new Button("Stop");
+
         print.setOnAction((ActionEvent e) -> {
             print(griglia.getCelle());
         });
-        
+
         clear.setOnAction((ActionEvent e) -> {
             griglia.clearAll();
         });
-        
+
         step.setOnAction((ActionEvent e) -> {
             griglia.stepAll();
         });
-        
+
         start.setOnAction((ActionEvent e) -> {
             thr = griglia.startTransition();
         });
-        
+
         stop.setOnAction((ActionEvent e) -> {
             killThread();
         });
@@ -65,12 +66,12 @@ public class LowerPanel extends HBox {
 
         for (int i = 0; i < celle.size(); i++) { // Lista memorizzata per righe
             text.appendText(celle.get(i).isCircVisible() ? "1" : "0");
-            if ((i+1) % Griglia.N == 0) {
+            if ((i + 1) % Griglia.N == 0) {
                 text.appendText("\n");
             }
         }
     }
-    
+
     public void killThread() {
         try {
             thr.interrupt();

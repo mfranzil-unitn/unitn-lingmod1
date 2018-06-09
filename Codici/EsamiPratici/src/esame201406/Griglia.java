@@ -17,8 +17,7 @@ import javafx.scene.layout.GridPane;
 public class Griglia extends GridPane {
 
     public static int N;
-    
-    
+
     public static final int BASESIZE = 18;
     private LinkedList<Cella> celle;
     public int currentAlg;
@@ -64,7 +63,7 @@ public class Griglia extends GridPane {
             celle.get(i).setCircleVisible(false);
         }
     }
-    
+
     public Thread startTransition() {
         Task<Integer> task = new Task<Integer>() {
             @Override
@@ -98,7 +97,7 @@ public class Griglia extends GridPane {
         }
         return res;
     }
-    
+
     public int getAlgConstraint(int i) {
         int res = i;
         switch (currentAlg) {
@@ -117,7 +116,7 @@ public class Griglia extends GridPane {
         }
         return res;
     }
-    
+
     public void setCurrentAlg(int Alg) {
         currentAlg = Alg;
     }

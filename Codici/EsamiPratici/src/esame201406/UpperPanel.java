@@ -25,15 +25,15 @@ public class UpperPanel extends HBox {
         alg2.setToggleGroup(tgl);
         alg3.setToggleGroup(tgl);
         getChildren().addAll(alg1, alg2, alg3);
-        
+
         alg1.setOnAction((ActionEvent e) -> {
             griglia.setCurrentAlg(1);
         });
-        
+
         alg2.setOnAction((ActionEvent e) -> {
             griglia.setCurrentAlg(2);
         });
-        
+
         alg3.setOnAction((ActionEvent e) -> {
             griglia.setCurrentAlg(3);
         });

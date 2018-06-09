@@ -21,12 +21,12 @@ import javafx.stage.Stage;
  * @author Matteo Franzil
  */
 public class PressaNumeri extends Application {
-    
+
     ArrayList<Button> bottoni;
-    
+
     @Override
     public void start(Stage primaryStage) {
-        
+
         GridPane root = new GridPane();
         root.setPrefHeight(100);
         root.setPrefWidth(100);
@@ -36,7 +36,7 @@ public class PressaNumeri extends Application {
             column.setPercentWidth(33);
             RowConstraints row = new RowConstraints();
             row.setPercentHeight(33);
-            for (int i = 0; i < 3; i++) {                
+            for (int i = 0; i < 3; i++) {
                 Button temp = new Button(String.valueOf(3 * j + i));
                 temp.setPrefHeight(1000);
                 temp.setPrefWidth(1000);
@@ -46,9 +46,9 @@ public class PressaNumeri extends Application {
             }
         }
         primaryStage.addEventFilter(KeyEvent.KEY_PRESSED, new Handler());
-        
+
         Scene scene = new Scene(root);
-        
+
         primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);
         primaryStage.show();
@@ -60,9 +60,9 @@ public class PressaNumeri extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
     class Handler implements EventHandler<KeyEvent> {
-        
+
         @Override
         public void handle(KeyEvent event) {
             if (event.getCode().isDigitKey() && !event.getCode().getName().equals("9")) {

@@ -56,7 +56,7 @@ public class Griglia extends GridPane {
     }
 
     public void changeCell(int i, int j) {
-        Node temp = standardGetElementAt(i, j);
+        Node temp = standardGetElementAt(i, (speculare ? N - 1 - j : j));
         if (temp instanceof Cella) {
             ((Cella) temp).forceSwitchBackground();
         }

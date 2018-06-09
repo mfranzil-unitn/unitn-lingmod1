@@ -276,7 +276,7 @@ public class Griglia extends GridPane {
         }
         return res;
     }
-    
+
     public Node standardGetElementAt(int i, int j) {
         Node res = null;
         for (Node x : getChildren()) {
@@ -285,7 +285,7 @@ public class Griglia extends GridPane {
                 break;
             }
         }
-        return res;  
+        return res;
     }
 
     public void stopThread() {

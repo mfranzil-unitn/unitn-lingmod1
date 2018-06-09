@@ -5,7 +5,6 @@ package luca_201406;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
@@ -41,21 +40,21 @@ public class Common extends Application {
 
         a = new Comandi();
         b = new Grafica();
-        
+
         a.primarystage.setOnCloseRequest(new EventHandler() {
             @Override
             public void handle(Event event) {
                 b.secondstage.close();
             }
         });
-        
+
         a.clearall.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                for(int i = 0; i < max; i++){
+                for (int i = 0; i < max; i++) {
                     b.root.getChildren().remove(figure[i].forma);
-                    figure[i].x=0;
-                    figure[i].y=0;
+                    figure[i].x = 0;
+                    figure[i].y = 0;
                 }
                 min = 0;
                 max = 0;
@@ -64,9 +63,9 @@ public class Common extends Application {
         a.clearlast.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                b.root.getChildren().remove(figure[max-1].forma);
-                figure[max-1].x=0;
-                figure[max-1].y=0;
+                b.root.getChildren().remove(figure[max - 1].forma);
+                figure[max - 1].x = 0;
+                figure[max - 1].y = 0;
                 max--;
             }
         });
@@ -74,16 +73,16 @@ public class Common extends Application {
             @Override
             public void handle(ActionEvent event) {
                 b.root.getChildren().remove(figure[min].forma);
-                figure[min].x=0;
-                figure[min].x=0;
+                figure[min].x = 0;
+                figure[min].x = 0;
                 min++;
             }
         });
-        
-        a.primarystage.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>(){
+
+        a.primarystage.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
-                switch(event.getCode()){
+                switch (event.getCode()) {
                     case C:
                         a.clearall.fireEvent(new ActionEvent());
                         break;
@@ -94,14 +93,14 @@ public class Common extends Application {
                         a.clearlast.fireEvent(new ActionEvent());
                         break;
                 }
-                
+
             }
         });
 
-        b.secondstage.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>(){
+        b.secondstage.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
-                switch(event.getCode()){
+                switch (event.getCode()) {
                     case C:
                         a.clearall.fireEvent(new ActionEvent());
                         break;
@@ -112,11 +111,11 @@ public class Common extends Application {
                         a.clearlast.fireEvent(new ActionEvent());
                         break;
                 }
-                
+
             }
-            
+
         });
-        
+
         a.print.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -151,7 +150,7 @@ public class Common extends Application {
 
     public void creafigura(Double paramx, Double paramy) {
         dim = Integer.parseInt(a.scale.getText());
-        figure[max] = new Figura(paramx,paramy);
+        figure[max] = new Figura(paramx, paramy);
         switch (int_forma) {
             case 0:
                 figure[max].forma = new Circle(paramx, paramy, dim / 2);
@@ -185,8 +184,6 @@ public class Common extends Application {
     }
 
     public void stampa() {
-        d = new Dati(min,max,figure);
+        d = new Dati(min, max, figure);
     }
 }
-
-

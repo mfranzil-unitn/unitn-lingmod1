@@ -15,10 +15,9 @@ import javafx.scene.transform.Rotate;
 public class Rombo extends Quadrato {
 
     public Rombo(double x, double y, double size, Color c) {
-        super(x-size/2, y-size/2, size, c);
+        super(x - size / 2, y - size / 2, size, c);
         Rotate rot = new Rotate(45, x, y);
         getTransforms().add(rot);
     }
-    
-    
+
 }

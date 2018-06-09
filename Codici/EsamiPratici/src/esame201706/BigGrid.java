@@ -35,7 +35,7 @@ public class BigGrid extends GridPane {
         clear();
         while (i < DIM && j < DIM) {
             if (linearGrid.units.get(i).circleOn) {
-                units.get(i).get(DIM-j-1).drawCircle(this);
+                units.get(i).get(DIM - j - 1).drawCircle(this);
             }
             i++;
             j++;
@@ -72,6 +72,7 @@ public class BigGrid extends GridPane {
             }
         }
     }
+
     public void setSqrt(LinearGrid linearGrid) {
         clear();
         for (int i = 0; i < DIM; i++) {
@@ -88,12 +89,11 @@ public class BigGrid extends GridPane {
             }
         }
     }
-    
 
     public long discretizza(double y, double ymin, double ymax, int nmax) {
         return (long) ((nmax - 1) * (1 - (y - ymin) / (ymax - ymin)));
     }
-    
+
     public void clear() {
         for (int i = 0; i < DIM; i++) {
             for (int j = 0; j < DIM; j++) {
@@ -101,5 +101,5 @@ public class BigGrid extends GridPane {
             }
         }
     }
-    
+
 }

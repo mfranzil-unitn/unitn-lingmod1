@@ -46,11 +46,11 @@ public class MainWindow extends GridPane {
         Squadra irlanda = new Squadra("Irlanda", new BandieraTreFasceVerticali(Color.rgb(0, 154, 73), Color.rgb(255, 255, 255), Color.rgb(255, 121, 0)));
         Squadra ungheria = new Squadra("Ungheria", new BandieraTreFasceOrizzontali(Color.rgb(205, 42, 62), Color.rgb(255, 255, 255), Color.rgb(67, 111, 77)));
         g3 = new Girone(svezia, belgio, irlanda, ungheria);
-        
+
         Squadra finlandia = new Squadra("Finlandia", new BandieraCroce(Color.rgb(0, 53, 128), Color.rgb(255, 255, 255)));
         Squadra danimarca = new Squadra("Danimarca", new BandieraCroce(Color.rgb(255, 255, 255), Color.rgb(208, 12, 51)));
         Squadra polonia = new Squadra("Polonia", new BandieraDueFasceOrizzontali(Color.rgb(255, 255, 255), Color.rgb(220, 20, 60)));
-        Squadra ucraina = new Squadra("Ucraina", new BandieraDueFasceOrizzontali(Color.rgb(0, 91,187), Color.rgb(255, 213, 0)));
+        Squadra ucraina = new Squadra("Ucraina", new BandieraDueFasceOrizzontali(Color.rgb(0, 91, 187), Color.rgb(255, 213, 0)));
         g4 = new Girone(finlandia, danimarca, polonia, ucraina);
 
         super.add(g1.getRiassunto(Color.WHITE), 0, 0);
