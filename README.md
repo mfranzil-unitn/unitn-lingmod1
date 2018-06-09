@@ -26,5 +26,5 @@ Feel free to contribute by forking the project and issuing a pull request. Any c
 
 ## Authors
 * **Matteo Franzil** - *Initial work* - [mfranzil](https://github.com/mfranzil)
-* **Luca Martinelli** - [lucagump](https://github.com/lucagump) code samples in /EsamiPratici
+* **Luca Martinelli** code samples in /EsamiPratici - [lucagump](https://github.com/lucagump) 
 * **Carlo Corradini** - code samples in /EsamiPratici
