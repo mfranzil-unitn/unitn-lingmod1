@@ -3,20 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package esame_slotmachine;
+package esame201409;
 
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.transform.Rotate;
 
 /**
  *
  * @author Matteo Franzil
  */
-public class Quadrato extends Rectangle {
+public class Slash extends Rectangle {
 
-    public Quadrato(int size) {
-        super(size, size);
-        setFill(Color.RED);
+    public Slash(int size) {
+        super(size, size / 10);
+        setRotate(75);
+        setFill(Color.CHOCOLATE);
     }
-
 }
