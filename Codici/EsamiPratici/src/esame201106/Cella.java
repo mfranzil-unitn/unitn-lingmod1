@@ -36,7 +36,9 @@ public class Cella extends StackPane {
         this.defaultColor = color;
         setBackground(new Background(new BackgroundFill(color, new CornerRadii(10), Insets.EMPTY)));
         setPrefWidth(SIZE);
+        setMinWidth(10);
         setPrefHeight(SIZE);
+        setMinHeight(10);
 
         ellipse = new Circle(this.SIZE * 0.45, Pannello.C4);
         ellipse.setVisible(false);

@@ -9,6 +9,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Priority;
 import javafx.scene.layout.RowConstraints;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -28,10 +29,16 @@ public class Main extends Application {
         ColumnConstraints column1 = new ColumnConstraints();
         ColumnConstraints column2 = new ColumnConstraints();
         column1.setPercentWidth(80);
+        column1.setHgrow(Priority.ALWAYS);
         column2.setPercentWidth(20);
 
         RowConstraints row1 = new RowConstraints();
         row1.setPercentHeight(100);
+        row1.setVgrow(Priority.ALWAYS);
+
+        root.getColumnConstraints().addAll(column1, column2);
+        root.getRowConstraints().add(row1);
+        
 
         GridPane.setConstraints(pannello, 0, 0);
         GridPane.setConstraints(buttons, 1, 0);
