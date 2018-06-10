@@ -50,10 +50,6 @@ public class Pannello extends GridPane {
             getRowConstraints().add(row);
         }
     }
-    
-    public void setConstraints() {
-        
-    }
 
     public void stampa() {
         TextArea area = new TextArea();
