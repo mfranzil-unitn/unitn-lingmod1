@@ -22,13 +22,13 @@ import javafx.stage.Stage;
  * @author Matteo Franzil
  */
 public class Main extends Application {
-    
+
     @Override
     public void start(Stage primaryStage) {
         Pannello pannello = new Pannello();
-        VBox buttons = new ButtonBox(pannello);                             
+        VBox buttons = new ButtonBox(pannello);
         GridPane root = new GridPane();
-                        
+
         // Constraints
         ColumnConstraints column1 = new ColumnConstraints();
         ColumnConstraints column2 = new ColumnConstraints();
@@ -37,19 +37,18 @@ public class Main extends Application {
 
         RowConstraints row1 = new RowConstraints();
         row1.setPercentHeight(100);
-                
+
         root.getColumnConstraints().addAll(column1, column2);
         root.getRowConstraints().addAll(row1);
-        
+
         GridPane.setConstraints(buttons, 1, 0);
         GridPane.setConstraints(pannello, 0, 0);
         //
-        
-        
+
         root.getChildren().addAll(pannello, buttons);
-        
+
         Scene scene = new Scene(root);
-        
+
         primaryStage.setTitle("Non so più che nome dare a sti esami");
         primaryStage.setScene(scene);
         primaryStage.show();
@@ -61,5 +60,5 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }

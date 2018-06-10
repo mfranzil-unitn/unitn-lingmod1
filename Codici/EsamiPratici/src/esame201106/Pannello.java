@@ -73,7 +73,7 @@ public class Pannello extends GridPane {
         LinkedList<Cella> celle = new LinkedList<>();
         for (Node a : getChildren()) {
             if (a instanceof Cella) {
-            celle.add((Cella) a);
+                celle.add((Cella) a);
             }
         }
         getChildren().clear();
@@ -81,7 +81,7 @@ public class Pannello extends GridPane {
         Cella cella;
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
-                cella = celle.get(i*N + j);
+                cella = celle.get(i * N + j);
                 GridPane.setConstraints(cella, j, i, 1, 1);
                 getChildren().addAll(cella);
             }

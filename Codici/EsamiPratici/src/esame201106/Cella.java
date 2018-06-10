@@ -37,10 +37,10 @@ public class Cella extends StackPane {
         setBackground(new Background(new BackgroundFill(color, new CornerRadii(10), Insets.EMPTY)));
         setPrefWidth(SIZE);
         setPrefHeight(SIZE);
-        
-        ellipse = new Circle(this.SIZE*0.45, Pannello.C4);
+
+        ellipse = new Circle(this.SIZE * 0.45, Pannello.C4);
         ellipse.setVisible(false);
-        
+
         getChildren().add(ellipse);
 
         addEventHandler(MouseEvent.MOUSE_CLICKED, e -> {
@@ -71,7 +71,5 @@ public class Cella extends StackPane {
     public String toString() {
         return "Cella di colore " + color.toString();
     }
-    
-    
 
 }

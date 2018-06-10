@@ -31,8 +31,8 @@ public class Rett extends GridPane {
 
     public Rett(boolean random) {
         Pane disegno = new StackPane();
-        disegno.setPrefHeight(size*1.2);
-        disegno.setPrefWidth(size*1.2);
+        disegno.setPrefHeight(size * 1.2);
+        disegno.setPrefWidth(size * 1.2);
         disegno.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
         if (random) {
             r = new Button("r");
