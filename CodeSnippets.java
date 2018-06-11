@@ -202,5 +202,64 @@ SequentialTransition sq = new SequentialTransition(fadeTransition,
         translateTransition);
 ParallelTransition pt = new ParallelTransition(/* ... */);
     }
-
+    
+// Ricerca di un elemento in GridPane
+public Node standardGetElementAt(int i, int j) {
+    Node res = null;
+    for (Node x : getChildren()) {
+        if (GridPane.getRowIndex(x) == i && GridPane.getColumnIndex(x) == j) {
+            res = x;
+            break;
+        }
+    }
+    return res;  
 }
+
+root.setPadding(new Insets(20, 20, 20, 20)); // spazio tra il resto
+root.setHgap(10); // GridPane per lo spazio tra i node
+root.setVgap(10);
+
+// Ottenere colore in background
+getBackground().getFills().get(0).getFill().equals(Color.WHITE)
+
+// Punti di costruzione di un "+"
+getPoints().addAll(
+    x, y,
+    x, y + size / 2,
+    x - size / 6, y + size / 2,
+    x - size / 6, y,
+    x - size / 6 - size / 2, y,
+    x - size / 6 - size / 2, y - size / 6,
+    x - size / 6, y - size / 6,
+    x - size / 6, y - size / 6 - size / 2,
+    x, y - size / 6 - size / 2,
+    x, y - size / 6,
+    x + size / 2, y - size / 6,
+    x + size / 2, y
+);
+
+// Varie ed eventuali
+System.arraycopy(Object src, int srcPos,
+Object dest, int destPos, int length);
+System.currentTimeMillis();		// restituisce un long dalla epoca Unix
+
+// Parsing sample
+Integer.parseint(string);		
+Float.parseFloat(string);
+String.charAt(0);				
+
+// Iterator sample
+Iterator i = x.iterator();
+while (i.hasNext()) {
+if (!cond(i.next())) {
+    i.remove();
+}
+
+// Riga di comando (compile, run, jar)
+// javac -verbose -sourcepath "src/" -d
+//     "build/classes/" "src/it/unitn/prog2/HelloWorldApp.java"
+//
+// java -verbose -classpath build/classes it.unitn.prog2.HelloWorldApp args
+// 
+// jar cfe HelloWorldApp.jar it.unitn.prog2.HelloWorldApp
+//      -C build/classes/ it/unitn/prog2/HelloWorldApp.class

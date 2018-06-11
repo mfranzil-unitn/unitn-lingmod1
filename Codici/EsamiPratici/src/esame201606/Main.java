@@ -11,6 +11,7 @@ import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
@@ -44,10 +45,11 @@ public class Main extends Application {
             Platform.exit();
 
         });
-
         primaryStage.setTitle("Terreno");
         primaryStage.setScene(scene);
         primaryStage.show();
+        
+        
     }
 
     /**

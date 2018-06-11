@@ -217,7 +217,6 @@ public class Griglia extends GridPane {
         } else {
             System.out.println("Movement failed: illegal position");
         }
-
     }
 
     public Macchina findCarCoordinates(int possibleX, int possibleY) {
