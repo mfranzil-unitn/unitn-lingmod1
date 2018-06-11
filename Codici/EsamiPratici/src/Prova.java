@@ -5,9 +5,6 @@ class A {
         System.out.print("X");
     }
 
-    A() {
-        System.out.print("Y");
-    }
 
     public void finalize() {
         System.out.print("Z");
