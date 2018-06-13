@@ -1,0 +1,50 @@
+V	Di default l’operatore == e il metodo equals fanno la stessa cosa.	
+Due oggetti per cui equals è vero possono avere variabili pubbliche con valori differenti	
+Due oggetti per cui equals è vero sono sempre identici	
+E' corretto scrivere Integer k = 3;	
+Ereditarietà multipla è permessa con le interfacce e le classi astratte.	
+Gli identificatori di oggetto sono concettualmente equivalenti ai puntatori	
+Il costruttore chiama automaticamente il costruttore della superclasse con gli stessi parametri. Se nella superclasse non è disponibile un costruttore con la stessa firma, viene chiamato il costruttore vuoto.	
+Il costruttore di una classe può non essere visibile ali'esterno della classe stessa.	
+Il garbage collector di Java sospende l’esecuzione del programma finchè non ha finito di liberare la memoria.	
+Il main può accedere a qualunque variabile di istanza della classe in cui è contenuto.	
+Il main può sempre accedere a qualunque variabile di istanza della classe in cui è contenuto.	
+Il metodo finalize() chiama automaticamente il corrispondente metodo della superclasse	
+In C++ le variabili globali non stanno nè in Heap nè in Stack	
+In Java esiste ereditarietà multipla	
+In Java non esistono le variabili globali	
+In un progetto ci possono essere più classi con lo stesso nome	
+In un progetto ci possono essere tanti metodi public static void main(String a[]);	
+In un programma ci possono essere più classi con lo stesso nome	
+In un programma ci può essere un solo metodo public static void main(String[] args)	
+In una classe ci può essere un solo metodo chiamato main	
+int a[] è un oggetto	
+Java usa solo la heap e non lo stack	
+Java usa solo la heap perché tutta la memoria è allocata dinamicamente con le new()	
+L’esistenza in una classe di un metodo f(int x), e in una sua superclasse di un metodo f(float x) è un esempio di overriding	
+L’esistenza in una classe di un metodo f(int x), e in una sua superclasse di un metodo f(String s) è un esempio di overriding	
+Le variabili dichiarate static non sono modificabili dai metodi privati	
+L'esistenza in una classe di un metodo f(int x) e di uno f(String s) è un esempio di overloading	
+L'esistenza in una classe di un metodo f(int x) e di uno f(String s) in una sua sottoclasse è un esempio di overloading	
+Nei metodi statici non è possibile leggere e scrivere le variabili di istanza	
+Nel main non posso definire variabili non statiche	
+Nel main si può leggere una qualunque variabile di istanza della classe in cui è contenuto.	
+Non è possibile chiamare il metodo equals su una classe generica a meno che essa non dichiari l’interfaccia Comparable	
+Non è possibile istanziare una Collection	
+Poichè Java usa sempre dynamic binding, esso usa sempre la heap e mai lo stack.	
+Se A è padre di B la scrittura B a=(B)(new A()); genera errore a compile time	
+Se A è padre di B la scrittura B a=new A(); genera errore a runtime	
+Se a.equals(b) è falso, deve essere a.hashCode!=b.hashCode	
+Se a.equals(b) è vero, deve essere a.hashCode()==b.hashCode()	
+Se a.hashCode()!=b.hashCode(), a.equals(b) deve essere falso	
+Se a.hashCode()==b.hashCode(), a.equals(b) deve essere vero	
+Se B estende A la scrittura B a=new A(); genera errore a compile time	
+Se di un metodo f faccio overloading non è detto che ci siano più “signatures” (firme) di metodi legate al nome f	
+Se di un metodo f faccio overriding non è detto che ci siano più “signatures” (firme) di metodi legate al nome f	
+Se una classe è astratta è permesso usarla per effettuare ereditarietà multipla	
+Se una Collection è specializzata tramite una generic gli oggetti estratti dal relativo iteratore non richiedono un cast.	
+Una classe astratta può implementare al massimo una interfaccia	
+Una classe figlia può fare l'overriding di un metodo final della classe padre	
+Una classe figlia può fare overloading di un metodo final della classe padre	
+Una Interface non può ereditare da una classe	
+Una Interface può estendere una classe
