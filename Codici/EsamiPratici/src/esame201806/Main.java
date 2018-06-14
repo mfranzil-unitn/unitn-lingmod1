@@ -86,7 +86,7 @@ public class Main extends Application {
 
         Scene scene = new Scene(root);
 
-        primaryStage.setResizable(false);
+        // primaryStage.setResizable(false);
         primaryStage.setOnCloseRequest(e -> Platform.exit());
         primaryStage.setTitle("Torre di Hanoi");
         primaryStage.setScene(scene);
