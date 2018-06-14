@@ -22,7 +22,7 @@ You can find the following material in the repo:
 * CodeSnippets.java - A file containing useful files, to be printed and brought at the exam as a reference.
 
 ## Contribute
-Feel free to contribute by forking the project and issuing a pull request. Any contribution to the /EsamiPratici project and CodeSnippets.java is more than welcome
+Feel free to contribute by forking the project and issuing a pull request. Any contribution to the /EsamiPratici project and CodeSnippets.java is more than welcome.
 
 ## Authors
 * **Matteo Franzil** - *Initial work* - [mfranzil](https://github.com/mfranzil)
