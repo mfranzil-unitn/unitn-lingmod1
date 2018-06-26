@@ -5,7 +5,6 @@
  */
 package esame201109;
 
-import static java.awt.SystemColor.info;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
@@ -14,7 +13,6 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 /**
- *
  * @author Matteo Franzil
  */
 public class Griglia extends GridPane {
@@ -36,12 +34,12 @@ public class Griglia extends GridPane {
 
     }
 
-    public void setSpeculare(boolean speculare) {
-        this.speculare = speculare;
-    }
-
     public boolean isSpeculare() {
         return speculare;
+    }
+
+    public void setSpeculare(boolean speculare) {
+        this.speculare = speculare;
     }
 
     public Node standardGetElementAt(int i, int j) {

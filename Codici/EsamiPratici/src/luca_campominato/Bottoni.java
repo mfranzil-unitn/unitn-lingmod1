@@ -5,14 +5,14 @@
  */
 package luca_campominato;
 
-import static javafx.application.Application.STYLESHEET_CASPIAN;
 import javafx.geometry.Pos;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
+import static javafx.application.Application.STYLESHEET_CASPIAN;
+
 /**
- *
  * @author lucamartinelli
  */
 public class Bottoni extends HBox {

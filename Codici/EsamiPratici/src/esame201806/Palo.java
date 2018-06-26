@@ -5,10 +5,11 @@
  */
 package esame201806;
 
-import java.util.LinkedList;
-import java.util.NoSuchElementException;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+
+import java.util.LinkedList;
+import java.util.NoSuchElementException;
 
 /**
  * Classe che rappresenta un palo del gioco delle Torri di Hanoi. Viene
@@ -20,10 +21,9 @@ import javafx.scene.shape.Rectangle;
  */
 public class Palo extends Rectangle {
 
+    private static int idCount = 0;
     private LinkedList<Disco> dischi;
     private int id;
-
-    private static int idCount = 0;
 
     /**
      * Costruisce un nuovo Palo assegnandogli un ID univoco.

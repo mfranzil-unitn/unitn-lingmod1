@@ -5,21 +5,16 @@
  */
 package esame201409;
 
-import java.util.LinkedList;
-import java.util.Random;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Border;
-import javafx.scene.layout.BorderStroke;
-import javafx.scene.layout.BorderStrokeStyle;
-import javafx.scene.layout.BorderWidths;
-import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Shape;
 
+import java.util.LinkedList;
+import java.util.Random;
+
 /**
- *
  * @author Matteo Franzil
  */
 public class SpinItem extends StackPane {
@@ -41,6 +36,7 @@ public class SpinItem extends StackPane {
             }
         });
 
+
         setStyle("-fx-border-color: black");
     }
 
@@ -51,8 +47,9 @@ public class SpinItem extends StackPane {
         forme.add(new Rombo(50));
         forme.add(new Plus(50));
         forme.add(new Slash(50));
-        for (int i = 0; i < forme.size(); i++) {
-            forme.get(i).setVisible(false);
+
+        for (Shape aForme : forme) {
+            aForme.setVisible(false);
         }
     }
 
@@ -60,7 +57,7 @@ public class SpinItem extends StackPane {
         if (currentshape > -1 && number > -1) {
             forme.get(currentshape).setVisible(false);
             forme.get(number).setVisible(true);
-        } else if (currentshape > -1 && number <= -1) {
+        } else if (currentshape > -1) {
             forme.get(currentshape).setVisible(false);
         }
 
@@ -68,7 +65,6 @@ public class SpinItem extends StackPane {
     }
 
     public void switchShape() {
-        System.out.println(forme.size());
         int number = new Random().nextInt(forme.size());
         if (currentshape > -1) {
             forme.get(currentshape).setVisible(false);

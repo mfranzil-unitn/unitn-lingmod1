@@ -5,7 +5,6 @@
  */
 package esame201706;
 
-import java.util.LinkedList;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -16,8 +15,9 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
+import java.util.LinkedList;
+
 /**
- *
  * @author Matteo Franzil
  */
 public class Lineare extends Application {
@@ -26,6 +26,13 @@ public class Lineare extends Application {
     public final static int SIZE = 25;
 
     public static int lastPressedButton = -1;
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
 
     @Override
     public void start(Stage primaryStage) {
@@ -101,13 +108,6 @@ public class Lineare extends Application {
         primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);
         primaryStage.show();
-    }
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
     }
 
 }

@@ -6,11 +6,12 @@
 package esame201706;
 
 import javafx.scene.layout.GridPane;
-import static esame201706.Lineare.DIM;
+
 import java.util.LinkedList;
 
+import static esame201706.Lineare.DIM;
+
 /**
- *
  * @author Matteo Franzil
  */
 public class BigGrid extends GridPane {

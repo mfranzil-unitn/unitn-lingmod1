@@ -14,7 +14,7 @@ public class BandieraTreFasceOrizzontali extends Bandiera {
      * Costruttore BandieraTreFasceOrizzontali caratterizzata da tre bande
      * colorate
      *
-     * @param topColor Colore superiore
+     * @param topColor    Colore superiore
      * @param middleColor Colore centrale
      * @param bottomColor Colore inferiore
      */

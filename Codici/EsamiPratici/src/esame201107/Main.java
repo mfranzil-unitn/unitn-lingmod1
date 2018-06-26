@@ -6,11 +6,7 @@
 package esame201107;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
@@ -18,10 +14,16 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 /**
- *
  * @author Matteo Franzil
  */
 public class Main extends Application {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
 
     @Override
     public void start(Stage primaryStage) {
@@ -52,13 +54,6 @@ public class Main extends Application {
         primaryStage.setTitle("Non so più che nome dare a sti esami");
         primaryStage.setScene(scene);
         primaryStage.show();
-    }
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
     }
 
 }

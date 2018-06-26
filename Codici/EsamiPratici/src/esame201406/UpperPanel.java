@@ -11,7 +11,6 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.HBox;
 
 /**
- *
  * @author Matteo Franzil
  */
 public class UpperPanel extends HBox {

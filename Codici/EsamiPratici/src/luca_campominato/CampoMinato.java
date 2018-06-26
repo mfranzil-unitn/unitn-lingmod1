@@ -15,7 +15,6 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 /**
- *
  * @author lucamartinelli
  */
 public class CampoMinato {

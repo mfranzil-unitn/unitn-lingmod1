@@ -14,9 +14,9 @@ public class BandieraTreFasceVerticali extends Bandiera {
      * Costruttore BandieraTreFasceVerticali caratterizzata da tre bande
      * colorate
      *
-     * @param leftColor Colore sinistro
+     * @param leftColor   Colore sinistro
      * @param centerColor Colore centrale
-     * @param rightColor Colore destro
+     * @param rightColor  Colore destro
      */
     public BandieraTreFasceVerticali(Color leftColor, Color centerColor, Color rightColor) {
         Rectangle rec = new Rectangle(0, 0, 20, 30);

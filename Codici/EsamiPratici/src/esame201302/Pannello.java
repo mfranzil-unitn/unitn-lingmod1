@@ -5,7 +5,6 @@
  */
 package esame201302;
 
-import java.util.Random;
 import javafx.animation.TranslateTransition;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
@@ -20,8 +19,9 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
 
+import java.util.Random;
+
 /**
- *
  * @author Matteo Franzil
  */
 public class Pannello extends Pane {

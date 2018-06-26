@@ -1,14 +1,12 @@
 package luca_esame201409;
 
 import javafx.animation.PathTransition;
-import javafx.animation.Timeline;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
-import javafx.util.Duration;
 
 public class Money {
 

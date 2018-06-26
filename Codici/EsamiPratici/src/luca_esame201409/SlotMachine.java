@@ -1,20 +1,24 @@
 package luca_esame201409;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.*;
-import javafx.stage.Stage;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.control.Label;
 import javafx.scene.Group;
-import javafx.scene.text.*;
-import java.util.Random;
-import javafx.event.ActionEvent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+import java.util.Random;
 
 public class SlotMachine extends Application {
 
@@ -32,6 +36,10 @@ public class SlotMachine extends Application {
     ValueBox punteggioBox = null;
     Spinbar spinbar = null;
     Salvadanaio salvadanaio = null;
+
+    public static void main(String[] args) {
+        launch(args);
+    }
 
     /**
      * paga i punti necessari per effettuare uno spin
@@ -120,6 +128,7 @@ public class SlotMachine extends Application {
         salvadanaio.initialize();
         spinbar.initialize();
     }
+// ============= BOTTONI =======================================================
 
     /**
      * Creates a modal pop-up window, i.e. a window that blocks actions om the
@@ -140,7 +149,17 @@ public class SlotMachine extends Application {
         stage.initOwner(mainWindow);
         stage.show();
     }
-// ============= BOTTONI =======================================================
+// ============= LISTENERS DEI BOTTONI =========================================
+
+    public void start(Stage primaryStage) {
+
+        Scene scene = new Scene(this.prepareSceneContent(), 800, 500);
+        mainWindow = primaryStage;
+        primaryStage.setTitle("Slot Machine");
+        primaryStage.setScene(scene);
+        primaryStage.centerOnScreen();
+        primaryStage.show();
+    }
 
     class MyButton extends Button {
 
@@ -151,7 +170,6 @@ public class SlotMachine extends Application {
             addEventHandler(ActionEvent.ACTION, listener);
         }
     }
-// ============= LISTENERS DEI BOTTONI =========================================
 
     class ListenerNuovaPartitaButton implements EventHandler {
 
@@ -171,6 +189,7 @@ public class SlotMachine extends Application {
             }
         }
     }
+// =============================================================================
 
     class ListenerPayButton implements EventHandler {
 
@@ -199,21 +218,6 @@ public class SlotMachine extends Application {
             //System.out.println("SpinButton pushed");
             spinbar.spinAll();
         }
-    }
-// =============================================================================
-
-    public void start(Stage primaryStage) {
-
-        Scene scene = new Scene(this.prepareSceneContent(), 800, 500);
-        mainWindow = primaryStage;
-        primaryStage.setTitle("Slot Machine");
-        primaryStage.setScene(scene);
-        primaryStage.centerOnScreen();
-        primaryStage.show();
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 
 }

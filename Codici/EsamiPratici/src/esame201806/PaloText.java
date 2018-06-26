@@ -25,7 +25,7 @@ public class PaloText extends Text {
      * Costruisce un nuovo PaloText.
      *
      * @param isFrom Se TRUE, verrà costruito un PaloText di tipo partenza,
-     * altrimenti di tipo arrivo
+     *               altrimenti di tipo arrivo
      */
     public PaloText(boolean isFrom) {
         this.isFrom = isFrom;
@@ -54,6 +54,15 @@ public class PaloText extends Text {
     }
 
     /**
+     * Restituisce il Palo memorizzato come target.
+     *
+     * @return Un oggetto di tipo Palo, target del PaloText.
+     */
+    public Palo getTarget() {
+        return target;
+    }
+
+    /**
      * Imposta il target del PaloText.
      *
      * @param palo Un Palo che verrà memorizzato come target.
@@ -61,14 +70,5 @@ public class PaloText extends Text {
     public void setTarget(Palo palo) {
         target = palo;
         setText((isFrom ? "From" : "To") + " " + palo.toString());
-    }
-
-    /**
-     * Restituisce il Palo memorizzato come target.
-     *
-     * @return Un oggetto di tipo Palo, target del PaloText.
-     */
-    public Palo getTarget() {
-        return target;
     }
 }

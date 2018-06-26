@@ -19,11 +19,11 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 /**
- *
  * @author lucamartinelli
  */
 public class Common extends Application {
 
+    static int auto = 3;
     HBox ogg;
     BorderPane root;
     Terreno celle[][] = new Terreno[8][8];
@@ -33,7 +33,13 @@ public class Common extends Application {
     TextField auto_disp;
     Button add_auto, inizia;
     Boolean aggiungibile = false;
-    static int auto = 3;
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
 
     @Override
     public void start(Stage primaryStage) {
@@ -115,13 +121,6 @@ public class Common extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-    }
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
     }
 
 }

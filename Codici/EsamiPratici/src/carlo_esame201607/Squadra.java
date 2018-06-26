@@ -14,7 +14,7 @@ public class Squadra implements Comparable<Squadra> {
     /**
      * Costruttore della classe che rappresenta una squadra calcistica
      *
-     * @param nome Nome della squadra
+     * @param nome     Nome della squadra
      * @param bandiera Bandiera della squadra
      */
     public Squadra(String nome, Bandiera bandiera) {

@@ -6,7 +6,6 @@
 package esame200506;
 
 /**
- *
  * @author Matteo Franzil
  */
 public class Coordinate implements Comparable<Coordinate> {

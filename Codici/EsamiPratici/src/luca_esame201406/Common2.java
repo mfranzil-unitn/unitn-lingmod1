@@ -5,20 +5,27 @@ package luca_esame201406;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.stage.Stage;
 
 /**
- *
  * @author lucamartinelli
  */
 public class Common2 extends Application {
 
+    static int dimensione;
     Pop a;
     Schermata b;
-    static int dimensione;
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
 
     @Override
     public void start(Stage primaryStage) {
@@ -39,13 +46,6 @@ public class Common2 extends Application {
             }
         });
 
-    }
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
     }
 
 }

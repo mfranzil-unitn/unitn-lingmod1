@@ -5,19 +5,19 @@
  */
 package luca_campominato;
 
-import java.util.Random;
 import javafx.geometry.Pos;
 import javafx.scene.layout.GridPane;
 
+import java.util.Random;
+
 /**
- *
  * @author lucamartinelli
  */
 class Griglia extends GridPane {
 
+    static int conta = 0;
     int tmp;
     int i, j, valrandom;
-    static int conta = 0;
     Random random = new Random();
 
     Griglia(int dim, Cella celle[][]) {

@@ -5,11 +5,6 @@
  */
 package esame201606;
 
-import java.util.LinkedList;
-import java.util.Optional;
-import java.util.Random;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.animation.TranslateTransition;
 import javafx.application.Platform;
 import javafx.scene.Node;
@@ -19,15 +14,20 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.util.Duration;
 
+import java.util.LinkedList;
+import java.util.Optional;
+import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
- *
  * @author Matteo Franzil
  */
 public class Griglia extends GridPane {
 
     public static final int N = 8;
-    private LinkedList<LinkedList<Terreno>> celle;
     boolean addCarMode;
+    private LinkedList<LinkedList<Terreno>> celle;
     private LinkedList<Macchina> macchine;
     private Thread thr;
 
@@ -116,12 +116,12 @@ public class Griglia extends GridPane {
         return coordinates;
     }
 
-    public void setAddCarMode(boolean addCarMode) {
-        this.addCarMode = addCarMode;
-    }
-
     public boolean isAddCarMode() {
         return addCarMode;
+    }
+
+    public void setAddCarMode(boolean addCarMode) {
+        this.addCarMode = addCarMode;
     }
 
     public LinkedList<Macchina> getMacchine() {
@@ -209,7 +209,7 @@ public class Griglia extends GridPane {
                     () -> {
                         System.out.println("Crash in progress...");
                         Alert alert = new Alert(Alert.AlertType.ERROR, "CRASH", ButtonType.OK);
-                        Optional result = alert.showAndWait();
+                        Optional<? extends ButtonType> result = alert.showAndWait();
                         if (result.get() == ButtonType.OK || result.isPresent()) {
                             Platform.exit();
                         }

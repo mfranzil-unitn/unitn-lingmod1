@@ -1,8 +1,5 @@
 package carlo_esame201707;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Random;
 import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -10,18 +7,14 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.DialogEvent;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.Border;
-import javafx.scene.layout.BorderStroke;
-import javafx.scene.layout.BorderStrokeStyle;
-import javafx.scene.layout.BorderWidths;
-import javafx.scene.layout.CornerRadii;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 
 /**
  * Classe rappresentante il Campo
@@ -34,15 +27,15 @@ public class Campo extends Pane {
      * Numero massimo di dadi ammessi sul Campo
      */
     public static final int MAX_DADI_ON_CAMPO = 3;
-    private int ctrDadiOnCampo;
-    private int contatore;
     private final ArrayList<Dado> dadi;
     private final Label lblContatore;
+    private int ctrDadiOnCampo;
+    private int contatore;
 
     /**
      * Costruttore Campo
      *
-     * @param size Grandezza in pixel del campo
+     * @param size         Grandezza in pixel del campo
      * @param lblContatore Riferimento alla Label per il contatore
      */
     public Campo(int size, Label lblContatore) {

@@ -5,8 +5,6 @@
  */
 package esame201106;
 
-import java.util.Collections;
-import java.util.LinkedList;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
@@ -16,8 +14,10 @@ import javafx.scene.layout.RowConstraints;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+import java.util.Collections;
+import java.util.LinkedList;
+
 /**
- *
  * @author Matteo Franzil
  */
 public class Pannello extends GridPane {
@@ -40,7 +40,7 @@ public class Pannello extends GridPane {
                 GridPane.setConstraints(cella, j, i, 1, 1);
                 getChildren().addAll(cella);
             }
-            
+
             ColumnConstraints column = new ColumnConstraints();
             column.setPercentWidth(100.0 / N);
             getColumnConstraints().add(column);

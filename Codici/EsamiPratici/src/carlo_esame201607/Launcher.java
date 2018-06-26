@@ -14,6 +14,15 @@ import javafx.stage.WindowEvent;
  */
 public class Launcher extends Application {
 
+    /**
+     * Main
+     *
+     * @param args Parametri passati da console
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     @Override
     public void start(Stage stage) {
         MainWindow mainWindow = new MainWindow();
@@ -48,14 +57,5 @@ public class Launcher extends Application {
         controlStage.setY(stage.getY());
         controlStage.setResizable(false);
         controlStage.show();
-    }
-
-    /**
-     * Main
-     *
-     * @param args Parametri passati da console
-     */
-    public static void main(String[] args) {
-        launch(args);
     }
 }

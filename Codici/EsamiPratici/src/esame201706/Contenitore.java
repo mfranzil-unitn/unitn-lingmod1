@@ -5,9 +5,6 @@
  */
 package esame201706;
 
-import static esame201706.Lineare.DIM;
-import static esame201706.Lineare.SIZE;
-import java.util.LinkedList;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
@@ -19,8 +16,12 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.util.LinkedList;
+
+import static esame201706.Lineare.DIM;
+import static esame201706.Lineare.SIZE;
+
 /**
- *
  * @author Matteo Franzil
  */
 public class Contenitore {

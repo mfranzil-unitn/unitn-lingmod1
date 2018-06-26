@@ -11,7 +11,6 @@ import javafx.util.Duration;
  * Questa classe gestisce il set di spinner nella slot machine. Ha la
  * responsabilità di istanziare i singoli spinner,rappresentarli graficamente e
  * di verificare se sono uguali o meno
- *
  */
 public class Spinbar extends HBox {
 
@@ -107,7 +106,7 @@ public class Spinbar extends HBox {
         }
     }
 
-// ================ LISTENER Simboli ===========================================
+    // ================ LISTENER Simboli ===========================================
     class SymbolListener implements EventHandler {
 
         public void handle(Event t) {

@@ -8,8 +8,8 @@ import javafx.scene.layout.GridPane;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 /**
- *
  * @author lucamartinelli
  */
 public class Griglia extends GridPane {

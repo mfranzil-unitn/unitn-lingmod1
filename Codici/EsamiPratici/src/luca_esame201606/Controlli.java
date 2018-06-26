@@ -14,7 +14,6 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 /**
- *
  * @author lucamartinelli
  */
 public class Controlli extends VBox {

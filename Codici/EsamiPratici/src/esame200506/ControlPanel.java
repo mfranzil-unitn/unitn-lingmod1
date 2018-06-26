@@ -5,7 +5,6 @@
  */
 package esame200506;
 
-import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
@@ -14,7 +13,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 
 /**
- *
  * @author Matteo Franzil
  */
 public class ControlPanel extends VBox {

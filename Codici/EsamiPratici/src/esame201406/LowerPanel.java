@@ -5,18 +5,17 @@
  */
 package esame201406;
 
-import java.util.LinkedList;
 import javafx.event.ActionEvent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
+import java.util.LinkedList;
+
 /**
- *
  * @author Matteo Franzil
  */
 public class LowerPanel extends HBox {
@@ -30,6 +29,9 @@ public class LowerPanel extends HBox {
         step = new Button("Step");
         start = new Button("Start");
         stop = new Button("Stop");
+
+        start.setDisable(false);
+        stop.setDisable(true);
 
         print.setOnAction((ActionEvent e) -> {
             print(griglia.getCelle());

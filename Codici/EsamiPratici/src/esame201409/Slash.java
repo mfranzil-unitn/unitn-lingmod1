@@ -7,10 +7,8 @@ package esame201409;
 
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.transform.Rotate;
 
 /**
- *
  * @author Matteo Franzil
  */
 public class Slash extends Rectangle {

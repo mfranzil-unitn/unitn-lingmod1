@@ -9,7 +9,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
 /**
- *
  * @author Matteo Franzil
  */
 public class Macchina extends Circle {
@@ -29,27 +28,27 @@ public class Macchina extends Circle {
         }
     }
 
-    public int getRelativeX() {
-        return relativeX;
-    }
-
-    public int getRelativeY() {
-        return relativeY;
-    }
-
-    public void setRelativeX(int x) {
-        this.relativeX = x;
-    }
-
-    public void setRelativeY(int relativeY) {
-        this.relativeY = relativeY;
-    }
-
     public static int getMacchinedisponibili() {
         return macchinedisponibili;
     }
 
     public static void setMacchinedisponibili(int macchine) {
         macchinedisponibili = macchine;
+    }
+
+    public int getRelativeX() {
+        return relativeX;
+    }
+
+    public void setRelativeX(int x) {
+        this.relativeX = x;
+    }
+
+    public int getRelativeY() {
+        return relativeY;
+    }
+
+    public void setRelativeY(int relativeY) {
+        this.relativeY = relativeY;
     }
 }

@@ -14,7 +14,7 @@ public class BandieraDueFasceOrizzontali extends Bandiera {
      * Costruttore BandieraDueFasceOrizzontali caratterizzata da due bande
      * colorate
      *
-     * @param topColor Colore superiore
+     * @param topColor    Colore superiore
      * @param bottomColor Colore inferiore
      */
     public BandieraDueFasceOrizzontali(Color topColor, Color bottomColor) {

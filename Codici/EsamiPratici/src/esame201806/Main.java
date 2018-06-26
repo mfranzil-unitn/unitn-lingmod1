@@ -10,6 +10,7 @@ import javafx.application.Platform;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
@@ -28,6 +29,14 @@ public class Main extends Application {
     private Button close, reset, move, clear, animaz;
     private PaloText from, to;
     private HanoiArea area;
+    private Thread thread;
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
 
     @Override
     public void start(Stage primaryStage) {
@@ -86,18 +95,42 @@ public class Main extends Application {
 
         Scene scene = new Scene(root);
 
+        root.addEventFilter(KeyEvent.KEY_PRESSED, e -> {
+            switch (e.getCode()) {
+                case DIGIT1:
+                    area.manualPaloSet(0, from, to);
+                    break;
+                case DIGIT2:
+                    area.manualPaloSet(1, from, to);
+                    break;
+                case DIGIT3:
+                    area.manualPaloSet(2, from, to);
+                    break;
+                case M:
+                    move.fire();
+                    break;
+                case A:
+                    animaz.fire();
+                    break;
+                case C:
+                    clear.fire();
+                    break;
+                case R:
+                    reset.fire();
+                    break;
+                case O:
+                    area.solve(HanoiArea.NUMERO_DISCHI, area.getPali().get(0),
+                            area.getPali().get(2), area.getPali().get(1), from, to);
+                default:
+                    break;
+            }
+        });
+
         // primaryStage.setResizable(false);
         primaryStage.setOnCloseRequest(e -> Platform.exit());
         primaryStage.setTitle("Torre di Hanoi");
         primaryStage.setScene(scene);
         primaryStage.show();
-    }
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
     }
 
 }

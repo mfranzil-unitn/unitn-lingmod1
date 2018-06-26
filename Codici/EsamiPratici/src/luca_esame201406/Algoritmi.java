@@ -11,14 +11,14 @@ import javafx.scene.layout.HBox;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 /**
- *
  * @author lucamartinelli
  */
 public class Algoritmi extends HBox {
 
-    ToggleButton alg1, alg2, alg3;
     static int alg = 1;
+    ToggleButton alg1, alg2, alg3;
 
     Algoritmi() {
         alg1 = new ToggleButton("Alg1");

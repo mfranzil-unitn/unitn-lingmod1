@@ -10,7 +10,6 @@ import javafx.scene.text.FontWeight;
 
 /**
  * Questa classe definisce il "titolo" presente nella GUI.
- *
  */
 public class Title extends Group {
 

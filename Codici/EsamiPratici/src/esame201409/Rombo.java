@@ -6,10 +6,8 @@
 package esame201409;
 
 import javafx.scene.paint.Color;
-import javafx.scene.transform.Rotate;
 
 /**
- *
  * @author Matteo Franzil
  */
 public class Rombo extends Quadrato {

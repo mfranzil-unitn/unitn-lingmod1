@@ -15,15 +15,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 
 /**
- *
  * @author Matteo Franzil
  */
 public class ControlPanel extends VBox {
 
-    Button up, down, start, stop, reset;
-    TextField figura;
-
-    Thread corsa;
+    private Button up, down, start, stop, reset;
+    private TextField figura;
+    private Thread corsa;
 
     public ControlPanel(Pannello pannello) {
         setPadding(new Insets(12, 15, 12, 15));

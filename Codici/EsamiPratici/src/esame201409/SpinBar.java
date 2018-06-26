@@ -5,7 +5,6 @@
  */
 package esame201409;
 
-import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Alert;
@@ -14,7 +13,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 
 /**
- *
  * @author Matteo Franzil
  */
 public class SpinBar extends HBox {
@@ -56,7 +54,7 @@ public class SpinBar extends HBox {
             if (pannello.getPunteggio() == 1) {
                 pannello.setPunteggio(0);
             } else {
-                pannello.setPunteggio(pannello.getPunteggio() * 1 / 2);
+                pannello.setPunteggio(pannello.getPunteggio() / 2);
             }
             if (switchAll) {
                 this.switchAll();

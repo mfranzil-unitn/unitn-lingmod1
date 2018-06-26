@@ -9,8 +9,6 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
@@ -18,7 +16,6 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
- *
  * @author Matteo Franzil
  */
 public class Main extends Application {
@@ -26,6 +23,13 @@ public class Main extends Application {
     Pannello panel;
     SpinBar roulette;
     Text titolo;
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
 
     @Override
     public void start(Stage primaryStage) {
@@ -62,13 +66,6 @@ public class Main extends Application {
 
     public void reset() {
         roulette.clear();
-    }
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
     }
 
 }

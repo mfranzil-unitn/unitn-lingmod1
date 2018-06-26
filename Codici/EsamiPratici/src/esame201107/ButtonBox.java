@@ -10,7 +10,6 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 
 /**
- *
  * @author Matteo Franzil
  */
 public class ButtonBox extends VBox {

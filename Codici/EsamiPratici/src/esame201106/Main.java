@@ -7,18 +7,20 @@ package esame201106;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.layout.ColumnConstraints;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Priority;
-import javafx.scene.layout.RowConstraints;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
 /**
- *
  * @author Matteo Franzil
  */
 public class Main extends Application {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        launch(args);
+    }
 
     @Override
     public void start(Stage primaryStage) {
@@ -38,7 +40,7 @@ public class Main extends Application {
 
         root.getColumnConstraints().addAll(column1, column2);
         root.getRowConstraints().add(row1);
-        
+
 
         GridPane.setConstraints(pannello, 0, 0);
         GridPane.setConstraints(buttons, 1, 0);
@@ -50,13 +52,6 @@ public class Main extends Application {
         primaryStage.setTitle("Out of fantasia");
         primaryStage.setScene(scene);
         primaryStage.show();
-    }
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        launch(args);
     }
 
 }

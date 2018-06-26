@@ -13,7 +13,6 @@ import javafx.util.Duration;
 
 /**
  * Questa classe è il contenitore grafico del set di monete.
- *
  */
 public class Salvadanaio extends VBox {
 
@@ -42,7 +41,7 @@ public class Salvadanaio extends VBox {
         getChildren().add(m);
     }
 
-// ============= LISTENER Moneta  ==============================================
+    // ============= LISTENER Moneta  ==============================================
     public class ListenerMoneteWithoutAnimation implements EventHandler {
 
         public void handle(Event t) {

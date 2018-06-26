@@ -19,8 +19,8 @@ import javafx.util.Duration;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 /**
- *
  * @author lucamartinelli
  */
 public class Bottoni extends HBox {

@@ -9,7 +9,6 @@ import javafx.geometry.Pos;
 import javafx.scene.layout.GridPane;
 
 /**
- *
  * @author lucamartinelli
  */
 public class Griglia extends GridPane {

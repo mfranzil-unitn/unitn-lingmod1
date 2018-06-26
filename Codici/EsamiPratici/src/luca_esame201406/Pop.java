@@ -13,8 +13,8 @@ import javafx.stage.Stage;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 /**
- *
  * @author lucamartinelli
  */
 public class Pop {

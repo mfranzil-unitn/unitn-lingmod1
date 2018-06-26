@@ -14,7 +14,6 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
 /**
- *
  * @author lucamartinelli
  */
 public class Cella extends StackPane {

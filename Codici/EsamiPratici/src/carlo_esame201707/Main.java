@@ -20,6 +20,13 @@ public class Main extends Application {
 
     private boolean isDissolve = true;
 
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     @Override
     public void start(Stage stage) {
         BorderPane root = new BorderPane();
@@ -69,12 +76,5 @@ public class Main extends Application {
         stage.setResizable(false);
         stage.sizeToScene();
         stage.show();
-    }
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
     }
 }

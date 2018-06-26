@@ -5,7 +5,6 @@
  */
 package esamepressanumeri;
 
-import java.util.ArrayList;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -16,13 +15,21 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+
 /**
- *
  * @author Matteo Franzil
  */
 public class PressaNumeri extends Application {
 
     ArrayList<Button> bottoni;
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
 
     @Override
     public void start(Stage primaryStage) {
@@ -52,13 +59,6 @@ public class PressaNumeri extends Application {
         primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);
         primaryStage.show();
-    }
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
     }
 
     class Handler implements EventHandler<KeyEvent> {

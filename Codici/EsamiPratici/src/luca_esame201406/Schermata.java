@@ -9,14 +9,14 @@ import javafx.stage.Stage;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 /**
- *
  * @author lucamartinelli
  */
 class Schermata extends BorderPane {
 
-    Stage secondstage;
     static Algoritmi al;
+    Stage secondstage;
     Bottoni btn;
     Griglia grid;
     Cella celle[][];

@@ -8,7 +8,6 @@ package luca_esame201606;
 import javafx.scene.paint.Color;
 
 /**
- *
  * @author lucamartinelli
  */
 class Prato extends Terreno {

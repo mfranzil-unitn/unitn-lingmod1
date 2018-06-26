@@ -5,7 +5,6 @@
  */
 package esame201107;
 
-import java.util.Random;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Scene;
@@ -17,8 +16,9 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 import javafx.stage.Stage;
 
+import java.util.Random;
+
 /**
- *
  * @author Matteo Franzil
  */
 public class Pannello extends GridPane {

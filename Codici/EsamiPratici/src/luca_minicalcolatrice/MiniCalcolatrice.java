@@ -16,11 +16,13 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
- *
  * @author lucamartinelli
- *
  */
 public class MiniCalcolatrice extends Application {
+
+    public static void main(String[] args) {
+        launch(args);
+    }
 
     @Override
     public void start(Stage primaryStage) {
@@ -121,10 +123,6 @@ public class MiniCalcolatrice extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 
 }

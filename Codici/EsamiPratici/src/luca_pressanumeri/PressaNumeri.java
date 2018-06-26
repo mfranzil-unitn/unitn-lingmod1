@@ -13,6 +13,13 @@ public class PressaNumeri extends Application {
     Button bottoni[] = new Button[9];
     boolean vivo[] = new boolean[9];
 
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     @Override
     public void start(Stage primaryStage) {
         setButtons(bottoni);
@@ -41,13 +48,6 @@ public class PressaNumeri extends Application {
         primaryStage.addEventHandler(KeyEvent.KEY_PRESSED, pressato);
         primaryStage.show();
 
-    }
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
     }
 
     void setButtons(Button bottoni[]) {

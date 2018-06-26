@@ -6,14 +6,16 @@
 package esame201406;
 
 import javafx.event.ActionEvent;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
- *
  * @author Matteo Franzil
  */
 public class NumberRequestWindow extends Stage {
@@ -21,9 +23,9 @@ public class NumberRequestWindow extends Stage {
     int n;
 
     public NumberRequestWindow(Stage primaryStage) {
-        VBox pane = new VBox();
-        Text text = new Text("N?");
-        TextField field = new TextField();
+        StackPane pane = new StackPane();
+        pane.setPadding(new Insets(5,5,5,5));
+        TextField field = new TextField("Inserisci qui un valore di N...");
 
         field.addEventHandler(ActionEvent.ACTION, (ActionEvent e) -> {
             try {
@@ -36,8 +38,8 @@ public class NumberRequestWindow extends Stage {
             this.close();
             primaryStage.show();
         });
-        pane.getChildren().addAll(text, field);
-        Scene scene = new Scene(pane, 200, 200);
+        pane.getChildren().addAll(field);
+        Scene scene = new Scene(pane);
         setScene(scene);
     }
 }

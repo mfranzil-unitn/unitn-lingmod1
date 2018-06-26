@@ -9,7 +9,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
 /**
- *
  * @author Matteo Franzil
  */
 public class Quadrato extends Rectangle {

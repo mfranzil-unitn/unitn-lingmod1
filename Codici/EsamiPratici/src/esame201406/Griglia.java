@@ -5,22 +5,20 @@
  */
 package esame201406;
 
-import java.util.LinkedList;
-import java.util.Random;
 import javafx.concurrent.Task;
 import javafx.scene.layout.GridPane;
 
+import java.util.LinkedList;
+
 /**
- *
  * @author Matteo Franzil
  */
 public class Griglia extends GridPane {
 
-    public static int N;
-
     public static final int BASESIZE = 18;
-    private LinkedList<Cella> celle;
+    public static int N;
     public int currentAlg;
+    private LinkedList<Cella> celle;
 
     public Griglia() {
         celle = new LinkedList<>();
@@ -65,16 +63,15 @@ public class Griglia extends GridPane {
     }
 
     public Thread startTransition() {
-        Task<Integer> task = new Task<Integer>() {
+        Thread thread = new Thread(new Task<Integer>() {
             @Override
             protected Integer call() throws Exception {
                 while (true) {
                     stepAll();
-                    Thread.sleep(1000);
+                    Thread.sleep(100);
                 }
             }
-        };
-        Thread thread = new Thread(task);
+        });
         thread.start();
         return thread;
     }

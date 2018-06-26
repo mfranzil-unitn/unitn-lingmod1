@@ -12,7 +12,6 @@ import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 
 /**
- *
  * @author Matteo Franzil
  */
 public class Moneta extends StackPane {

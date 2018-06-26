@@ -12,7 +12,6 @@ import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
 
 /**
- *
  * @author Matteo Franzil
  */
 public class Prato extends Terreno {

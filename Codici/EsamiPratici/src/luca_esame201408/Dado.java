@@ -1,23 +1,25 @@
 package luca_esame201408;
 
-import static luca_esame201408.Agosto_2014.punt;
-import javafx.event.Event;
-import javafx.event.EventHandler;
-import java.util.Random;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
 
+import java.util.Random;
+
+import static luca_esame201408.Agosto_2014.punt;
+
 class Dado {
 
+    static int max_count = 0;
     Circle c[] = new Circle[7];
     int val;
     int num;
-    static int max_count = 0;
     Rectangle faccia;
 
     Dado(double posx, double posy, BorderPane root) {
@@ -120,9 +122,9 @@ class Dado {
     /**
      * Funzione che rimuove i pallini da una faccia di un dado.
      *
-     * @param val: indica il valore del dado, in modo da sapere quale pallini
-     * togliere.
-     * @param c: vettore contenente tutti i cerchi.
+     * @param val:  indica il valore del dado, in modo da sapere quale pallini
+     *              togliere.
+     * @param c:    vettore contenente tutti i cerchi.
      * @param root: BorderPane di base da cui rimuovere i pallini.
      */
     void removeDot(BorderPane root) {

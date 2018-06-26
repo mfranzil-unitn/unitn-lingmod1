@@ -9,7 +9,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
 /**
- *
  * @author Matteo Franzil
  */
 public class Cerchio extends Circle {

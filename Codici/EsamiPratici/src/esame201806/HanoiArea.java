@@ -5,8 +5,8 @@
  */
 package esame201806;
 
-import java.util.LinkedList;
 import javafx.animation.PathTransition;
+import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
@@ -19,6 +19,8 @@ import javafx.scene.shape.CubicCurveTo;
 import javafx.scene.shape.MoveTo;
 import javafx.scene.shape.Path;
 import javafx.util.Duration;
+
+import java.util.LinkedList;
 
 /**
  * Classe costruita da un Pane di sfondo grigio contenente un numero variabile
@@ -50,9 +52,9 @@ public class HanoiArea extends Pane {
     /**
      * Costruisce una nuova HanoiArea
      *
-     * @param from Un parametro di tipo PaloText che memorizzi il palo di
-     * partenza.
-     * @param to Un parametro di tipo PaloText che memorizzi il palo di arrivo.
+     * @param from  Un parametro di tipo PaloText che memorizzi il palo di
+     *              partenza.
+     * @param to    Un parametro di tipo PaloText che memorizzi il palo di arrivo.
      * @param close Un bottone per chiudere i popup generati.
      */
     public HanoiArea(PaloText from, PaloText to, Button close) {
@@ -79,12 +81,12 @@ public class HanoiArea extends Pane {
 
         // Aggiungo i listener ai click del mouse
         addEventHandler(MouseEvent.MOUSE_CLICKED, e -> {
-            if (e.getTarget() instanceof Palo) {
-                // se non clicco un palo non faccio niente
-                Palo palo = (Palo) e.getTarget();
-                setPaloText(palo, from, to);
-            }
-        }
+                    if (e.getTarget() instanceof Palo) {
+                        // se non clicco un palo non faccio niente
+                        Palo palo = (Palo) e.getTarget();
+                        setPaloText(palo, from, to);
+                    }
+                }
         );
 
     }
@@ -112,8 +114,8 @@ public class HanoiArea extends Pane {
      * d'arrivo).
      *
      * @param from Un parametro di tipo PaloText che memorizzi il palo di
-     * partenza.
-     * @param to Un parametro di tipo PaloText che memorizzi il palo di arrivo.
+     *             partenza.
+     * @param to   Un parametro di tipo PaloText che memorizzi il palo di arrivo.
      */
     public void moveDisco(PaloText from, PaloText to) {
         if (!from.isEmpty() && !to.isEmpty()) {
@@ -247,9 +249,27 @@ public class HanoiArea extends Pane {
      * Imposta il metodo di animazione dei dischi desiderato.
      *
      * @param isAnimationOn Un booleano, settato su TRUE se si desidera
-     * abilitare le animazioni.
+     *                      abilitare le animazioni.
      */
     public void setAnimationOn(boolean isAnimationOn) {
         this.animationOn = isAnimationOn;
+    }
+
+    public void manualPaloSet(int number, PaloText from, PaloText to) {
+        setPaloText(pali.get(number), from, to);
+    }
+
+    public LinkedList<Palo> getPali() {
+        return pali;
+    }
+
+    public void solve(int disk, Palo source, Palo dest, Palo aux, PaloText from, PaloText to) {
+        if (disk == 0) {
+            System.out.println(source + " -> " + dest);
+        } else {
+            solve(disk - 1, source, aux, dest, from, to);
+            System.out.println(source + " -> " + dest);
+            solve(disk - 1, aux, dest, source, from, to);
+        }
     }
 }

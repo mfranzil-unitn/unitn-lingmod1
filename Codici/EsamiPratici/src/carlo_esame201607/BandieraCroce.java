@@ -13,7 +13,7 @@ public class BandieraCroce extends Bandiera {
     /**
      * Costruttore Bandiera caratterizzata da una croce
      *
-     * @param crossColor Colore della croce
+     * @param crossColor      Colore della croce
      * @param backgroundColor Colore di sfondo
      */
     public BandieraCroce(Color crossColor, Color backgroundColor) {

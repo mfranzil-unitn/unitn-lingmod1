@@ -5,6 +5,7 @@ package luca_esame201406;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
@@ -18,22 +19,28 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 /**
- *
  * @author lucamartinelli
  */
 public class Common extends Application {
 
+    static int raggio = 5;
+    static int int_forma = 0;
+    static int dim;
+    static int min = 0;
+    static int max = 0;
     Dati d;
     Comandi a;
     Grafica b;
     Group finestre;
     Figura figure[] = new Figura[400];
-    static int raggio = 5;
-    static int int_forma = 0;
-    static int dim;
     double lastx;
-    static int min = 0;
-    static int max = 0;
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
 
     @Override
     public void start(Stage primaryStage) {
@@ -139,13 +146,6 @@ public class Common extends Application {
             }
         });
 
-    }
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
     }
 
     public void creafigura(Double paramx, Double paramy) {

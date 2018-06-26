@@ -9,7 +9,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 
 /**
- *
  * @author Matteo Franzil
  */
 public class Triangolo extends Polygon {
@@ -18,9 +17,9 @@ public class Triangolo extends Polygon {
         double x = 0;
         double y = 0;
         getPoints().addAll(new Double[]{
-            x, y,
-            x + size, y,
-            x + size / 2.0, y - (size * Math.sqrt(3) / 2.0)});
+                x, y,
+                x + size, y,
+                x + size / 2.0, y - (size * Math.sqrt(3) / 2.0)});
         setFill(Color.GREEN);
     }
 

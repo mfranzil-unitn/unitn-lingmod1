@@ -5,16 +5,12 @@
  */
 package luca_esame201606;
 
-import javafx.event.EventHandler;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 
 /**
- *
  * @author lucamartinelli
  */
 public abstract class Terreno extends StackPane {

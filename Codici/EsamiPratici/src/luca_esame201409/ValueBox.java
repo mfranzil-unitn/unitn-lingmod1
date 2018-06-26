@@ -1,7 +1,6 @@
 package luca_esame201409;
 
 import javafx.geometry.Pos;
-import javafx.scene.Group;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -17,8 +16,8 @@ import javafx.scene.layout.VBox;
 public class ValueBox extends VBox {
 
     TextField txt = null;
-    private int value = 0;
     Button associatedButton = null;
+    private int value = 0;
 
     public ValueBox(String label, Button associatedButton) {
         this.associatedButton = associatedButton;
@@ -36,14 +35,14 @@ public class ValueBox extends VBox {
         setValue(0);
     }
 
+    public int getValue() {
+        return value;
+    }
+
     public void setValue(int value) {
         this.value = value;
         txt.setText(String.valueOf(value));
         associatedButton.setDisable(value == 0);
-    }
-
-    public int getValue() {
-        return value;
     }
 
     public void incrementValue(int delta) {

@@ -1,11 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package esame201409;
 
-import java.util.Random;
 import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -13,20 +7,20 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 
 /**
- *
  * @author Matteo Franzil
  */
 public class Pannello extends GridPane {
 
+    private Button newgame;
+    Button spin;
+    private Button pay;
     private int punteggio;
     private int credito;
     private Text punteggiotxt;
     private Text creditotxt;
-    Button newgame, spin, pay;
 
     public Pannello(Main main) {
         punteggio = 0;
@@ -71,13 +65,17 @@ public class Pannello extends GridPane {
         getChildren().addAll(newgame, spin, pay, punteggiotxt, creditotxt);
     }
 
+    public int getPunteggio() {
+        return punteggio;
+    }
+
     public void setPunteggio(int punteggio) {
         this.punteggio = punteggio;
         punteggiotxt.setText("Punteggio: " + this.punteggio);
     }
 
-    public int getPunteggio() {
-        return punteggio;
+    public int getCredito() {
+        return credito;
     }
 
     public void setCredito(int credito) {
@@ -87,10 +85,6 @@ public class Pannello extends GridPane {
             spin.setDisable(false);
             pay.setDisable(false);
         }
-    }
-
-    public int getCredito() {
-        return credito;
     }
 
     /**

@@ -5,13 +5,14 @@
  */
 package esame201706;
 
-import static esame201706.Lineare.DIM;
-import java.util.LinkedList;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 
+import java.util.LinkedList;
+
+import static esame201706.Lineare.DIM;
+
 /**
- *
  * @author Matteo Franzil
  */
 public class LinearGrid extends GridPane {
@@ -35,9 +36,8 @@ public class LinearGrid extends GridPane {
     }
 
     /**
-     *
-     * @param mode Modalità di cambiamento griglia: 1 per random, 2 per tutto
-     * on, 3 per tutto off
+     * @param mode       Modalità di cambiamento griglia: 1 per random, 2 per tutto
+     *                   on, 3 per tutto off
      * @param linearGrid La griglia da cambiare
      * @param bigGrid
      * @param modifiers

@@ -5,11 +5,9 @@
  */
 package esamepressanumeri;
 
-import java.util.ArrayList;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
@@ -17,12 +15,18 @@ import javafx.scene.layout.RowConstraints;
 import javafx.stage.Stage;
 
 /**
- *
  * @author Matteo Franzil
  */
 public class SpostaNumeri extends Application {
 
     BottoneMovimentato[][] buttons;
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
 
     @Override
     public void start(Stage primaryStage) {
@@ -59,11 +63,12 @@ public class SpostaNumeri extends Application {
         primaryStage.show();
     }
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
+    public BottoneMovimentato getNearby(int i, int j) {
+        BottoneMovimentato temp = null;
+        while (!temp.getText().equals(8)) {
+            temp = buttons[i - 1][j - 1];
+        }
+        return null;
     }
 
     class Handler implements EventHandler<KeyEvent> {
@@ -72,13 +77,5 @@ public class SpostaNumeri extends Application {
         public void handle(KeyEvent event) {
 
         }
-    }
-
-    public BottoneMovimentato getNearby(int i, int j) {
-        BottoneMovimentato temp = null;
-        while (!temp.getText().equals(8)) {
-            temp = buttons[i - 1][j - 1];
-        }
-        return null;
     }
 }

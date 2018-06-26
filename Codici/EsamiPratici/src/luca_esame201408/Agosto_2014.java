@@ -25,18 +25,35 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
- *
  * @author Cirogiu
  */
 public class Agosto_2014 extends Application {
 
-    Dado tutti_dadi[] = new Dado[5];
-    double posx, posy;
     static int punt = 30;
     static int tot = 0;
     static Text totale = new Text("Totale: 0");
     static Text punteggio = new Text("Punteggio: 30");
     static boolean vittoria;
+    Dado tutti_dadi[] = new Dado[5];
+    double posx, posy;
+
+    /**
+     * Funzione che aggiorna il Testo del punteggio.
+     *
+     * @param punt:      variabile che tiene conto degli aggiornamenti del punteggio.
+     * @param punteggio: il testo della classe Text da aggiornare.
+     */
+    static void updateTextScore(int punt) {
+        punteggio.setText("Punteggio: " + punt);
+    }
+
+    static void updateTextTotale(int tot) {
+        totale.setText("Totale: " + tot);
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
 
     // Label totale, punteggio;
     @Override
@@ -157,30 +174,12 @@ public class Agosto_2014 extends Application {
     /**
      * Funzione che aggiorna il Testo del totale.
      *
-     * @param d: il dado che, col suo valore, aggiorna il testo.
+     * @param d:            il dado che, col suo valore, aggiorna il testo.
      * @param testo_stampa: il testo della classe Text da aggiornare.
      */
     void updateTextStampa(Dado d, Text testo_stampa) {
         String temp = testo_stampa.getText();
         testo_stampa.setText(temp + d + "\n");
-    }
-
-    /**
-     * Funzione che aggiorna il Testo del punteggio.
-     *
-     * @param punt: variabile che tiene conto degli aggiornamenti del punteggio.
-     * @param punteggio: il testo della classe Text da aggiornare.
-     */
-    static void updateTextScore(int punt) {
-        punteggio.setText("Punteggio: " + punt);
-    }
-
-    static void updateTextTotale(int tot) {
-        totale.setText("Totale: " + tot);
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 
     void cancellazione(BorderPane root) {

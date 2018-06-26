@@ -8,7 +8,6 @@ package esamepressanumeri;
 import javafx.scene.control.Button;
 
 /**
- *
  * @author Matteo Franzil
  */
 public class BottoneMovimentato extends Button {

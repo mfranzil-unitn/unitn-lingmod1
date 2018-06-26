@@ -1,22 +1,16 @@
 package carlo_esame201707;
 
-import java.util.Random;
 import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.Border;
-import javafx.scene.layout.BorderStroke;
-import javafx.scene.layout.BorderStrokeStyle;
-import javafx.scene.layout.BorderWidths;
-import javafx.scene.layout.CornerRadii;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.util.Duration;
+
+import java.util.Random;
 
 /**
  * Classe rappresentante un Dado
@@ -50,8 +44,8 @@ public class Dado extends Pane implements Comparable<Dado> {
     /**
      * Costruttore Dado
      *
-     * @param posX Posizione X Dado
-     * @param posY Posizione Y Dado
+     * @param posX  Posizione X Dado
+     * @param posY  Posizione Y Dado
      * @param value Valore del Dado
      * @param campo Riferimento al campo
      * @throws IllegalDadoValueException Lanciato quando il valore non è ammesso

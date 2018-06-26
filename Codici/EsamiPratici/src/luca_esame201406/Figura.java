@@ -7,8 +7,8 @@ import javafx.scene.shape.Shape;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 /**
- *
  * @author lucamartinelli
  */
 public class Figura {

@@ -14,8 +14,8 @@ public abstract class Bandiera extends Pane {
     /**
      * Costruttore Bandiera
      *
-     * @param width Lunghezza bandiera
-     * @param height Altezza bandiera
+     * @param width       Lunghezza bandiera
+     * @param height      Altezza bandiera
      * @param borderColor Colore bordo bandiera
      */
     public Bandiera(double width, double height, Color borderColor) {

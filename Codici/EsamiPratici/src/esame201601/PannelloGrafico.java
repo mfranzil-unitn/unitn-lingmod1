@@ -5,7 +5,6 @@
  */
 package esame201601;
 
-import java.util.LinkedList;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
@@ -15,8 +14,9 @@ import javafx.scene.shape.Shape;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
+import java.util.LinkedList;
+
 /**
- *
  * @author Matteo Franzil
  */
 public class PannelloGrafico extends Pane {

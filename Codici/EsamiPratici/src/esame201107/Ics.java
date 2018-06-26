@@ -5,11 +5,9 @@
  */
 package esame201107;
 
-import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 
 /**
- *
  * @author Matteo Franzil
  */
 public class Ics extends Polygon {

@@ -5,8 +5,6 @@
  */
 package esame200506;
 
-import java.util.Optional;
-import java.util.Random;
 import javafx.geometry.Insets;
 import javafx.scene.control.TextInputDialog;
 import javafx.scene.input.MouseEvent;
@@ -17,8 +15,10 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
+import java.util.Optional;
+import java.util.Random;
+
 /**
- *
  * @author Matteo Franzil
  */
 public class GraphicPanel extends Pane {

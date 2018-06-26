@@ -14,7 +14,6 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
 
 /**
- *
  * @author Matteo Franzil
  */
 public class ToolBar extends FlowPane {

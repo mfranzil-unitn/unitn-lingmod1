@@ -17,6 +17,10 @@ public class Main extends Application {
 
     Griglia grigliaSx, grigliaDx;
 
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     @Override
     public void start(Stage primaryStage) {
         Button reset = new Button("Reset");
@@ -99,10 +103,6 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.setTitle("Griglie");
         primaryStage.show();
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 
 }
