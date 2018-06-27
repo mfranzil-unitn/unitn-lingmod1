@@ -12,7 +12,7 @@ import javafx.scene.shape.Polygon;
  */
 public class Ics extends Polygon {
 
-    Ics(double size) {
+    public Ics(double size) {
         double x = 0;
         double y = 0;
 

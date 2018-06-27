@@ -117,7 +117,7 @@ public class HanoiArea extends Pane {
      *             partenza.
      * @param to   Un parametro di tipo PaloText che memorizzi il palo di arrivo.
      */
-    public void moveDisco(PaloText from, PaloText to) {
+    public synchronized void moveDisco(PaloText from, PaloText to) {
         if (!from.isEmpty() && !to.isEmpty()) {
             // Sposto i dischi soltanto se permesso dalle regole
             if (to.getTarget().getLastDiscoSize() < from.getTarget().getLastDiscoSize()) {
@@ -234,6 +234,7 @@ public class HanoiArea extends Pane {
         pathTransition.setPath(path);
         pathTransition.setNode(disco);
         pathTransition.play();
+
     }
 
     /**
@@ -264,12 +265,15 @@ public class HanoiArea extends Pane {
     }
 
     public void solve(int disk, Palo source, Palo dest, Palo aux, PaloText from, PaloText to) {
-        if (disk == 0) {
+        if (disk == 1) {
             System.out.println(source + " -> " + dest);
+            //moveDiscoAuto(source, dest);
         } else {
             solve(disk - 1, source, aux, dest, from, to);
             System.out.println(source + " -> " + dest);
+            //moveDiscoAuto(source, dest);
             solve(disk - 1, aux, dest, source, from, to);
         }
+
     }
 }
