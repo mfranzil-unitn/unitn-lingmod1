@@ -111,7 +111,7 @@ public class Controls extends Stage {
 
         finale.setOnAction(e -> {
             System.out.println("\nFINALE");
-            Partita finalissima = new Partita(squadreAmmesse.get(0),squadreAmmesse.get(1));
+            Partita finalissima = new Partita(squadreAmmesse.get(0), squadreAmmesse.get(1));
 
             Risultato ris = finalissima.calcola(false);
             System.out.println(finalissima);

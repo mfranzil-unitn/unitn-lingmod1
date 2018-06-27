@@ -14,8 +14,8 @@ import javafx.scene.text.Text;
  */
 public class Pannello extends GridPane {
 
-    private Button newgame;
     Button spin;
+    private Button newgame;
     private Button pay;
     private int punteggio;
     private int credito;

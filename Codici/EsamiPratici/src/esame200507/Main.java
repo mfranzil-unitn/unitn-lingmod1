@@ -39,14 +39,14 @@ public class Main extends Application {
 
         panel.add(state, 0, 0);
         panel.add(st_txt, 1, 0);
-        panel.add(x_txt,2,0);
+        panel.add(x_txt, 2, 0);
         panel.add(xCoord, 3, 0);
-        panel.add(y_txt,2,1);
+        panel.add(y_txt, 2, 1);
         panel.add(yCoord, 3, 1);
 
         panel.setHgap(10);
         panel.setVgap(10);
-        panel.setPadding(new Insets(10,10,10,10));
+        panel.setPadding(new Insets(10, 10, 10, 10));
 
 
         root.setTop(panel);

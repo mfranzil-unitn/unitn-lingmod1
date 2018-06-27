@@ -26,7 +26,7 @@ public class Main extends Application {
         Girone g3 = new Girone(Color.YELLOW, squadre.subList(8, 12));
         Girone g4 = new Girone(Color.WHITE, squadre.subList(12, 16));
 
-        Stage controls = new Controls(Arrays.asList(g1,g2,g3,g4), squadre);
+        Stage controls = new Controls(Arrays.asList(g1, g2, g3, g4), squadre);
 
         GridPane root = new GridPane();
         root.setPadding(new Insets(10, 10, 10, 10));

@@ -9,10 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
@@ -24,7 +21,7 @@ public class NumberRequestWindow extends Stage {
 
     public NumberRequestWindow(Stage primaryStage) {
         StackPane pane = new StackPane();
-        pane.setPadding(new Insets(5,5,5,5));
+        pane.setPadding(new Insets(5, 5, 5, 5));
         TextField field = new TextField("Inserisci qui un valore di N...");
 
         field.addEventHandler(ActionEvent.ACTION, (ActionEvent e) -> {

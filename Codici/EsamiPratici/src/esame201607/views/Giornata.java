@@ -8,9 +8,10 @@ import java.util.List;
 
 public class Giornata extends VBox {
     private Partita p1, p2;
+
     Giornata(int index, List<Squadra> squadre) {
         Text text = new Text("===" + index + "a Giornata ===");
-        switch(index) {
+        switch (index) {
             case 1: // 1-2 3-4
                 p1 = new Partita(squadre.get(0), squadre.get(1));
                 p2 = new Partita(squadre.get(2), squadre.get(3));

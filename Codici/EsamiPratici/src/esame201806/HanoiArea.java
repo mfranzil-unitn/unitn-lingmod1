@@ -6,7 +6,6 @@
 package esame201806;
 
 import javafx.animation.PathTransition;
-import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;

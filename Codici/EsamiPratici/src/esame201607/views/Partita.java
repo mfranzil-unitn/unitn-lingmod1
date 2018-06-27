@@ -41,11 +41,11 @@ public class Partita extends HBox {
         double pareggio = new Random().nextDouble();
         Risultato<Integer, Integer> risultato;
         if (pareggio < 0.3 && pareggioAmmesso) {
-            int gol = getPoisson(Girone.MAX_GOALS/4);
+            int gol = getPoisson(Girone.MAX_GOALS / 4);
             risultato = new Risultato<>(gol, gol);
         } else {
-            int gol1 = getPoisson(Girone.MAX_GOALS/4);
-            int gol2 = getPoisson(Girone.MAX_GOALS/4);
+            int gol1 = getPoisson(Girone.MAX_GOALS / 4);
+            int gol2 = getPoisson(Girone.MAX_GOALS / 4);
             if (gol1 == gol2) {
                 if (new Random().nextDouble() < 0.5)
                     gol1++;

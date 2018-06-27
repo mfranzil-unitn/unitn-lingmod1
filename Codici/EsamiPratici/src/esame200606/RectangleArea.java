@@ -1,6 +1,5 @@
 package esame200606;
 
-import javafx.event.ActionEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -33,12 +32,12 @@ public class RectangleArea extends Pane {
         getChildren().addAll(yellowRect, blueRect);
     }
 
-    public void setBlueSelected(boolean blueSelected) {
-        this.blueSelected = blueSelected;
-    }
-
     public boolean isBlueSelected() {
         return blueSelected;
+    }
+
+    public void setBlueSelected(boolean blueSelected) {
+        this.blueSelected = blueSelected;
     }
 
     public void move(boolean isBlue, int direction) {
@@ -49,7 +48,7 @@ public class RectangleArea extends Pane {
             rect = yellowRect;
         }
 
-        switch(direction) {
+        switch (direction) {
             case 0:
                 rect.setTranslateX(rect.getTranslateX() + DIM);
                 break;

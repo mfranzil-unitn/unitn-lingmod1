@@ -2,6 +2,7 @@ package esame201607.views;
 
 public class Risultato<K extends Integer, T extends Integer> {
     private Integer r1, r2;
+
     Risultato(K r1, T r2) {
         this.r1 = r1;
         this.r2 = r2;
