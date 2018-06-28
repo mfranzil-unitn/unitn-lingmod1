@@ -33,7 +33,6 @@ public class PressaNumeri extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-
         GridPane root = new GridPane();
         root.setPrefHeight(100);
         root.setPrefWidth(100);

@@ -34,11 +34,11 @@ public class Controls extends Stage {
         GridPane root = new GridPane();
 
         root.setPadding(new Insets(20, 20, 20, 20));
-        root.setVgap(20);
-        root.setHgap(20);
+        root.setVgap(10);
+        root.setHgap(10);
 
         Pane ballSpace = new Pane();
-        ballSpace.setPrefSize(400, 300);
+        ballSpace.setPrefSize(300, 300);
         ball = new Circle(50, 260, 30, Color.LIGHTBLUE);
         ballSpace.getChildren().add(ball);
 
@@ -57,71 +57,90 @@ public class Controls extends Stage {
         finale.setDisable(true);
 
         giornata1.setOnAction(e -> gironi.forEach(g -> {
-            g.calcola(1);
-            giornata1.setDisable(true);
-            giornata2.setDisable(false);
-            animateBall();
+            PathTransition pt = animateBall();
+            pt.setOnFinished(f -> {
+                g.calcola(1);
+                giornata1.setDisable(true);
+                giornata2.setDisable(false);
+            });
+            pt.play();
         }));
 
         giornata2.setOnAction(e -> gironi.forEach(g -> {
-            g.calcola(2);
-            giornata2.setDisable(true);
-            giornata3.setDisable(false);
-            animateBall();
+            PathTransition pt = animateBall();
+            pt.setOnFinished(f -> {
+                g.calcola(2);
+                giornata2.setDisable(true);
+                giornata3.setDisable(false);
+            });
+            pt.play();
         }));
 
         giornata3.setOnAction(e -> gironi.forEach(g -> {
-            g.calcola(3);
-            giornata3.setDisable(true);
-            quarti.setDisable(false);
-            animateBall();
+            PathTransition pt = animateBall();
+            pt.setOnFinished(f -> {
+                g.calcola(3);
+                giornata3.setDisable(true);
+                quarti.setDisable(false);
+            });
+            pt.play();
         }));
 
         quarti.setOnAction(e -> {
-            System.out.println("\nQUARTI");
-            List<Partita> partite = svolgiQuarti(gironi);
-            squadreAmmesse = new LinkedList<>();
+            PathTransition pt = animateBall();
+            pt.setOnFinished(g -> {
+                System.out.println("\nQUARTI");
+                List<Partita> partite = svolgiQuarti(gironi);
+                squadreAmmesse = new LinkedList<>();
 
-            partite.forEach(f -> {
-                Risultato ris = f.calcola(false);
-                squadreAmmesse.add(f.getVincente());
-                System.out.println(f);
+                partite.forEach(f -> {
+                    Risultato<Integer, Integer> ris = f.calcola(false);
+                    squadreAmmesse.add(f.getVincente());
+                    System.out.println(f);
+                });
+
+                quarti.setDisable(true);
+                semifinali.setDisable(false);
             });
-
-            animateBall();
-            quarti.setDisable(true);
-            semifinali.setDisable(false);
+            pt.play();
         });
 
         semifinali.setOnAction(e -> {
-            System.out.println("\nSEMIFINALI");
-            List<Partita> partite = svolgiSemifinali(squadreAmmesse);
-            squadreAmmesse = new LinkedList<>();
+            PathTransition pt = animateBall();
+            pt.setOnFinished(g -> {
+                System.out.println("\nSEMIFINALI");
+                List<Partita> partite = svolgiSemifinali(squadreAmmesse);
+                squadreAmmesse = new LinkedList<>();
 
-            partite.forEach(f -> {
-                Risultato ris = f.calcola(false);
-                squadreAmmesse.add(f.getVincente());
-                System.out.println(f);
+                partite.forEach(f -> {
+                    Risultato<Integer, Integer> ris = f.calcola(false);
+                    squadreAmmesse.add(f.getVincente());
+                    System.out.println(f);
+                });
+
+                semifinali.setDisable(true);
+                finale.setDisable(false);
             });
-
-            animateBall();
-            semifinali.setDisable(true);
-            finale.setDisable(false);
+            pt.play();
         });
 
         finale.setOnAction(e -> {
-            System.out.println("\nFINALE");
-            Partita finalissima = new Partita(squadreAmmesse.get(0), squadreAmmesse.get(1));
-
-            Risultato ris = finalissima.calcola(false);
-            System.out.println(finalissima);
-
-            animateBall();
             semifinali.setDisable(true);
+            Partita finalissima = new Partita(squadreAmmesse.get(0), squadreAmmesse.get(1));
+            Risultato<Integer, Integer> ris = finalissima.calcola(false);
+            PathTransition pt = animateBall();
+
+            pt.setOnFinished(g -> {
+                System.out.println("\nFINALE");
+                System.out.println(finalissima);
+                finale.setDisable(true);
+            });
+            pt.play();
+
             Alert alert = new Alert(Alert.AlertType.INFORMATION,
-                    "VINCE L'EUROPEO: " + finalissima.getVincente(),
+                    "VINCE L'EUROPEO: " + (finalissima.getVincente()),
                     ButtonType.OK);
-            Optional opt = alert.showAndWait();
+            alert.showAndWait().ifPresent(h -> Platform.exit());
             Platform.exit();
         });
 
@@ -136,6 +155,7 @@ public class Controls extends Stage {
         Scene scene = new Scene(root);
         setScene(scene);
         setTitle("Controlli");
+        setOnCloseRequest(e -> Platform.exit());
     }
 
     public List<Partita> svolgiQuarti(List<Girone> g) {
@@ -155,10 +175,9 @@ public class Controls extends Stage {
         Partita s1 = new Partita(s.get(0), s.get(3));
         Partita s2 = new Partita(s.get(1), s.get(2));
         return Arrays.asList(s1, s2);
-
     }
 
-    public void animateBall() {
+    public PathTransition animateBall() {
         PathTransition pathTransition = new PathTransition();
         pathTransition.setDuration(Duration.millis(2000));
 
@@ -203,6 +222,6 @@ public class Controls extends Stage {
 
         pathTransition.setPath(path);
         pathTransition.setNode(ball);
-        pathTransition.play();
+        return pathTransition;
     }
 }

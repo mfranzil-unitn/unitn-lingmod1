@@ -2,6 +2,8 @@ package esame201607.views;
 
 import esame201607.Squadra;
 import javafx.scene.layout.HBox;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 
 import java.util.Random;
@@ -9,14 +11,16 @@ import java.util.Random;
 public class Partita extends HBox {
     Text text1, text2, risultato;
     Squadra s1, s2;
-    Risultato ris;
+    Risultato<Integer, Integer> ris;
 
     public Partita(Squadra s1, Squadra s2) {
         this.s1 = s1;
         this.s2 = s2;
 
-        this.text1 = new Text(s1.toString());
-        this.text2 = new Text(s2.toString());
+        this.text1 = new Text(s1.toString() + "\t\t");
+        this.text1.setFont(Font.font("Google Sans", FontWeight.NORMAL, 12));
+        this.text2 = new Text(s2.toString() + "\t\t");
+        this.text2.setFont(Font.font("Google Sans", FontWeight.NORMAL, 12));
         this.risultato = new Text("");
 
         setSpacing(20);

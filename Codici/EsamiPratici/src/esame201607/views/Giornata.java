@@ -1,7 +1,10 @@
 package esame201607.views;
 
 import esame201607.Squadra;
+import javafx.geometry.Insets;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 
 import java.util.List;
@@ -10,7 +13,8 @@ public class Giornata extends VBox {
     private Partita p1, p2;
 
     Giornata(int index, List<Squadra> squadre) {
-        Text text = new Text("===" + index + "a Giornata ===");
+        Text text = new Text("Giornata " + index);
+        text.setFont(Font.font("Google Sans", FontWeight.NORMAL, 18));
         switch (index) {
             case 1: // 1-2 3-4
                 p1 = new Partita(squadre.get(0), squadre.get(1));
@@ -26,6 +30,7 @@ public class Giornata extends VBox {
                 break;
         }
         getChildren().addAll(text, p1, p2);
+        setPadding(new Insets(4));
     }
 
     public void calcola() {

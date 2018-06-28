@@ -23,9 +23,9 @@ public class Girone extends GridPane {
         this.squadre = squadre;
 
         setPrefSize(400, 400);
-        setBackground(new Background(new BackgroundFill(bg, new CornerRadii(3), Insets.EMPTY)));
-        setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID,
-                CornerRadii.EMPTY, BorderWidths.DEFAULT)));
+        setBackground(new Background(new BackgroundFill(bg, new CornerRadii(20), Insets.EMPTY)));
+        setBorder(new Border(new BorderStroke(Color.DARKGRAY, BorderStrokeStyle.SOLID,
+                new CornerRadii(20), new BorderWidths(3))));
         setPadding(new Insets(10, 10, 10, 10));
 
         g1 = new Giornata(1, squadre);

@@ -2,9 +2,12 @@ package esame201607;
 
 import esame201607.views.Girone;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
+import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.RowConstraints;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
@@ -38,11 +41,24 @@ public class Main extends Application {
         root.add(g3, 0, 1);
         root.add(g4, 1, 1);
 
+        RowConstraints r1 = new RowConstraints();
+        r1.setPercentHeight(50);
+        RowConstraints r2 = new RowConstraints();
+        r2.setPercentHeight(50);
+        root.getRowConstraints().addAll(r1,r2);
+
+        ColumnConstraints c1 = new ColumnConstraints();
+        c1.setPercentWidth(50);
+        ColumnConstraints c2 = new ColumnConstraints();
+        c2.setPercentWidth(50);
+        root.getColumnConstraints().addAll(c1,c2);
+
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Europei");
-        primaryStage.show();
+        primaryStage.setOnCloseRequest(e -> Platform.exit());
 
+        primaryStage.show();
         controls.show();
     }
 }
