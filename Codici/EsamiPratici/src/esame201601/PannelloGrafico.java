@@ -95,14 +95,14 @@ public class PannelloGrafico extends Pane {
             res = Color.BLACK;
             isFirst = false;
         } else {
-            res = (x < getFirstX() ? C2 : C1);
+            res = (x < getLastX() ? C2 : C1);
         }
         return res;
     }
 
-    public double getFirstX() {
+    public double getLastX() {
         double res;
-        Shape temp = figure.peekFirst();
+        Shape temp = figure.peekLast();
         if (temp instanceof Cerchio) {
             res = ((Cerchio) temp).getCenterX();
         } else if (temp instanceof Quadrato) {

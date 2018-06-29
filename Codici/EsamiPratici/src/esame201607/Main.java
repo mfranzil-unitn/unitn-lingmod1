@@ -3,8 +3,10 @@ package esame201607;
 import esame201607.views.Girone;
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.event.Event;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
@@ -32,6 +34,7 @@ public class Main extends Application {
         Stage controls = new Controls(Arrays.asList(g1, g2, g3, g4), squadre);
 
         GridPane root = new GridPane();
+
         root.setPadding(new Insets(10, 10, 10, 10));
         root.setVgap(10);
         root.setHgap(10);
@@ -57,6 +60,7 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.setTitle("Europei");
         primaryStage.setOnCloseRequest(e -> Platform.exit());
+
 
         primaryStage.show();
         controls.show();

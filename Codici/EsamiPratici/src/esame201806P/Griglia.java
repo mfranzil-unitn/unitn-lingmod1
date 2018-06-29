@@ -4,8 +4,11 @@ import esame201806P.celle.*;
 import javafx.event.Event;
 import javafx.scene.Node;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.input.ScrollEvent;
+import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
-import javafx.scene.shape.Rectangle;
+import javafx.scene.layout.RowConstraints;
+import javafx.scene.text.Text;
 
 import java.util.Collections;
 import java.util.LinkedList;
@@ -13,10 +16,10 @@ import java.util.LinkedList;
 public class Griglia extends GridPane {
 
     public static final int N = 10;
-    public static final int N_CELLEBASE = 75;
-    public static final int N_CELLEMOLT = 10;
-    public static final int N_CELLEDIV = 10;
-    public static final int N_CELLEBOMB = 5;
+    public static final int N_CELLEBASE = N * N * 3 / 4 + 1;
+    public static final int N_CELLEMOLT = N * N / 10;
+    public static final int N_CELLEDIV = N * N / 10;
+    public static final int N_CELLEBOMB = N * N / 20;
 
     private Integer punteggio, tentativi;
     private TextContainer<Integer> punteggioTxt;
@@ -49,6 +52,12 @@ public class Griglia extends GridPane {
         Collections.shuffle(celle);
 
         for (int i = 0; i < N; i++) {
+            RowConstraints r = new RowConstraints();
+            r.setPercentHeight(100 / N);
+            ColumnConstraints c = new ColumnConstraints();
+            c.setPercentWidth(100 / N);
+            getRowConstraints().addAll(r);
+            getColumnConstraints().add(c);
             for (int j = 0; j < N; j++) {
                 add(celle.get(i * N + j), j, i);
             }
@@ -56,8 +65,10 @@ public class Griglia extends GridPane {
 
         addEventFilter(MouseEvent.MOUSE_CLICKED, e -> {
             if (getTentativi() > 0) {
-                if (e.getTarget() instanceof Rectangle)
+                if (((Node) e.getTarget()).getParent() instanceof Cella &&
+                        !(e.getTarget() instanceof Text)) {
                     setTentativi(getTentativi() - 1);
+                }
             } else {
                 e.consume();
             }
@@ -65,6 +76,15 @@ public class Griglia extends GridPane {
 
         punteggioTxt.update(punteggio);
         tentativiTxt.update(tentativi);
+
+
+        addEventHandler(ScrollEvent.SCROLL, e -> {
+            if (e.isControlDown()) {
+                for (Cella a : celle) {
+                    a.changeCover(e.getDeltaY() / 1000);
+                }
+            }
+        });
     }
 
     public Integer getPunteggio() {

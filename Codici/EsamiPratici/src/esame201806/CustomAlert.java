@@ -7,6 +7,7 @@ package esame201806;
 
 import javafx.application.Platform;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -29,6 +30,12 @@ public class CustomAlert extends Stage {
         root.getChildren().add(text);
 
         Scene scene = new Scene(root, message.length() * 9, 40);
+
+        scene.setOnKeyPressed(e -> {
+            if (e.getCode() == KeyCode.ESCAPE) {
+                this.close();
+            }
+        });
 
         setTitle("Errore!");
         setResizable(false);

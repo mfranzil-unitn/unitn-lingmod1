@@ -42,7 +42,7 @@ public class CellaBomba extends Cella {
         this.toFront();
         getChildren().add(circ);
 
-        ParallelTransition pt = ExplodeTransition.getExplodeTransition(circ, 20);
+        ParallelTransition pt = ExplodeTransition.getExplodeTransition(circ, 40);
         pt.play();
         pt.setOnFinished(e -> {
             getChildren().remove(circ);
