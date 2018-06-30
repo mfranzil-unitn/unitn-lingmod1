@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package esamepressanumeri;
+package esamespostanumeri;
 
 import javafx.application.Application;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
@@ -19,7 +19,6 @@ import javafx.stage.Stage;
  */
 public class SpostaNumeri extends Application {
 
-    BottoneMovimentato[][] buttons;
 
     /**
      * @param args the command line arguments
@@ -34,8 +33,6 @@ public class SpostaNumeri extends Application {
         root.setPrefHeight(100);
         root.setPrefWidth(100);
 
-        buttons = new BottoneMovimentato[3][3];
-
         for (int j = 0; j < 3; j++) {
             ColumnConstraints column = new ColumnConstraints();
             column.setPercentWidth(33);
@@ -44,38 +41,39 @@ public class SpostaNumeri extends Application {
             for (int i = 0; i < 3 && (3 * j + i < 8); i++) {
                 BottoneMovimentato temp = new BottoneMovimentato(i, j);
                 GridPane.setConstraints(temp, i, j);
-                buttons[i][j] = temp;
                 root.getChildren().add(temp);
             }
         }
+
         BottoneMovimentato vuoto = new BottoneMovimentato(2, 2);
         GridPane.setConstraints(vuoto, 2, 2);
-        buttons[2][2] = vuoto;
         vuoto.setVisible(false);
         root.getChildren().add(vuoto);
 
-        primaryStage.addEventFilter(KeyEvent.KEY_PRESSED, new Handler());
+        primaryStage.addEventFilter(KeyEvent.KEY_PRESSED, e -> {
+            try {
+                Button temp = (Button) root.getChildren().get(Integer.parseInt(e.getCode().getName()) - 1);
+                Integer i1 = GridPane.getColumnIndex(vuoto);
+                Integer j1 = GridPane.getRowIndex(vuoto);
+                Integer i2 = GridPane.getColumnIndex(temp);
+                Integer j2 = GridPane.getRowIndex(temp);
+                System.out.println(i1 + ", " + j1 + " -> " + i2 + ", " + j2);
+                if ((i2.equals(i1 - 1) && j2.equals(j1))
+                        || (i2.equals(i1 + 1) && j2.equals(j1))
+                        || (j2.equals(j1 - 1) && i2.equals(i1))
+                        || (j2.equals(j1 + 1) && i2.equals(i1))) {
+                    GridPane.setConstraints(vuoto,i2,j2);
+                    GridPane.setConstraints(temp,i1,j1);
+                }
+            } catch (Exception ex) {
+                e.consume();
+            }
+        });
 
         Scene scene = new Scene(root);
 
         primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);
         primaryStage.show();
-    }
-
-    public BottoneMovimentato getNearby(int i, int j) {
-        BottoneMovimentato temp = null;
-        while (!temp.getText().equals(8)) {
-            temp = buttons[i - 1][j - 1];
-        }
-        return null;
-    }
-
-    class Handler implements EventHandler<KeyEvent> {
-
-        @Override
-        public void handle(KeyEvent event) {
-
-        }
     }
 }

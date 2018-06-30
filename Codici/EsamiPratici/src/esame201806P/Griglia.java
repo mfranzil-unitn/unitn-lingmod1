@@ -16,7 +16,7 @@ import java.util.LinkedList;
 public class Griglia extends GridPane {
 
     public static final int N = 10;
-    public static final int N_CELLEBASE = N * N * 3 / 4 + 1;
+    public static final int N_CELLEBASE = N * N * 3 / 4;
     public static final int N_CELLEMOLT = N * N / 10;
     public static final int N_CELLEDIV = N * N / 10;
     public static final int N_CELLEBOMB = N * N / 20;
@@ -59,7 +59,11 @@ public class Griglia extends GridPane {
             getRowConstraints().addAll(r);
             getColumnConstraints().add(c);
             for (int j = 0; j < N; j++) {
-                add(celle.get(i * N + j), j, i);
+                try {
+                    add(celle.get(i * N + j), j, i);
+                } catch (IndexOutOfBoundsException ex) {
+                    add(new CellaBase(this),j,i);
+                }
             }
         }
 

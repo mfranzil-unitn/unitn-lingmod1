@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package esamepressanumeri;
+package esamespostanumeri;
 
 import javafx.scene.control.Button;
 
@@ -16,7 +16,7 @@ public class BottoneMovimentato extends Button {
     int j;
 
     public BottoneMovimentato(int i, int j) {
-        super(String.valueOf(3 * j + i));
+        super(String.valueOf(3 * j + i + 1));
         setPrefHeight(1000);
         setPrefWidth(1000);
         this.i = i;
