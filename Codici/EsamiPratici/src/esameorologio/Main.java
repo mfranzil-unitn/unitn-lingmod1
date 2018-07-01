@@ -2,17 +2,25 @@ package esameorologio;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
+import javafx.scene.Cursor;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.input.MouseButton;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
+import static esameorologio.Orologio.OFFSET;
+import static esameorologio.Orologio.RADIUS;
 
 public class Main extends Application {
 
-    Scene clockScene;
-    Stage clockStage;
+    private Scene clockScene;
+    private Stage clockStage;
+    private double xOffset, yOffset;
 
     public static void main(String[] args) {
         launch(args);
@@ -42,6 +50,7 @@ public class Main extends Application {
         automatico.setOnAction(e -> generateNewClock(automatico.getText(), radio));
 
         var scene = new Scene(vbox);
+        primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Orologi");
         primaryStage.show();
@@ -49,20 +58,49 @@ public class Main extends Application {
     }
 
     private void generateNewClock(String mode, ToggleGroup radio) {
-        var orologio = new Orologio(mode,(String) radio.getSelectedToggle().getUserData());
+        var orologio = new Orologio(mode, (String) radio.getSelectedToggle().getUserData());
+        initActions(orologio);
+
         try {
             clockStage.close();
         } catch (NullPointerException ex) {
             System.err.println("Trying to close an empty stage");
         }
-        clockStage = new Stage();
+
         if (mode.equals("Automatico")) {
-            clockScene = new Scene(orologio, 360, 360);
+            clockScene = new Scene(orologio, 2 * OFFSET + 2 * RADIUS, 2 * OFFSET + 2 * RADIUS);
         } else {
             clockScene = new Scene(orologio);
         }
+
+        clockStage = new Stage();
+
+        clockScene.setFill(Color.TRANSPARENT);
+
         clockStage.setScene(clockScene);
         clockStage.setTitle("Orologio");
+        clockStage.initStyle(StageStyle.TRANSPARENT);
         clockStage.show();
     }
+
+    private void initActions(Orologio orologio) {
+        // Drag and drop
+        orologio.setOnMousePressed(event -> {
+            xOffset = clockStage.getX() - event.getScreenX();
+            yOffset = clockStage.getY() - event.getScreenY();
+        });
+
+        orologio.setOnMouseDragged(event -> {
+            clockStage.setX(event.getScreenX() + xOffset);
+            clockStage.setY(event.getScreenY() + yOffset);
+        });
+
+        // Cursore
+        orologio.setOnMouseEntered(mouseEvent -> {
+            if (!mouseEvent.isPrimaryButtonDown()) {
+                orologio.setCursor(Cursor.HAND);
+            }
+        });
+    }
+
 }
