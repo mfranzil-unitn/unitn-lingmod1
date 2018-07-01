@@ -1,4 +1,4 @@
-V	Di default l’operatore == e il metodo equals fanno la stessa cosa.	
+Di default l’operatore == e il metodo equals fanno la stessa cosa.	
 Due oggetti per cui equals è vero possono avere variabili pubbliche con valori differenti	
 Due oggetti per cui equals è vero sono sempre identici	
 E' corretto scrivere Integer k = 3;	

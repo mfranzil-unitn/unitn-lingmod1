@@ -36,21 +36,21 @@ public class Orologio extends Pane {
         }
 
         if (mode.equals("Manuale")) {
-            TextField ore = new TextField("0") {{
+            var ore = new TextField("0") {{
                 setPrefWidth(40);
             }};
-            TextField minuti = new TextField("0") {{
+            var minuti = new TextField("0") {{
                 setPrefWidth(40);
             }};
-            TextField secondi = new TextField("0") {{
+            var secondi = new TextField("0") {{
                 setPrefWidth(40);
             }};
-            Text text1 = new Text(":");
-            Text text2 = new Text(":");
-            Button aggiorna = new Button("Aggiorna");
+            var text1 = new Text(":");
+            var text2 = new Text(":");
+            var aggiorna = new Button("Aggiorna");
 
 
-            HBox choice = new HBox() {{
+            var choice = new HBox() {{
                 getChildren().addAll(ore, text1, minuti, text2, secondi, aggiorna);
             }};
             choice.setLayoutX(280);
