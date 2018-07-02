@@ -12,7 +12,6 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
 import java.time.LocalDateTime;
 
 import static esameorologio.Orologio.OFFSET;
@@ -104,7 +103,7 @@ public class Main extends Application {
             }
         });
 
-        orologio.setOnMouseEntered(e ->
+        orologio.setOnMouseMoved(e ->
                 Tooltip.install(orologio,
                         new Tooltip(LocalDateTime.now().getHour()
                                 + ":" + LocalDateTime.now().getMinute()
