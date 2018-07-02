@@ -1,5 +1,6 @@
 package esameorologio;
 
+import javafx.animation.Animation;
 import javafx.animation.RotateTransition;
 import javafx.geometry.Insets;
 import javafx.scene.control.Alert;
@@ -20,7 +21,7 @@ import java.time.LocalDateTime;
 
 public class Orologio extends Pane {
 
-    public static final int RADIUS = 80;
+    public static final int RADIUS = 180;
     public static final int OFFSET = 20;
 
     private Circle clock;
@@ -32,9 +33,9 @@ public class Orologio extends Pane {
         this.mode = mode;
         this.assignedShape = shape;
 
-        clock = new Circle(OFFSET + RADIUS, OFFSET + RADIUS, RADIUS, RegistryRead.getAccentColor());
+        clock = new Circle(OFFSET + RADIUS, OFFSET + RADIUS, RADIUS, AccentParser.getAccentColor());
         optionalClock = new Rectangle(OFFSET, OFFSET, RADIUS * 2, RADIUS * 2);
-        optionalClock.setFill(RegistryRead.getAccentColor());
+        optionalClock.setFill(AccentParser.getAccentColor());
         getChildren().addAll(optionalClock, clock);
 
         setStyle("-fx-background-color: rgba(255, 255, 255, 0);");
@@ -79,9 +80,9 @@ public class Orologio extends Pane {
                     this.minuti = Integer.parseInt(minuti.getText());
                     this.secondi = Integer.parseInt(secondi.getText());
                     getChildren().retainAll(choice, clock, optionalClock);
-                    getChildren().addAll(drawArc(this.ore * 360 / 12, 2 * RADIUS / 3.0, 5, Color.RED),
+                    getChildren().addAll(drawArc(this.ore * 360 / 12, 2 * RADIUS / 3.0, 7, Color.RED),
                             drawArc(this.minuti * 360 / 60.0, RADIUS, 5, Color.GREEN),
-                            drawArc(this.secondi * 360 / 60.0, 9 * RADIUS / 10.0, 2, Color.BLUE));
+                            drawArc(this.secondi * 360 / 60.0, 9 * RADIUS / 10.0, 1, Color.BLUE));
                 } else {
                     new Alert(Alert.AlertType.ERROR, "Formato non corretto!", ButtonType.OK).showAndWait();
                 }
@@ -96,10 +97,10 @@ public class Orologio extends Pane {
         } else {
             this.ore = LocalDateTime.now().getHour() * 360 / 12;
             this.minuti = LocalDateTime.now().getMinute() * 360 / 60.0;
-            this.secondi = (LocalDateTime.now().getSecond() - 3) * 360 / 60.0;
+            this.secondi = (LocalDateTime.now().getSecond() + 3) * 360 / 60.0;
 
             var oreRoot = new Pane();
-            var oreArc = drawArc(0, 3 * RADIUS / 4.0, 8, Color.RED);
+            var oreArc = drawArc(0, 3 * RADIUS / 4.0, 7, Color.RED);
             oreRoot.setLayoutX(0);
             oreRoot.setLayoutY(0);
             oreRoot.setPrefSize(2*OFFSET + 2*RADIUS, 2*OFFSET + 2*RADIUS);
@@ -113,7 +114,7 @@ public class Orologio extends Pane {
             minutiRoot.getChildren().add(minutiArc);
 
             var secondiRoot = new Pane();
-            var secondiArc = drawArc(0, 9 * RADIUS / 10.0, 2, Color.BLUE);
+            var secondiArc = drawArc(0, 9 * RADIUS / 10.0, 1, Color.BLUE);
             secondiRoot.setLayoutX(0);
             secondiRoot.setLayoutY(0);
             secondiRoot.setPrefSize(2*OFFSET + 2*RADIUS, 2*OFFSET + 2*RADIUS);
@@ -143,8 +144,8 @@ public class Orologio extends Pane {
             rt3.setByAngle(this.secondi);
             rt3.play();
             rt3.setOnFinished(e -> {
-                rt3.setDuration(Duration.millis(1000 * 59));
-                rt3.setByAngle(360);
+                rt3.setDuration(Duration.millis(925));
+                rt3.setByAngle(6);
                 rt3.play();
             });
         }

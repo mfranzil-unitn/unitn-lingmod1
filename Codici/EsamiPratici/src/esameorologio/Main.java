@@ -7,11 +7,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
-import javafx.scene.input.MouseButton;
+import javafx.scene.control.Tooltip;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+
+import java.time.LocalDateTime;
 
 import static esameorologio.Orologio.OFFSET;
 import static esameorologio.Orologio.RADIUS;
@@ -101,6 +103,14 @@ public class Main extends Application {
                 orologio.setCursor(Cursor.HAND);
             }
         });
+
+        orologio.setOnMouseEntered(e ->
+                Tooltip.install(orologio,
+                        new Tooltip(LocalDateTime.now().getHour()
+                                + ":" + LocalDateTime.now().getMinute()
+                                + ":" + LocalDateTime.now().getSecond())
+                )
+        );
     }
 
 }
