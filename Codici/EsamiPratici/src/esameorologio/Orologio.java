@@ -1,6 +1,5 @@
 package esameorologio;
 
-import javafx.animation.Animation;
 import javafx.animation.RotateTransition;
 import javafx.geometry.Insets;
 import javafx.scene.control.Alert;
@@ -12,7 +11,10 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.*;
+import javafx.scene.shape.Arc;
+import javafx.scene.shape.ArcType;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.scene.transform.Rotate;
 import javafx.util.Duration;
@@ -70,7 +72,7 @@ public class Orologio extends Pane {
             }};
 
             choice.setLayoutX(RADIUS + OFFSET);
-            choice.setLayoutY(2*OFFSET + 2*RADIUS);
+            choice.setLayoutY(2 * OFFSET + 2 * RADIUS);
             choice.setPadding(new Insets(OFFSET));
             getChildren().add(choice);
 
@@ -89,7 +91,6 @@ public class Orologio extends Pane {
             });
 
             setOnKeyPressed(e -> {
-                System.out.println(e.getCode());
                 if (e.getCode() == KeyCode.ENTER) {
                     aggiorna.fire();
                 }
@@ -103,51 +104,51 @@ public class Orologio extends Pane {
             var oreArc = drawArc(0, 3 * RADIUS / 4.0, 7, Color.RED);
             oreRoot.setLayoutX(0);
             oreRoot.setLayoutY(0);
-            oreRoot.setPrefSize(2*OFFSET + 2*RADIUS, 2*OFFSET + 2*RADIUS);
+            oreRoot.setPrefSize(2 * OFFSET + 2 * RADIUS, 2 * OFFSET + 2 * RADIUS);
             oreRoot.getChildren().add(oreArc);
 
             var minutiRoot = new Pane();
             var minutiArc = drawArc(0, RADIUS, 5, Color.GREEN);
             minutiRoot.setLayoutX(0);
             minutiRoot.setLayoutY(0);
-            minutiRoot.setPrefSize(2*OFFSET + 2*RADIUS, 2*OFFSET + 2*RADIUS);
+            minutiRoot.setPrefSize(2 * OFFSET + 2 * RADIUS, 2 * OFFSET + 2 * RADIUS);
             minutiRoot.getChildren().add(minutiArc);
 
             var secondiRoot = new Pane();
             var secondiArc = drawArc(0, 9 * RADIUS / 10.0, 1, Color.BLUE);
             secondiRoot.setLayoutX(0);
             secondiRoot.setLayoutY(0);
-            secondiRoot.setPrefSize(2*OFFSET + 2*RADIUS, 2*OFFSET + 2*RADIUS);
+            secondiRoot.setPrefSize(2 * OFFSET + 2 * RADIUS, 2 * OFFSET + 2 * RADIUS);
             secondiRoot.getChildren().add(secondiArc);
 
             getChildren().addAll(oreRoot, minutiRoot, secondiRoot);
 
             RotateTransition rt1 = new RotateTransition(Duration.millis(3000), oreRoot);
             rt1.setByAngle(this.ore);
-            rt1.play();
             rt1.setOnFinished(e -> {
                 rt1.setDuration(Duration.millis(1000 * 59 * 24));
                 rt1.setByAngle(360 / 12.0);
                 rt1.play();
             });
+            rt1.play();
 
             RotateTransition rt2 = new RotateTransition(Duration.millis(3000), minutiRoot);
             rt2.setByAngle(this.minuti);
-            rt2.play();
             rt2.setOnFinished(e -> {
                 rt2.setDuration(Duration.millis(1000 * 59));
                 rt2.setByAngle(360 / 60.0);
                 rt2.play();
             });
+            rt2.play();
 
             RotateTransition rt3 = new RotateTransition(Duration.millis(3000), secondiRoot);
             rt3.setByAngle(this.secondi);
-            rt3.play();
             rt3.setOnFinished(e -> {
                 rt3.setDuration(Duration.millis(925));
                 rt3.setByAngle(6);
                 rt3.play();
             });
+            rt3.play();
         }
     }
 

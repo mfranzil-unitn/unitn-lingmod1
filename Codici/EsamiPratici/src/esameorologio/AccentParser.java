@@ -41,9 +41,14 @@ public class AccentParser {
 
         assert value != null;
 
-        value = value.substring(4);
+        if (value.length() == 10) {
+            value = value.substring(4);
+        } else {
+            value = value.substring(2);
+        }
 
         int r = Integer.valueOf(value.substring(0, 2), 16);
+        System.out.println(value.substring(0, 2));
         int g = Integer.valueOf(value.substring(2, 4), 16);
         int b = Integer.valueOf(value.substring(4, 6), 16);
    //     int a = Integer.valueOf(value.substring(6, 8), 16);

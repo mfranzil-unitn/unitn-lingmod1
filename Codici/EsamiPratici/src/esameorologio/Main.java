@@ -86,19 +86,19 @@ public class Main extends Application {
 
     private void initActions(Orologio orologio) {
         // Drag and drop
-        orologio.setOnMousePressed(event -> {
-            xOffset = clockStage.getX() - event.getScreenX();
-            yOffset = clockStage.getY() - event.getScreenY();
+        orologio.setOnMousePressed(e -> {
+            xOffset = clockStage.getX() - e.getScreenX();
+            yOffset = clockStage.getY() - e.getScreenY();
         });
 
-        orologio.setOnMouseDragged(event -> {
-            clockStage.setX(event.getScreenX() + xOffset);
-            clockStage.setY(event.getScreenY() + yOffset);
+        orologio.setOnMouseDragged(e -> {
+            clockStage.setX(e.getScreenX() + xOffset);
+            clockStage.setY(e.getScreenY() + yOffset);
         });
 
         // Cursore
-        orologio.setOnMouseEntered(mouseEvent -> {
-            if (!mouseEvent.isPrimaryButtonDown()) {
+        orologio.setOnMouseEntered(e -> {
+            if (!e.isPrimaryButtonDown()) {
                 orologio.setCursor(Cursor.HAND);
             }
         });
