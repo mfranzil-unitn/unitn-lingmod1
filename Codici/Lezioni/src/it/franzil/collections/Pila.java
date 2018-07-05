@@ -1,6 +1,6 @@
 package it.franzil.collections;
 
-import java.util.*; 
+import java.util.Iterator;
 
 class Pila extends Stack {
 

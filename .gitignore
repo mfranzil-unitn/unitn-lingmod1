@@ -9,12 +9,14 @@
 *.zip
 *.tar.gz
 *.rar
+*.iml
 hs_err_pid*
 Esami/
 Libri PDF/
 Materiale/
 Codici/EsamiTeorici/
 Appunti.java
+/Codici/Lezioni/.idea/
 /Codici/Oracle JavaFX Tutorials/nbproject/private/
 /Codici/EsamiPratici/nbproject/private/
 /Codici/EsamiPratici/dist/

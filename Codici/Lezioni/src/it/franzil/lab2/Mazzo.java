@@ -11,7 +11,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- *
  * @author matteo.franzil
  */
 public class Mazzo {

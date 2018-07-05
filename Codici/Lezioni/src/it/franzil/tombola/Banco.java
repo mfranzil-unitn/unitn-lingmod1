@@ -3,7 +3,6 @@ package it.franzil.tombola;
 import java.util.LinkedList;
 
 /**
- *
  * @author matte
  */
 public class Banco {
@@ -11,7 +10,7 @@ public class Banco {
     static LinkedList<Cartella> vincitori;
     private final LinkedList<Integer> sacchetto;
     private final LinkedList<Cartella> cartelle;
-    
+
     public boolean numerifiniti;
 
     public Banco() {
@@ -40,6 +39,7 @@ public class Banco {
 
     /**
      * Funzione che si occupa di estrarre il numero successivo dal sacchetto.
+     *
      * @return Il numero appena estratto.
      */
     int getNextNumber() {

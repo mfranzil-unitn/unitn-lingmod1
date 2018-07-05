@@ -6,17 +6,16 @@
 package it.franzil.point;
 
 /**
- *
  * @author matte
  */
 public class Point3D extends Point {
     public int z = 0;
-    
+
     Point3D(int x, int y, int z) {
-        super(x,y);
+        super(x, y);
         this.z = z;
     }
-    
+
     public void move(int x, int y, int z) {
         super.move(x, y);
         this.z += z;

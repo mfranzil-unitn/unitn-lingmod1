@@ -1,14 +1,14 @@
 package it.franzil.persone;
 
 public class Docente extends Persona {
-    
+
     public String materia;
 
     public Docente(String nome, String cognome, String materia) {
         super(nome, cognome);
         this.materia = materia;
     }
-    
+
     @Override
     public String toString() {
         return super.toString() + " - " + this.materia;
@@ -19,7 +19,7 @@ public class Docente extends Persona {
         boolean res;
         if (super.equals(a) == true) {
             if (a instanceof Docente)
-                res = this.materia.equals(((Docente)a).materia);
+                res = this.materia.equals(((Docente) a).materia);
             else
                 res = false;
         } else

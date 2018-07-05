@@ -1,7 +1,7 @@
 package it.franzil.impiegati;
 
+import it.baiguera.lab1.Data;
 import it.franzil.Common;
-import it.franzil.lab1.Data;
 import it.franzil.persone.Persona;
 
 public class Impiegato extends Persona {
@@ -19,7 +19,7 @@ public class Impiegato extends Persona {
     public Impiegato() {
         super();
         this.stipendio = Common.randomInt(60000);
-        this.assunzione = new Data(1,1,1900);
+        this.assunzione = new Data(1, 1, 1900);
         this.età = Common.randomInt(60);
     }
 
@@ -39,9 +39,9 @@ public class Impiegato extends Persona {
     public boolean equals(Object a) {
         boolean res;
         if (a != null && !(a instanceof Impiegato) && super.equals(a))
-            res = (((Impiegato)a).stipendio == stipendio &&
-                    ((Impiegato)a).assunzione.equals(assunzione) &&
-                    ((Impiegato)a).età == età);
+            res = (((Impiegato) a).stipendio == stipendio &&
+                    ((Impiegato) a).assunzione.equals(assunzione) &&
+                    ((Impiegato) a).età == età);
         else
             res = false;
         return res;
@@ -61,27 +61,9 @@ public class Impiegato extends Persona {
     public String toString() {
         return super.toString();
     }
-    
+
     public Data getAssunzione() {
         return assunzione;
-    }
-
-    @Override
-    public String getCognome() {
-        return super.getCognome(); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public int getEtà() {
-        return età;
-    }
-
-    @Override
-    public String getNome() {
-        return super.getNome(); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public int getStipendio() {
-        return stipendio;
     }
 
     public void setAssunzione(Data assunzione) {
@@ -89,8 +71,17 @@ public class Impiegato extends Persona {
     }
 
     @Override
+    public String getCognome() {
+        return super.getCognome(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
     public void setCognome(String cognome) {
         super.setCognome(cognome); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public int getEtà() {
+        return età;
     }
 
     public void setEtà(int età) {
@@ -98,11 +89,20 @@ public class Impiegato extends Persona {
     }
 
     @Override
+    public String getNome() {
+        return super.getNome(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
     public void setNome(String nome) {
         super.setNome(nome); //To change body of generated methods, choose Tools | Templates.
     }
 
+    public int getStipendio() {
+        return stipendio;
+    }
+
     public void setStipendio(int stipendio) {
         this.stipendio = stipendio;
-    } 
+    }
 }

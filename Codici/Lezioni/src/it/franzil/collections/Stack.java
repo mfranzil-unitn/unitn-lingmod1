@@ -5,10 +5,9 @@
  */
 package it.franzil.collections;
 
-import java.util.*;
+import java.util.LinkedList;
 
 /**
- *
  * @author matte
  */
 public abstract class Stack extends LinkedList {

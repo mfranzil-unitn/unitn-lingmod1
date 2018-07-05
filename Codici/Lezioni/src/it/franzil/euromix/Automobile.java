@@ -6,6 +6,7 @@
 package it.franzil.euromix;
 
 import it.franzil.persone.Persona;
+
 import java.util.Objects;
 
 public class Automobile {
@@ -15,7 +16,7 @@ public class Automobile {
     public int cilindrata;
     public Targa targa;
     public Persona proprietario;
-    
+
     Automobile(String marca, String tipo, String colore, int cilindrata, Targa targa, Persona proprietario) {
         this.marca = marca;
         this.tipo = tipo;
@@ -32,13 +33,13 @@ public class Automobile {
             res = false;
         else if (!(o instanceof Automobile))
             res = false;
-        else 
-            res = (marca.equals(((Automobile)o).marca) &&
-                   tipo.equals(((Automobile)o).tipo) &&
-                   colore.equals(((Automobile)o).colore) &&
-                   cilindrata == ((Automobile)o).cilindrata &&
-                   targa.equals(((Automobile)o).targa) &&
-                   proprietario.equals(((Automobile)o).proprietario));
+        else
+            res = (marca.equals(((Automobile) o).marca) &&
+                    tipo.equals(((Automobile) o).tipo) &&
+                    colore.equals(((Automobile) o).colore) &&
+                    cilindrata == ((Automobile) o).cilindrata &&
+                    targa.equals(((Automobile) o).targa) &&
+                    proprietario.equals(((Automobile) o).proprietario));
         return res;
     }
 
@@ -53,7 +54,6 @@ public class Automobile {
         hash = 17 * hash + Objects.hashCode(this.proprietario);
         return hash;
     }
-    
-    
-    
+
+
 }

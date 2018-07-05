@@ -16,7 +16,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 /**
- *
  * @author nicolo.gottardello
  */
 public class Lab4 extends Application {
@@ -24,16 +23,23 @@ public class Lab4 extends Application {
     static boolean isX = true;
     static int destroyCount = 0;
 
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     @Override
     public void start(Stage primaryStage) {
-       
+
         Group root = new Group();
         Scene scene = new Scene(root, 1200, 750);
-        
+
         Group btnRoot = new Group();
         Scene btnScene = new Scene(btnRoot, 400, 50);
-        
-        
+
+
         Cerchio crc = new Cerchio();
         crc.addEventHandler(MouseEvent.MOUSE_ENTERED, (MouseEvent e) -> {
             if (isX) {
@@ -76,7 +82,7 @@ public class Lab4 extends Application {
                 crc.moveY(10);
             }
         });
-        
+
         Button btnL = new Button("Move Circle Left");
 
         btnL.setOnAction((ActionEvent event) -> {
@@ -104,9 +110,9 @@ public class Lab4 extends Application {
                 btnXY.setText("Sposta su y");
             }
         });
-        
+
         scene.addEventHandler(KeyEvent.KEY_PRESSED, (KeyEvent e) -> {
-            if (null != e.getCode()) { 
+            if (null != e.getCode()) {
                 switch (e.getCode()) {
                     case LEFT:
                         btnL.fire();
@@ -129,7 +135,7 @@ public class Lab4 extends Application {
 
         root.getChildren().addAll(crc);
         btnRoot.getChildren().addAll(btnR, btnL, btnXY);
-        
+
         Stage stage = new Stage();
         stage.setTitle("Controlli");
         stage.setY(105);
@@ -140,13 +146,6 @@ public class Lab4 extends Application {
         primaryStage.setTitle("Cerchio!");
         primaryStage.setScene(scene);
         primaryStage.show();
-    }
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
     }
 
 }

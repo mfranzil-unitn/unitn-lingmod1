@@ -15,10 +15,7 @@ This repo contains material about the following course:
 ## Content
 You can find the following material in the repo:
 * Codici/EsamiPratici/ - A JavaFX project containing code about past exams, made by myself and other students.
-* Codici/Lezioni - A Java project containing code samples written during the 2017/2018 course.
-* Codici/OracleJavaFXTutorials - A Java project containing code samples provided by Oracle.
-* Codici/ You can find two C++ files here, related to a lesson example.
-* Slide (Laboratorio)/ and Slide (Lezione)/ - Lecture slides, courtesy of the teacher.
+* Codici/Lezioni - A Java project containing code samples written and given during the 2017/2018 course.
 * CodeSnippets.java - A file containing useful files, to be printed and brought at the exam as a reference.
 
 ## Contribute

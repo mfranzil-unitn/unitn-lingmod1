@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         Collection set = new TreeSet();
-        
+
         Persona p1 = new Studente("Matteo", "Franzil", 192198);
         Persona p2 = new Studente("Paolo", "Baiguera", 193188);
         Persona p3 = new Studente("Claudio", "Facchinetti", 196177);
@@ -32,7 +32,7 @@ public class Main {
         set.add(p9);
         set.add(p10);
         set.add(p11);
-        
+
         // Richiesta 1: Nomi di studenti che iniziano con M
         Iterator i = set.iterator();
         Persona p;
@@ -61,11 +61,11 @@ public class Main {
         while (i.hasNext()) {
             System.out.println(i.next());
         }
-        
-        
+
+
         Persona p20 = new Studente("Matteo", "Franzil", 192198);
         Persona p21 = new Studente("Matteo", "Franzl", 192198);
         System.out.println(p20.equals(p21) + ", " + p20.hashCode() + ", " + p21.hashCode());
     }
-    
+
 }

@@ -8,7 +8,6 @@ package it.franzil.lab2;
 import java.util.Objects;
 
 /**
- *
  * @author matteo.franzil
  */
 public class CartaDaGioco {
@@ -29,11 +28,11 @@ public class CartaDaGioco {
     @Override
     public boolean equals(Object o) {
         boolean ret = false;
-        if  (o==null)
+        if (o == null)
             ret = false;
-        else if (! (o instanceof CartaDaGioco))
+        else if (!(o instanceof CartaDaGioco))
             ret = false;
-        else if (((CartaDaGioco)o).valore == valore && ((CartaDaGioco)o).seme.equals(seme))
+        else if (((CartaDaGioco) o).valore == valore && ((CartaDaGioco) o).seme.equals(seme))
             ret = true;
         return ret;
     }

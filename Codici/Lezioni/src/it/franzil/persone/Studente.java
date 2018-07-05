@@ -1,9 +1,9 @@
 package it.franzil.persone;
 
 public class Studente extends Persona {
-    
+
     public int matricola;
-    
+
     public Studente(String nome, String cognome, int matricola) {
         super(nome, cognome);
         try {
@@ -17,7 +17,7 @@ public class Studente extends Persona {
             this.matricola = 0;
         }
     }
-    
+
     @Override
     public String toString() {
         return super.toString() + " - mat. " + this.matricola;
@@ -28,7 +28,7 @@ public class Studente extends Persona {
         boolean res;
         if (super.equals(a) == true) {
             if (a instanceof Studente) {
-                res = (this.matricola == ((Studente)a).matricola);
+                res = (this.matricola == ((Studente) a).matricola);
             } else {
                 res = false;
             }
@@ -43,5 +43,5 @@ public class Studente extends Persona {
         result = 31 * result + matricola;
         return result;
     }
-  
+
 }

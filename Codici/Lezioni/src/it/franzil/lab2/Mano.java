@@ -6,15 +6,10 @@
 package it.franzil.lab2;
 
 import it.franzil.persone.Persona;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
-import java.util.Set;
+
+import java.util.*;
 
 /**
- *
  * @author matteo.franzil
  */
 public class Mano {
@@ -48,21 +43,21 @@ public class Mano {
         this.carte.add(temp);
         return temp;
     }
-    
+
     public CartaDaGioco scarta() {
         int rnd = new Random().nextInt(Lab2.CARTEPESCATE);
         CartaDaGioco res = carte.get(rnd);
         carte.remove(rnd);
         return res;
     }
-    
+
     public boolean dueUguali() {
         boolean res;
         Set temp = new HashSet();
         Iterator iterCheck = carte.iterator();
-        while(iterCheck.hasNext())
+        while (iterCheck.hasNext())
             temp.add(iterCheck.next());
-        
+
         res = temp.size() != Lab2.CARTEPESCATE;
         return res;
     }

@@ -6,7 +6,6 @@
 package it.franzil.collections;
 
 /**
- *
  * @author matte
  */
 class Number {

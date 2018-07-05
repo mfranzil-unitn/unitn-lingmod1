@@ -3,16 +3,15 @@ package it.franzil.tombola;
 import java.util.TreeSet;
 
 /**
- *
  * @author matte
  */
 public class Cartella {
 
+    private static int nCartelle = 0;
     private final TreeSet<Integer> numeri = new TreeSet<>();
     private final TreeSet<Integer> mancanti = new TreeSet<>();
     private Giocatore proprietario = null;
     private int id = 0;
-    private static int nCartelle = 0;
 
     Cartella(Giocatore g) {
         id = ++nCartelle;
@@ -32,7 +31,6 @@ public class Cartella {
     }
 
     /**
-     *
      * @param x Numero estratto dal Banco che verrà controllato dal metodo.
      * @return Un Boolean che segnalerà la presenza o meno nella cartella.
      */
@@ -70,6 +68,7 @@ public class Cartella {
 
     /**
      * Metodo utilizzato per ottnere il valore del field privato proprietario.
+     *
      * @return Il proprietario (tipo Giocatore estende Persona) della Cartella
      */
     Giocatore getProprietario() {
@@ -79,5 +78,5 @@ public class Cartella {
     int getId() {
         return id;
     }
-        
+
 }

@@ -8,11 +8,10 @@ package it.franzil.lab2;
 import it.franzil.persone.Persona;
 
 /**
- *
  * @author matteo.franzil
  */
 public class Lab2 {
-    
+
     public static final int CARTEPESCATE = 5;
     public static final int NUMEROMAZZI = 4;
 
@@ -22,14 +21,14 @@ public class Lab2 {
     public static void main(String[] args) {
         Mazzo mazzo = new Mazzo();
         Mano mano = new Mano(mazzo, new Persona("Nicolò", "Gottardello"));
-        for(int i = 0; i < CARTEPESCATE; i++) {
+        for (int i = 0; i < CARTEPESCATE; i++) {
             System.out.println(mano.toString());
             if (mano.dueUguali()) {
                 System.out.println("Hai vinto!");
                 System.exit(0);
             } else {
                 System.out.println("Scartata ===> " + mano.scarta());
-                System.out.println("Pescata <=== " +  mano.pesca(mazzo));
+                System.out.println("Pescata <=== " + mano.pesca(mazzo));
             }
         }
         System.out.println("Hai perso!");

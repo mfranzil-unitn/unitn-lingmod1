@@ -6,7 +6,6 @@
 package it.franzil.point;
 
 /**
- *
  * @author matte
  */
 public class Point {
@@ -19,18 +18,18 @@ public class Point {
         this.y = y;
     }
 
+    public static void main(String a[]) {
+        Point p = new Point(5, 3);
+        System.out.println(p);
+    }
+
     @Override
     public String toString() {
         return "(" + x + "," + y + ")";
     }
-    
+
     public void move(int x, int y) {
         this.x += x;
         this.y += y;
-    }
-
-    public static void main(String a[]) {
-        Point p = new Point(5, 3);
-        System.out.println(p);
     }
 }

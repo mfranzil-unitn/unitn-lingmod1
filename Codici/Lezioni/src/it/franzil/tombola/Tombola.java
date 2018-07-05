@@ -1,11 +1,8 @@
 package it.franzil.tombola;
 
 import it.franzil.Common;
-import java.util.Random;
 import javafx.application.Application;
-import static javafx.application.Application.launch;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -13,8 +10,10 @@ import javafx.scene.control.TextArea;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
+
+import java.util.Random;
+
 /**
- *
  * @author matte
  */
 public class Tombola extends Application {
@@ -23,11 +22,17 @@ public class Tombola extends Application {
     static final int NCELLS = 15;
     static final int MAXPLAYERS = 10;
     static final int MAXNUM = 90;
-    
+
     static Random generatore = new Random(System.currentTimeMillis());
-    private Banco banco;
-    
     static TextArea txt;
+    private Banco banco;
+
+    public static void main(String[] args) throws IllegalArgumentException {
+        if (MAXCARTELLE <= 0 || NCELLS <= 0 || MAXPLAYERS <= 0 || MAXNUM <= 0 || NCELLS >= MAXNUM)
+            throw new IllegalArgumentException("Valori di partenza non validi");
+        else
+            launch(args);
+    }
 
     @Override
     public void start(Stage primaryStage) {
@@ -66,30 +71,23 @@ public class Tombola extends Application {
                 Common.endProgram("Numeri finiti");
             }
         });
-        
+
         t.relocate(btn.getLayoutX(), btn.getLayoutY() + 30);
-        
+
         //StackPane root2 = new StackPane();
         //root2.getChildren().add(btn);
-        
+
         Group root = new Group();
         root.getChildren().add(t);
         root.getChildren().add(btn);
         root.getChildren().add(txt);
-        
+
         Scene scene = new Scene(root, txt.getMaxWidth(), txt.getMaxHeight() + 60);
 
         primaryStage.setScene(scene);
         primaryStage.setTitle("Tombola");
         primaryStage.show();
-        
-    }
 
-    public static void main(String[] args) throws IllegalArgumentException {
-        if (MAXCARTELLE <= 0 || NCELLS <= 0 || MAXPLAYERS <= 0 || MAXNUM <= 0 || NCELLS >= MAXNUM)
-            throw new IllegalArgumentException("Valori di partenza non validi");
-        else
-            launch(args);
     }
 
     private void allocaCartelleRandom(Banco banco) {
@@ -102,6 +100,6 @@ public class Tombola extends Application {
                 banco.addListener(new Cartella(p));
             }
         }
-    }  
- 
+    }
+
 }

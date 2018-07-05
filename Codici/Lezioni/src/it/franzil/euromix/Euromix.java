@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package it.franzil.euromix;
+
 import it.franzil.persone.Persona;
 
 public class Euromix {
@@ -12,7 +13,7 @@ public class Euromix {
         Automobile a2 = new Automobile("Fiat", "Tipo", "bianco", 1600, new Targa("AA030AA"), new Persona("Matteo", "Franzil"));
         System.out.println(a1.targa.toString());
         System.out.println(a1.equals(a2) + " " + a1.hashCode() + " " + a2.hashCode());
-        
+
     }
 }
 

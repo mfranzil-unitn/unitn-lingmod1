@@ -6,18 +6,18 @@ public class Targa {
     private String lettere_1;
     private int numeri;
     private String lettere_2;
-    
+
     public Targa(String input) {
-        try {            
+        try {
             if (input.length() == 7 && Character.isLetter(input.charAt(0))
                     && Character.isLetter(input.charAt(1)) && Character.isLetter(input.charAt(5))
                     && Character.isLetter(input.charAt(6)) && Character.isDigit(input.charAt(2))
                     && Character.isDigit(input.charAt(3)) && Character.isDigit(input.charAt(4))) {
                 lettere_1 = new StringBuilder().append(input.charAt(0)).append(input.charAt(1)).toString().toUpperCase();
                 lettere_2 = new StringBuilder().append(input.charAt(5)).append(input.charAt(6)).toString().toUpperCase();
-                numeri = Character.getNumericValue(input.charAt(2)) * 100 + 
-                         Character.getNumericValue(input.charAt(3)) * 10 +
-                         Character.getNumericValue(input.charAt(4));
+                numeri = Character.getNumericValue(input.charAt(2)) * 100 +
+                        Character.getNumericValue(input.charAt(3)) * 10 +
+                        Character.getNumericValue(input.charAt(4));
             } else {
                 throw new IllegalArgumentException("Targa non valida!");
             }
@@ -25,7 +25,7 @@ public class Targa {
             e.printStackTrace();
         }
     }
-    
+
     public Targa(String lettere_1, int numeri, String lettere_2) {
         this.lettere_1 = lettere_1;
         this.numeri = numeri;
@@ -51,8 +51,8 @@ public class Targa {
             res = false;
         else if (!(o instanceof Targa))
             res = false;
-        else 
-            res = (lettere_1.equals(((Targa)o).lettere_1) && lettere_2.equals(((Targa)o).lettere_2) && numeri == ((Targa)o).numeri);
+        else
+            res = (lettere_1.equals(((Targa) o).lettere_1) && lettere_2.equals(((Targa) o).lettere_2) && numeri == ((Targa) o).numeri);
         return res;
     }
 
@@ -64,6 +64,6 @@ public class Targa {
         hash = 71 * hash + Objects.hashCode(this.lettere_2);
         return hash;
     }
- 
-    
+
+
 }

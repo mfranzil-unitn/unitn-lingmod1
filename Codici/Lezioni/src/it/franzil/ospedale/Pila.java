@@ -19,7 +19,7 @@ public class Pila {
         System.arraycopy(contenuto, 0, temp, 0, marker - 1);
         contenuto = temp;
     }
- 
+
     public void inserisci(Paziente k) {
         if (marker == size)
             cresci(DEFAULTGROWTHSIZE);
@@ -32,13 +32,13 @@ public class Pila {
             System.out.println("Pila vuota!");
         return contenuto[--marker];
     }
-    
+
     public boolean isEmpty() {
         return (marker == 0);
     }
-      
+
     public void stampa() {
-        for(int i = marker; i > 0; i--)
+        for (int i = marker; i > 0; i--)
             System.out.println(contenuto[i].toString());
     }
 }

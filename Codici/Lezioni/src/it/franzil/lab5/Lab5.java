@@ -23,7 +23,6 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 /**
- *
  * @author nicolo.gottardello
  */
 public class Lab5 extends Application {
@@ -34,6 +33,13 @@ public class Lab5 extends Application {
     Boolean continua, isClicked, figura;
     Segmento sg;
     double x_fig, y_fig;
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
 
     @Override
     public void start(Stage primaryStage) {
@@ -51,43 +57,43 @@ public class Lab5 extends Application {
         gC.setLineWidth(4);
 
         tela.addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent e) -> {
-            if (!continua && !figura) {
-                if (!isClicked) {
-                    sg = new Segmento(e.getX(), e.getY());
-                    isClicked = true;
-                } else {
-                    x_fig = e.getX();
-                    y_fig = e.getY();    
-                    sg.setFinale(e.getX(), e.getY());
-                    sg.disegna(gC);
-                    isClicked = false;
+                    if (!continua && !figura) {
+                        if (!isClicked) {
+                            sg = new Segmento(e.getX(), e.getY());
+                            isClicked = true;
+                        } else {
+                            x_fig = e.getX();
+                            y_fig = e.getY();
+                            sg.setFinale(e.getX(), e.getY());
+                            sg.disegna(gC);
+                            isClicked = false;
+                        }
+                    } else if (continua && !figura) {
+                        if (!isClicked) {
+                            sg = new Segmento(e.getX(), e.getY());
+                            isClicked = true;
+
+                        } else {
+                            sg.setFinale(e.getX(), e.getY());
+                            sg.disegna(gC);
+                            sg = new Segmento(e.getX(), e.getY());
+
+                        }
+                    } else if (figura && !continua) {
+                        if (!isClicked) {
+                            sg = new Segmento(e.getX(), e.getY());
+                            isClicked = true;
+                            x_fig = e.getX();
+                            y_fig = e.getY();
+
+                        } else {
+                            sg.setFinale(e.getX(), e.getY());
+                            sg.disegna(gC);
+                            sg = new Segmento(e.getX(), e.getY());
+
+                        }
+                    }
                 }
-            } else if (continua && !figura) {
-                if (!isClicked) {
-                    sg = new Segmento(e.getX(), e.getY());
-                    isClicked = true;
-
-                } else {
-                    sg.setFinale(e.getX(), e.getY());
-                    sg.disegna(gC);
-                    sg = new Segmento(e.getX(), e.getY());
-
-                }
-            } else if (figura && !continua) {
-                if (!isClicked) {
-                    sg = new Segmento(e.getX(), e.getY());
-                    isClicked = true;
-                    x_fig = e.getX();
-                    y_fig = e.getY();
-
-                } else {
-                    sg.setFinale(e.getX(), e.getY());
-                    sg.disegna(gC);
-                    sg = new Segmento(e.getX(), e.getY());
-
-                }
-            }
-        }
         );
 
         Button clc = new Button();
@@ -128,17 +134,17 @@ public class Lab5 extends Application {
                 sg.setFinale(x_fig, y_fig);
                 sg.disegna(gC);
                 isClicked = false;
-                
+
             }
         });
-        
-        ColorPicker color = new ColorPicker((Color)gC.getStroke());
+
+        ColorPicker color = new ColorPicker((Color) gC.getStroke());
         color.setLayoutY(75);
         color.setOnAction((ActionEvent event) -> {
-           //root.setBackground(new Background(new BackgroundFill(color.getValue(), CornerRadii.EMPTY, Insets.EMPTY)));
-           gC.setStroke(color.getValue());
+            //root.setBackground(new Background(new BackgroundFill(color.getValue(), CornerRadii.EMPTY, Insets.EMPTY)));
+            gC.setStroke(color.getValue());
         });
-        
+
 
         root.getChildren().addAll(tela, cnt, clc, fig, color);
 
@@ -147,13 +153,6 @@ public class Lab5 extends Application {
         primaryStage.setTitle("Paint <3");
         primaryStage.setScene(scene);
         primaryStage.show();
-    }
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
     }
 
 }

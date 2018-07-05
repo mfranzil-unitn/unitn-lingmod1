@@ -5,7 +5,7 @@
  */
 package it.franzil.collections;
 
-import java.util.*;
+import java.util.Iterator;
 
 class Coda extends Stack {
 
@@ -17,7 +17,7 @@ class Coda extends Stack {
             iter.remove();
         } else {
             System.out.println(
-            "Tentativo di estrarre da una Coda vuota ");
+                    "Tentativo di estrarre da una Coda vuota ");
             System.exit(1);
         }
         return x.getInt();

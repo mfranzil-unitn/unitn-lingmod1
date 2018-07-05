@@ -6,7 +6,6 @@
 package it.franzil.point;
 
 /**
- *
  * @author matte
  */
 public class NamedPoint extends Point {
@@ -18,12 +17,12 @@ public class NamedPoint extends Point {
         this.name = name;
     }
 
-    public String toString() { //Overriding
-        return name + super.toString();
-    }
-
     public static void main(String a[]) {
         NamedPoint p = new NamedPoint(5, 3, "A");
         System.out.println(p);
+    }
+
+    public String toString() { //Overriding
+        return name + super.toString();
     }
 }

@@ -12,8 +12,7 @@ public class Ospedale {
             do {
                 System.out.println("Operazioni: Inserisci (i) / Rimuovi (r) / Mostra coda (m) / Esci (e)");
                 choice = input.next().charAt(0);
-                switch(choice)
-                {
+                switch (choice) {
                     case 'i':
                         temp = new Paziente();
                         queue.inserisci(temp);
@@ -31,30 +30,29 @@ public class Ospedale {
                         System.out.println("Scelta non valida!");
                         break;
                 }
-            } while(choice != 'i' || choice != 'r' || choice != 'm' || choice != 'e');
+            } while (choice != 'i' || choice != 'r' || choice != 'm' || choice != 'e');
         } catch (Exception e) {
             System.out.println("Critical failure. <" + e + "> See log for details. Terminating...");
             System.exit(0);
         }
     }
-    
+
     public static void main(String args[]) {
         Ospedale p = new Ospedale();
-    } 
-    
+    }
+
     public static String intToPri(int i) {
         String retval;
-        switch(i)
-        {
+        switch (i) {
             case 0:
                 retval = "Rosso";
                 break;
             case 1:
                 retval = "Giallo";
-                break;            
+                break;
             case 2:
                 retval = "Verde";
-                break;            
+                break;
             case 3:
                 retval = "Bianco";
                 break;
@@ -64,5 +62,5 @@ public class Ospedale {
         }
         return retval;
     }
-           
+
 }

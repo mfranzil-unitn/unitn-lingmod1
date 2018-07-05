@@ -11,7 +11,7 @@ public class Persona implements Comparable<Persona> {
         this.nome = nome;
         this.cognome = cognome;
     }
-    
+
     public Persona() {
         this.nome = Common.randomName();
         this.cognome = Common.randomName();
@@ -56,12 +56,12 @@ public class Persona implements Comparable<Persona> {
         return cognome;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
     public void setCognome(String cognome) {
         this.cognome = cognome;
+    }
+
+    public String getNome() {
+        return nome;
     }
 
     public void setNome(String nome) {

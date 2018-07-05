@@ -4,16 +4,15 @@ import it.franzil.Common;
 import it.franzil.persone.Persona;
 
 /**
- *
  * @author matte
  */
 public class Giocatore extends Persona {
 
     private final int numerocartelle;
+
     /**
-     *
-     * @param nome Stringa del nome del giocatore
-     * @param cognome Stringa del cognome del giocatore
+     * @param nome           Stringa del nome del giocatore
+     * @param cognome        Stringa del cognome del giocatore
      * @param numerocartelle Numero di cartelle da assegnare al giocatore
      */
     public Giocatore(String nome, String cognome, int numerocartelle) {
@@ -22,8 +21,7 @@ public class Giocatore extends Persona {
     }
 
     /**
-     *
-     * @param persona E' possibile passare una Persona come parametro al costruttore.
+     * @param persona        E' possibile passare una Persona come parametro al costruttore.
      * @param numerocartelle Numero di cartelle da assegnare al giocatore
      */
     public Giocatore(Persona persona, int numerocartelle) {
@@ -48,7 +46,6 @@ public class Giocatore extends Persona {
     }
 
     /**
-     *
      * @return Ritorna il nome del giocatore.
      */
     @Override
@@ -58,6 +55,7 @@ public class Giocatore extends Persona {
 
     /**
      * Metodo nativo per comparare due giocatori.
+     *
      * @param a Un Object qualsiasi
      * @return Un Boolean che conferma o meno l'equals
      */
@@ -84,7 +82,7 @@ public class Giocatore extends Persona {
     public int compareTo(Persona a) {
         return super.compareTo(a); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
     public int getNumerocartelle() {
         return numerocartelle;
     }

@@ -9,7 +9,6 @@ package it.franzil.lab4;
 import javafx.scene.shape.Circle;
 
 /**
- *
  * @author nicolo.gottardello
  */
 public class Cerchio extends Circle {
@@ -18,15 +17,15 @@ public class Cerchio extends Circle {
         setCenterX(100.0f);
         setCenterY(100.0f);
         setRadius(10.0f);
-    //    setFill(Paint.valueOf(Color.BLACK));
+        //    setFill(Paint.valueOf(Color.BLACK));
     }
-    
+
     public void moveX(int offset) {
         setCenterX(getCenterX() + offset);
     }
-    
+
     public void moveY(int offset) {
         setCenterY(getCenterY() + offset);
-    }    
+    }
 
 }
