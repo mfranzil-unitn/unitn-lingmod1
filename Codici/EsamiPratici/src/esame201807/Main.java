@@ -1,6 +1,5 @@
 package esame201807;
 
-import esame201807.figure.EsagonoGiallo;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -21,7 +20,7 @@ public class Main extends Application {
         root.setLeft(stack);
         root.setCenter(controls);
 
-        Scene scene = new Scene(root, 300,200);
+        Scene scene = new Scene(root, 300, 200);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Figure geometriche");
         primaryStage.show();

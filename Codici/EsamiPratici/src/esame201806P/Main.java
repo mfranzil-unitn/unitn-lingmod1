@@ -2,12 +2,9 @@ package esame201806P;
 
 import javafx.application.Application;
 import javafx.application.Platform;
-import javafx.event.Event;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
@@ -30,11 +27,11 @@ public class Main extends Application {
 
         GridPane root = new GridPane();
         VBox info = new VBox();
-        info.getChildren().addAll(punteggio,tentativi);
+        info.getChildren().addAll(punteggio, tentativi);
         info.setAlignment(Pos.CENTER);
         root.setPadding(new Insets(10));
-        root.add(info,0,0);
-        root.add(griglia,0,1);
+        root.add(info, 0, 0);
+        root.add(griglia, 0, 1);
 
         RowConstraints r1 = new RowConstraints();
         r1.setPercentHeight(10);
@@ -43,7 +40,7 @@ public class Main extends Application {
         ColumnConstraints c1 = new ColumnConstraints();
         c1.setPercentWidth(100);
 
-        root.getRowConstraints().addAll(r1,r2);
+        root.getRowConstraints().addAll(r1, r2);
         root.getColumnConstraints().add(c1);
 
         Scene scene = new Scene(root);

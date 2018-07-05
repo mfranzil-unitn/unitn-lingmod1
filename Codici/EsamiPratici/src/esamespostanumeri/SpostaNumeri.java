@@ -62,8 +62,8 @@ public class SpostaNumeri extends Application {
                         || (i2.equals(i1 + 1) && j2.equals(j1))
                         || (j2.equals(j1 - 1) && i2.equals(i1))
                         || (j2.equals(j1 + 1) && i2.equals(i1))) {
-                    GridPane.setConstraints(vuoto,i2,j2);
-                    GridPane.setConstraints(temp,i1,j1);
+                    GridPane.setConstraints(vuoto, i2, j2);
+                    GridPane.setConstraints(temp, i1, j1);
                 }
             } catch (Exception ex) {
                 e.consume();

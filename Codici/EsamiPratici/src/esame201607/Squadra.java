@@ -18,6 +18,31 @@ public class Squadra implements Comparable<Squadra> {
         this.punti = 0;
     }
 
+    public static LinkedList<Squadra> getSquadreRandom() {
+        LinkedList<Squadra> squadreRandom = new LinkedList<>();
+        squadreRandom.add(new Squadra("Spagna"));
+        squadreRandom.add(new Squadra("Germania"));
+        squadreRandom.add(new Squadra("Russia"));
+        squadreRandom.add(new Squadra("Olanda"));
+        squadreRandom.add(new Squadra("Bulgaria"));
+        squadreRandom.add(new Squadra("Ungheria"));
+        squadreRandom.add(new Squadra("Austria"));
+        squadreRandom.add(new Squadra("Italia"));
+        squadreRandom.add(new Squadra("Belgio"));
+        squadreRandom.add(new Squadra("Irlanda"));
+        squadreRandom.add(new Squadra("Francia"));
+        squadreRandom.add(new Squadra("Svezia"));
+        squadreRandom.add(new Squadra("Finlandia"));
+        squadreRandom.add(new Squadra("Danimarca"));
+        squadreRandom.add(new Squadra("Polonia"));
+        squadreRandom.add(new Squadra("Ucraina"));
+        squadreRandom.add(new Squadra("Pride"));
+        squadreRandom.add(new Squadra("Islanda"));
+        squadreRandom.add(new Squadra("Norvegia"));
+        Collections.shuffle(squadreRandom);
+        return squadreRandom;
+    }
+
     private Bandiera generateBandiera(String name) {
         switch (name) {
             case "Spagna":
@@ -111,30 +136,5 @@ public class Squadra implements Comparable<Squadra> {
         } else {
             return res;
         }
-    }
-
-    public static LinkedList<Squadra> getSquadreRandom() {
-        LinkedList<Squadra> squadreRandom = new LinkedList<>();
-        squadreRandom.add(new Squadra("Spagna"));
-        squadreRandom.add(new Squadra("Germania"));
-        squadreRandom.add(new Squadra("Russia"));
-        squadreRandom.add(new Squadra("Olanda"));
-        squadreRandom.add(new Squadra("Bulgaria"));
-        squadreRandom.add(new Squadra("Ungheria"));
-        squadreRandom.add(new Squadra("Austria"));
-        squadreRandom.add(new Squadra("Italia"));
-        squadreRandom.add(new Squadra("Belgio"));
-        squadreRandom.add(new Squadra("Irlanda"));
-        squadreRandom.add(new Squadra("Francia"));
-        squadreRandom.add(new Squadra("Svezia"));
-        squadreRandom.add(new Squadra("Finlandia"));
-        squadreRandom.add(new Squadra("Danimarca"));
-        squadreRandom.add(new Squadra("Polonia"));
-        squadreRandom.add(new Squadra("Ucraina"));
-        squadreRandom.add(new Squadra("Pride"));
-        squadreRandom.add(new Squadra("Islanda"));
-        squadreRandom.add(new Squadra("Norvegia"));
-        Collections.shuffle(squadreRandom);
-        return squadreRandom;
     }
 }

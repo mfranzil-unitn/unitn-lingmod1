@@ -62,7 +62,7 @@ public class Griglia extends GridPane {
                 try {
                     add(celle.get(i * N + j), j, i);
                 } catch (IndexOutOfBoundsException ex) {
-                    add(new CellaBase(this),j,i);
+                    add(new CellaBase(this), j, i);
                 }
             }
         }

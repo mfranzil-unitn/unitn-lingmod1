@@ -8,7 +8,7 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 
 public abstract class Cella extends StackPane {
-    public static final int SIZE = 20*Griglia.N/50;
+    public static final int SIZE = 20 * Griglia.N / 50;
 
     protected Pane cover;
     private Griglia griglia;
@@ -17,7 +17,7 @@ public abstract class Cella extends StackPane {
         this.griglia = griglia;
 
         setPrefSize(SIZE, SIZE);
-        setMaxSize(1000,1000);
+        setMaxSize(1000, 1000);
         cover = new Pane() {{
             setBackground(new Background(new BackgroundFill(Color.YELLOW, CornerRadii.EMPTY, Insets.EMPTY)));
         }};

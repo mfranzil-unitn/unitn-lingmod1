@@ -23,7 +23,6 @@ import javafx.util.Duration;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Optional;
 
 public class Controls extends Stage {
 

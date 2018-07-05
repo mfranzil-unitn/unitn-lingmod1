@@ -5,8 +5,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 
 public class TriangoloGiallo extends Polygon {
-    
-    public TriangoloGiallo() { 
+
+    public TriangoloGiallo() {
         super(0, 0,
                 0 + CellContainer.SIZE, 0,
                 0 + CellContainer.SIZE / 2.0, CellContainer.SIZE * Math.sqrt(3) / 2.0);

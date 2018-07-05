@@ -13,8 +13,10 @@ import java.util.List;
 public class Classifica extends GridPane {
     public Classifica(List<Squadra> squadre) {
         Collections.sort(squadre);
-        add(new Text("CLASSIFICA") {{ setFont(Font.font("Google Sans", FontWeight.NORMAL, 18)); }},
-                0, 0,3,1);
+        add(new Text("CLASSIFICA") {{
+                setFont(Font.font("Google Sans", FontWeight.NORMAL, 18));
+            }},
+                0, 0, 3, 1);
         for (int i = 0; i < squadre.size(); i++) {
             add(squadre.get(i).getBandiera(), 0, i + 1);
             add(new Text(String.valueOf(squadre.get(i).getPunti())), 1, i + 1);

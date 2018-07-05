@@ -14,7 +14,7 @@ public class BandieraCroceDoppia extends BandieraCroce {
         dRect.toFront();
         getChildren().add(dRect);
 
-        Rectangle eRect = new Rectangle(0, getPrefHeight() / 2.5  + getPrefWidth() / 30.0,
+        Rectangle eRect = new Rectangle(0, getPrefHeight() / 2.5 + getPrefWidth() / 30.0,
                 getPrefWidth(), getPrefHeight() / 10.0);
         eRect.setFill(c);
         eRect.toFront();

@@ -3,10 +3,8 @@ package esame201607;
 import esame201607.views.Girone;
 import javafx.application.Application;
 import javafx.application.Platform;
-import javafx.event.Event;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
@@ -48,13 +46,13 @@ public class Main extends Application {
         r1.setPercentHeight(50);
         RowConstraints r2 = new RowConstraints();
         r2.setPercentHeight(50);
-        root.getRowConstraints().addAll(r1,r2);
+        root.getRowConstraints().addAll(r1, r2);
 
         ColumnConstraints c1 = new ColumnConstraints();
         c1.setPercentWidth(50);
         ColumnConstraints c2 = new ColumnConstraints();
         c2.setPercentWidth(50);
-        root.getColumnConstraints().addAll(c1,c2);
+        root.getColumnConstraints().addAll(c1, c2);
 
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);

@@ -5,7 +5,6 @@ import esame201807.figure.EsagonoGiallo;
 import esame201807.figure.TriangoloGiallo;
 import javafx.animation.FadeTransition;
 import javafx.geometry.Insets;
-import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ToggleButton;
@@ -48,7 +47,6 @@ public class Controls extends GridPane {
         triangle.setPrefWidth(80);
         hexagon.setPrefWidth(80);
 
-
         add(add, 0, 0, 3, 1);
         add(removeBottom, 3, 0, 3, 1);
         add(removeTop, 0, 1, 3, 1);
@@ -62,15 +60,18 @@ public class Controls extends GridPane {
 
         circle.setOnAction(e -> {
             cellContainer.removeFigura();
+            cellContainer.hideBackground();
             cellContainer.setFigura(new CerchioGiallo());
         });
         hexagon.setOnAction(e -> {
             cellContainer.removeFigura();
+            cellContainer.hideBackground();
             cellContainer.setFigura(new EsagonoGiallo());
         });
 
         triangle.setOnAction(e -> {
             cellContainer.removeFigura();
+            cellContainer.hideBackground();
             cellContainer.setFigura(new TriangoloGiallo());
         });
 
@@ -89,6 +90,7 @@ public class Controls extends GridPane {
 
                 stack.push(temp);
                 tg.getSelectedToggle().setSelected(false);
+                cellContainer.showBackground();
             } catch (NullPointerException ex) {
                 new Alert(Alert.AlertType.ERROR, "Nessuna figura selezionata!").showAndWait();
             }

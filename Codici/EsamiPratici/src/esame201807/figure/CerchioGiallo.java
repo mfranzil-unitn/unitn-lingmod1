@@ -8,7 +8,7 @@ import static esame201807.CellContainer.SIZE;
 public class CerchioGiallo extends Circle {
 
     public CerchioGiallo() {
-        super(SIZE/2, Color.YELLOW);
+        super(SIZE / 2, Color.YELLOW);
         setStroke(Color.RED);
         setStrokeWidth(1);
     }
