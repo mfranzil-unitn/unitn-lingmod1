@@ -35,9 +35,16 @@ public class Orologio extends Pane {
         this.mode = mode;
         this.assignedShape = shape;
 
-        clock = new Circle(OFFSET + RADIUS, OFFSET + RADIUS, RADIUS, AccentParser.getAccentColor());
+        Color color;
+        if (System.getProperty("os.name").equals("Windows 10")) {
+            color = AccentParser.getAccentColor();
+        } else {
+            color = Color.rgb(10,10,10);
+        }
+
+        clock = new Circle(OFFSET + RADIUS, OFFSET + RADIUS, RADIUS, color);
         optionalClock = new Rectangle(OFFSET, OFFSET, RADIUS * 2, RADIUS * 2);
-        optionalClock.setFill(AccentParser.getAccentColor());
+        optionalClock.setFill(color);
         getChildren().addAll(optionalClock, clock);
 
         setStyle("-fx-background-color: rgba(255, 255, 255, 0);");
@@ -53,21 +60,21 @@ public class Orologio extends Pane {
         }
 
         if (mode.equals("Manuale")) {
-            var ore = new TextField("0") {{
+            TextField ore = new TextField("0") {{
                 setPrefWidth(40);
             }};
-            var duepunti1 = new Text(":");
-            var minuti = new TextField("0") {{
+            Text duepunti1 = new Text(":");
+            TextField minuti = new TextField("0") {{
                 setPrefWidth(40);
             }};
-            var duepunti2 = new Text(":");
-            var secondi = new TextField("0") {{
+            Text duepunti2 = new Text(":");
+            TextField secondi = new TextField("0") {{
                 setPrefWidth(40);
             }};
-            var aggiorna = new Button("Aggiorna");
+            Button aggiorna = new Button("Aggiorna");
 
 
-            var choice = new HBox() {{
+            HBox choice = new HBox() {{
                 getChildren().addAll(ore, duepunti1, minuti, duepunti2, secondi, aggiorna);
             }};
 
@@ -100,22 +107,22 @@ public class Orologio extends Pane {
             this.minuti = LocalDateTime.now().getMinute() * 360 / 60.0;
             this.secondi = (LocalDateTime.now().getSecond() + 3) * 360 / 60.0;
 
-            var oreRoot = new Pane();
-            var oreArc = drawArc(0, 3 * RADIUS / 4.0, 7, Color.RED);
+            Pane oreRoot = new Pane();
+            Arc oreArc = drawArc(0, 3 * RADIUS / 4.0, 7, Color.RED);
             oreRoot.setLayoutX(0);
             oreRoot.setLayoutY(0);
             oreRoot.setPrefSize(2 * OFFSET + 2 * RADIUS, 2 * OFFSET + 2 * RADIUS);
             oreRoot.getChildren().add(oreArc);
 
-            var minutiRoot = new Pane();
-            var minutiArc = drawArc(0, RADIUS, 5, Color.GREEN);
+            Pane minutiRoot = new Pane();
+            Arc minutiArc = drawArc(0, RADIUS, 5, Color.GREEN);
             minutiRoot.setLayoutX(0);
             minutiRoot.setLayoutY(0);
             minutiRoot.setPrefSize(2 * OFFSET + 2 * RADIUS, 2 * OFFSET + 2 * RADIUS);
             minutiRoot.getChildren().add(minutiArc);
 
-            var secondiRoot = new Pane();
-            var secondiArc = drawArc(0, 9 * RADIUS / 10.0, 1, Color.BLUE);
+            Pane secondiRoot = new Pane();
+            Arc secondiArc = drawArc(0, 9 * RADIUS / 10.0, 1, Color.BLUE);
             secondiRoot.setLayoutX(0);
             secondiRoot.setLayoutY(0);
             secondiRoot.setPrefSize(2 * OFFSET + 2 * RADIUS, 2 * OFFSET + 2 * RADIUS);

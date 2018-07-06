@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.Tooltip;
+import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -30,9 +31,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        var quadrato = new RadioButton("Quadrato");
-        var rotondo = new RadioButton("Rotondo");
-        var radio = new ToggleGroup();
+        RadioButton quadrato = new RadioButton("Quadrato");
+        RadioButton rotondo = new RadioButton("Rotondo");
+        ToggleGroup radio = new ToggleGroup();
         quadrato.setToggleGroup(radio);
         rotondo.setToggleGroup(radio);
 
@@ -40,10 +41,10 @@ public class Main extends Application {
         quadrato.setUserData("Quadrato");
         rotondo.setUserData("Rotondo");
 
-        var manuale = new Button("Manuale");
-        var automatico = new Button("Automatico");
+        Button manuale = new Button("Manuale");
+        Button automatico = new Button("Automatico");
 
-        var vbox = new VBox();
+        VBox vbox = new VBox();
         vbox.setSpacing(20);
         vbox.setPadding(new Insets(20));
         vbox.getChildren().addAll(quadrato, rotondo, manuale, automatico);
@@ -51,7 +52,9 @@ public class Main extends Application {
         manuale.setOnAction(e -> generateNewClock(manuale.getText(), radio));
         automatico.setOnAction(e -> generateNewClock(automatico.getText(), radio));
 
-        var scene = new Scene(vbox);
+        Scene scene = new Scene(vbox);
+
+        primaryStage.getIcons().add(new Image(this.getClass().getResourceAsStream("clock.png")));
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Orologi");
@@ -60,7 +63,7 @@ public class Main extends Application {
     }
 
     private void generateNewClock(String mode, ToggleGroup radio) {
-        var orologio = new Orologio(mode, (String) radio.getSelectedToggle().getUserData());
+        Orologio orologio = new Orologio(mode, (String) radio.getSelectedToggle().getUserData());
         initActions(orologio);
 
         try {
@@ -79,6 +82,7 @@ public class Main extends Application {
 
         clockScene.setFill(Color.TRANSPARENT);
 
+        clockStage.getIcons().add(new Image(this.getClass().getResourceAsStream("clock.png")));
         clockStage.setScene(clockScene);
         clockStage.setTitle("Orologio");
         clockStage.initStyle(StageStyle.TRANSPARENT);

@@ -31,7 +31,7 @@ public class Griglia extends GridPane {
         this.punteggio = 0;
         this.tentativi = 10;
 
-        var celle = new LinkedList<Cella>();
+        LinkedList<Cella> celle = new LinkedList<>();
 
         for (int i = 0; i < N_CELLEBASE; i++) {
             celle.add(new CellaBase(this));

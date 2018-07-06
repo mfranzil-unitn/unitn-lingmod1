@@ -1,28 +1,29 @@
 *.class
-*.log
 *.ctxt
-.mtj.tmp/
-*.jar
-*.war
-*.nar
 *.ear
-*.zip
-*.tar.gz
-*.rar
 *.iml
-hs_err_pid*
-Esami/
-Libri PDF/
-Materiale/
-Codici/EsamiTeorici/
-Appunti.java
-/Codici/Lezioni/.idea/
-/Codici/Oracle JavaFX Tutorials/nbproject/private/
-/Codici/EsamiPratici/nbproject/private/
-/Codici/EsamiPratici/dist/
+*.jar
+*.log
+*.MF
+*.nar
+*.png
+*.rar
+*.tar.gz
+*.war
+*.zip
+.mtj.tmp/
 /Codici/EsamiPratici/.idea/
 /Codici/EsamiPratici/build/
+/Codici/EsamiPratici/dist/
+/Codici/EsamiPratici/nbproject/private/
 /Codici/EsamiPratici/out/
-Slide (Lezione)/
+/Codici/Lezioni/.idea/
+/Codici/Oracle JavaFX Tutorials/nbproject/private/
+Appunti.java
+Codici/EsamiTeorici/
+Esami/
+hs_err_pid*
+Libri PDF/
+Materiale/
 Slide (Laboratorio)/
-
+Slide (Lezione)/
