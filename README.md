@@ -8,7 +8,7 @@ This repo contains material about the following course:
 
 **Teacher**: prof. Marco Ronchetti
 
-**Course**: Informatica (BCs) / Matematica (Bachelor)
+**Course**: Informatica (Bachelor) / Matematica (Bachelor)
 
 **University**: Trento
 
