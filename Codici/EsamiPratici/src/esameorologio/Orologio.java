@@ -2,6 +2,7 @@ package esameorologio;
 
 import javafx.animation.RotateTransition;
 import javafx.geometry.Insets;
+import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
@@ -39,22 +40,23 @@ public class Orologio extends Pane {
         if (System.getProperty("os.name").equals("Windows 10")) {
             color = AccentParser.getAccentColor();
         } else {
-            color = Color.rgb(10,10,10);
+            color = Color.rgb(10, 10, 10);
         }
 
         clock = new Circle(OFFSET + RADIUS, OFFSET + RADIUS, RADIUS, color);
         optionalClock = new Rectangle(OFFSET, OFFSET, RADIUS * 2, RADIUS * 2);
         optionalClock.setFill(color);
+
         getChildren().addAll(optionalClock, clock);
 
         setStyle("-fx-background-color: rgba(255, 255, 255, 0);");
 
         if (shape.equals("Quadrato")) {
-            optionalClock.setEffect(getShadow());
             clock.setOpacity(0);
+            optionalClock.setEffect(getShadow());
             optionalClock.setOpacity(0.6);
         } else {
-            optionalClock.setFill(Color.TRANSPARENT);
+            optionalClock.setOpacity(0);
             clock.setEffect(getShadow());
             clock.setOpacity(0.6);
         }
@@ -151,7 +153,7 @@ public class Orologio extends Pane {
             RotateTransition rt3 = new RotateTransition(Duration.millis(3000), secondiRoot);
             rt3.setByAngle(this.secondi);
             rt3.setOnFinished(e -> {
-                rt3.setDuration(Duration.millis(925));
+                rt3.setDuration(Duration.millis(990));
                 rt3.setByAngle(6);
                 rt3.play();
             });
@@ -162,6 +164,7 @@ public class Orologio extends Pane {
     private Arc drawArc(double pos, double radius, double length, Color c) {
         pos = pos + 90 - 2 * pos;
         pos = pos % 360;
+
         Arc arc = new Arc();
         arc.setCenterX(OFFSET + RADIUS);
         arc.setCenterY(OFFSET + RADIUS);
@@ -172,6 +175,7 @@ public class Orologio extends Pane {
         arc.setFill(c);
         arc.setType(ArcType.ROUND);
         arc.setRotationAxis(Rotate.Z_AXIS);
+
         return arc;
     }
 
@@ -181,11 +185,13 @@ public class Orologio extends Pane {
         dropShadow.setOffsetX(3.0);
         dropShadow.setOffsetY(3.0);
         dropShadow.setColor(Color.color(0, 0, 0));
+
         return dropShadow;
     }
 
     private boolean checkRange(TextField ore, TextField minuti, TextField secondi) {
         boolean res = false;
+
         try {
             res = Integer.parseInt(ore.getText()) >= 0 && Integer.parseInt(ore.getText()) <= 23 &&
                     Integer.parseInt(minuti.getText()) >= 0 && Integer.parseInt(minuti.getText()) <= 59 &&
@@ -193,6 +199,7 @@ public class Orologio extends Pane {
         } catch (NumberFormatException ex) {
             new Alert(Alert.AlertType.ERROR, "Formato non corretto!", ButtonType.OK).showAndWait();
         }
+
         return res;
     }
 
