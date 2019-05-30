@@ -32,13 +32,13 @@ F	Nel main si può leggere una qualunque variabile di istanza della classe in cu
 F	Non è possibile chiamare il metodo equals su una classe generica a meno che essa non dichiari l’interfaccia Comparable
 V	Non è possibile istanziare una Collection
 F	Poichè Java usa sempre dynamic binding, esso usa sempre la heap e mai lo stack.
-V	Se A è padre di B la scrittura B a=(B)(new A()); genera errore a compile time
+F	Se A è padre di B la scrittura B a=(B)(new A()); genera errore a compile time
 F	Se A è padre di B la scrittura B a=new A(); genera errore a runtime
 F	Se a.equals(b) è falso, deve essere a.hashCode!=b.hashCode
 V	Se a.equals(b) è vero, deve essere a.hashCode()==b.hashCode()
 V	Se a.hashCode()!=b.hashCode(), a.equals(b) deve essere falso
 F	Se a.hashCode()==b.hashCode(), a.equals(b) deve essere vero
-V	Se B estende A la scrittura B a=new A(); genera errore a compile time
+F	Se B estende A la scrittura B a=new A(); genera errore a compile time
 F	Se di un metodo f faccio overloading non è detto che ci siano più “signatures” (firme) di metodi legate al nome f
 V	Se di un metodo f faccio overriding non è detto che ci siano più “signatures” (firme) di metodi legate al nome f
 F	Se una classe è astratta è permesso usarla per effettuare ereditarietà multipla
