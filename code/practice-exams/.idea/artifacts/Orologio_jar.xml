@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Orologio:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Orologio_jar</output-path>
+    <root id="archive" name="EsamiPratici.jar">
+      <element id="module-output" name="EsamiPratici" />
+    </root>
+  </artifact>
+</component>

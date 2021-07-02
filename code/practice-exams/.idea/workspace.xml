@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Orologio:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3d2e760c-7ecf-49ac-9285-cfd686cfd6ab" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../Lezioni/out/production/Lezioni/it/franzil/multilistener/MultiListener.jnlp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lezioni/out/production/Lezioni/it/franzil/pilacpp/02.1-Stack-OO.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lezioni/out/production/Lezioni/it/franzil/pilacpp/02.1-Stack-Struct.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lezioni/out/production/Lezioni/it/franzil/tree/Ronkorb_etenraku_ryuteki.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lezioni/out/production/Lezioni/resources/The_Horse_in_Motion.jpg" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaFXApplication" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>disco</find>
+      <find>0.15</find>
+      <find>System.out</find>
+      <find>size</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>ball</replace>
+      <replace>0</replace>
+      <replace>CellContainer.SIZE</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="94" />
+    <option name="y" value="-46" />
+    <option name="width" value="2696" />
+    <option name="height" value="1584" />
+  </component>
+  <component name="ProjectId" id="1ddDb8YMOpG3Qp202okAHoALQTc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="Standardgeteleme&#9;PSI&#9;JAVA://esame201107.Pannello#standardGetElementAt&#10;C&#9;ACTION&#9;ActivateCaptureAnalysisToolWindow" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../centodiciotto" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="esame201806P.celle" />
+      <recent name="esame200507" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\matte\OneDrive\Università\Archivio\2 - Linguaggi di programmazione - mod. 1\Codici\EsamiPratici\src\esameorologio" />
+      <recent name="C:\Users\matte\OneDrive\Università\Archivio\2 - Linguaggi di programmazione - mod. 1\Codici\EsamiPratici\src\esame201607\bandiere" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.201806P">
+    <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+    </configuration>
+    <configuration name="200507" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="esame200507.Main" />
+      <module name="EsamiPratici" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="200606" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="esame200606.Main" />
+      <module name="EsamiPratici" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="201607" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="esame201607.Main" />
+      <module name="EsamiPratici" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="201806P" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="esame201806P.Main" />
+      <module name="EsamiPratici" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="201807" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="esame201807.Main" />
+      <module name="EsamiPratici" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CampoMinato (L)" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="luca_campominato.Launcher" />
+      <module name="EsamiPratici" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Orologio" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="esameorologio.Main" />
+      <module name="EsamiPratici" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpostaNumeri" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="esamespostanumeri.SpostaNumeri" />
+      <module name="EsamiPratici" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EsamiPratici.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/Orologio_jar/EsamiPratici.jar" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.200507" />
+      <item itemvalue="Application.201607" />
+      <item itemvalue="Application.200606" />
+      <item itemvalue="Application.201806P" />
+      <item itemvalue="Application.SpostaNumeri" />
+      <item itemvalue="Application.Orologio" />
+      <item itemvalue="Application.CampoMinato (L)" />
+      <item itemvalue="Application.201807" />
+      <item itemvalue="JAR Application.EsamiPratici.jar" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.201807" />
+        <item itemvalue="Application.Orologio" />
+        <item itemvalue="JAR Application.EsamiPratici.jar" />
+        <item itemvalue="Application.CampoMinato (L)" />
+        <item itemvalue="Application.SpostaNumeri" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3d2e760c-7ecf-49ac-9285-cfd686cfd6ab" name="Default" comment="" />
+      <created>1533379059368</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1533379059368</updated>
+      <workItem from="1533379063442" duration="17000" />
+      <workItem from="1533379502731" duration="20000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="37000" />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>Orologio:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>EsamiPratici</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8 (1)</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>EsamiPratici</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
