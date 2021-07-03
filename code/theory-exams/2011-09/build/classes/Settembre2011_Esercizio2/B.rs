@@ -1,2 +1,0 @@
-Settembre2011_Esercizio2.A
-Settembre2011_Esercizio2.B

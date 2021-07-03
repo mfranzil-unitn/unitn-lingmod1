@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/..">
+      <sourceFolder url="file://$MODULE_DIR$/.." isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2017-06/es1a" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2017-06/es2a" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2017-06/es3a" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2017-06/es4a" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2017-06/es6a" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2017-06/es7a" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2017-06/es8a" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../2009">
+      <sourceFolder url="file://$MODULE_DIR$/../2009/es1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2009/es2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2009/es3" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2009/es5" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2009/es6" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2009/es7" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2009/es8" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../2011-06">
+      <sourceFolder url="file://$MODULE_DIR$/../2011-06/es1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2011-06/es3" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2011-06/es4" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2011-06/es5" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2011-06/es6" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2011-06/es7" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2011-06/es8" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../2011-07">
+      <sourceFolder url="file://$MODULE_DIR$/../2011-07/es1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2011-07/es2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2011-07/es3" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2011-07/es4" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2011-07/es6" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2011-07/es7" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2011-07/es8" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../2011-09">
+      <sourceFolder url="file://$MODULE_DIR$/../2011-09/es1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2011-09/es2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2011-09/es3" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2011-09/es4" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2011-09/es5" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2011-09/es6" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2011-09/es7" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2011-09/es8" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/es2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/es3" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/es4" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/es5" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/es6" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/es7" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/es8" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../2016-02">
+      <sourceFolder url="file://$MODULE_DIR$/../2016-02/es1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2016-02/es2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2016-02/es3" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2016-02/es4" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2016-02/es6" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2016-02/es7" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2016-02/es8" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../2016-06">
+      <sourceFolder url="file://$MODULE_DIR$/../2016-06/es1c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2016-06/es2c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2016-06/es3c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2016-06/es4c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2016-06/es6c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2016-06/es7c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2016-06/es8c" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../2016-07">
+      <sourceFolder url="file://$MODULE_DIR$/../2016-07/es1c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2016-07/es2c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2016-07/es3c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2016-07/es4c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2016-07/es6c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2016-07/es7c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2016-07/es8c" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../2016-09">
+      <sourceFolder url="file://$MODULE_DIR$/../2016-09/es2d" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2016-09/es3d" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2016-09/es4d" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2016-09/es5d" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2016-09/es6d" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2016-09/es7d" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2016-09/es8d" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../2017-01">
+      <sourceFolder url="file://$MODULE_DIR$/../2017-01/es1a" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2017-01/es2a" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2017-01/es3a" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2017-01/es4a" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2017-01/es5a" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2017-01/es7a" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2017-01/es8a" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../2017-02">
+      <sourceFolder url="file://$MODULE_DIR$/../2017-02/es2d" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2017-02/es3d" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2017-02/es4d" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2017-02/es5d" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2017-02/es6d" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2017-02/es7d" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../2017-02/es8d" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
